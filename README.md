@@ -1,6 +1,8 @@
 # Note about this fork:
 Ceramicskate0's fork of SwiftOnSecurity's sysmon config differs in 1 key area. With the exception of RegistryEvent, FileCreateTime, ImageLoads, and ProcessAccess I have tried to take a exclude only approach. I use [SWELF](https://github.com/ceramicskate0/SWELF) to ship my logs and thus do not get all of them on the SIEM. I only get the logs I want and if I ever needed all the logs they will remain on the end point until they roll (assuming they dont get cleared or modified). This means that the idea behind this config is that you have only logs for events of interest. It is my hope that a config with this approach gets you to that ~80% solution to start your testing with. Also this fork is under more rapid development than all others.
 
+# Like the work dont forget to hit that Star Button
+
 # Things you need to know:
 Due to ongoing research please search the config file for the comment ``Could miss things if you leave this uncommented, but it also reduces noise`` and review each one (yes there are alot) to see if that EventID and that object on that line is something you want to monitor or not. If you dont want to have that object excluded, comment or remove the line in the config if its in the excluded ruleset. These are decisions I cant make for you. Some of them are good files that I know could be used for evil BUT they do generate alot of noise doing normal activities. I do try and narrow them down to a smaller list but I can only do so much.
 
