@@ -380,6 +380,7 @@
 		<RuleGroup name="NetworkConnect exclude" groupRelation="or">
 		<NetworkConnect onmatch="exclude">
 			<!--<Image condition="contains">C:\Windows\System32\svchost.exe</Image>-->
+			<Image condition="begin with">C:\Windows\SystemApps\Microsoft.Windows.Search</Image>
 			<Image condition="begin with">c:\riot games\riot client\</Image><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
 			<Image condition="begin with">c:\program files\windowsapps\</Image><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
 			<Image condition="begin with">c:\riot games\league of legends\</Image><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
@@ -1323,6 +1324,7 @@
 		<!--DATA: UtcTime, ProcessGuid, ProcessId, Image, TargetFilename, CreationUtcTime-->
 		<RuleGroup name="FileCreate exclude" groupRelation="or">
 		<FileCreate onmatch="exclude">
+			<Image condition="begin with">C:\Windows\SystemApps\Microsoft.Windows.Search</Image>
 			<Image condition="is">C:\Windows\System32\mousocoreworker.exe</Image>
 			<Image condition="is">C:\program files (x86)\steam\steam.exe</Image>
 			<Image condition="is">C:\WINDOWS\System32\svchost.exe</Image>
@@ -1895,6 +1897,7 @@
 		<!--SYSMON EVENT ID 17 & 18 : PipeEvent MONITORING [PipeEvent]-->
 		<RuleGroup name="PipeEvent exclude" groupRelation="or">		
 		<PipeEvent onmatch="exclude">
+					<Image condition="begin with">C:\Windows\SystemApps\Microsoft.Windows.Search</Image>
 			<Image condition="is">c:\program files (x86)\microsoft visual studio\2019\community\common7\servicehub\controller\microsoft.servicehub.controller.exe</Image>
 			<Image condition="is">c:\program files (x86)\microsoft visual studio\2019\community\msbuild\current\bin\msbuild.exe</Image>
 			<Image condition="is">c:\program files (x86)\microsoft visual studio\2019\community\msbuild\current\bin\roslyn\vbcscompiler.exe</Image>
@@ -2001,6 +2004,7 @@
 
 		<RuleGroup name="DnsQuery exclude" groupRelation="or">
 		<DnsQuery onmatch="exclude">
+			<Image condition="begin with">C:\Windows\SystemApps\Microsoft.Windows.Search</Image>
 			<Image condition="is">c:\program files\fortinet\forticlient\fortiwf.exe</Image>
 			<Image condition="is">C:\Program Files\Fortinet\FortiClient\update_task.exe</Image>
 			<Image condition="is">C:\Program Files (x86)\OpenDNS Updater\OpenDNSUpdater.exe</Image>
