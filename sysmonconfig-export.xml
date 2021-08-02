@@ -566,7 +566,23 @@
 		    <ImageLoaded condition="end with" name="Defense Evasion - DLL Side Loading, possible minidump of lsass">dbghelp.dll</ImageLoaded> <!-- 360 SoftManager.exe -->
 		    <ImageLoaded condition="end with" name="Defense Evasion - DLL Side Loading">FaultRep.dll</ImageLoaded> <!-- FontsSet.exe -->
 		    <ImageLoaded condition="end with" name="Defense Evasion - DLL Side Loading">McVsoCfg.dll</ImageLoaded>
+			<ImageLoaded condition="end with" name="Defense Evasion - RDP DLL's used for lateral movement.">MSTSCLib.dll</ImageLoaded>
+			<ImageLoaded condition="end with" name="Defense Evasion - RDP DLL's used for lateral movement.">AxMSTSCLib.dll</ImageLoaded>
             <ImageLoaded condition="end with" name="Defense Evasion - DLL Side Loading">ActCtx.dll</ImageLoaded>
+			<!--
+			Might not need this info for rule but:
+			image=update.exe
+			image=teams.exe
+			image=code.exe
+			-->
+			<ImageLoaded condition="end with" name="Defense Evasion - Teams DLL HIJACK">\AppData\Local\Microsoft\Teams\current\WINSTA.dll</ImageLoaded>
+			<ImageLoaded condition="end with" name="Defense Evasion - Teams DLL HIJACK">\AppData\Local\Microsoft\Teams\current\WINSTA.dll</ImageLoaded>
+			<ImageLoaded condition="end with" name="Defense Evasion - Teams DLL HIJACK">\AppData\Local\Microsoft\Teams\current\ntshrui.dll</ImageLoaded>
+			<ImageLoaded condition="end with" name="Defense Evasion - Teams DLL HIJACK">\AppData\Local\Microsoft\Teams\current\ntshrui.dll</ImageLoaded>
+			<ImageLoaded condition="end with" name="Defense Evasion - Teams DLL HIJACKng">\AppData\Local\Microsoft\Teams\current\cscapi.dll</ImageLoaded>
+			<ImageLoaded condition="end with" name="Defense Evasion - Teams DLL HIJACK">\AppData\Local\Microsoft\Teams\current\WindowsCodecs.dll</ImageLoaded>
+			<ImageLoaded condition="end with" name="Defense Evasion - Teams DLL HIJACK">\AppData\Local\Microsoft\Teams\current\TextInputFramework.dll</ImageLoaded>
+			<!--TEAMS DLL Hijack rules above -->
             <ImageLoaded condition="end with" name="Defense Evasion - DLL Boo Lang">Boo.Lang.Compiler.dll</ImageLoaded>
             <ImageLoaded condition="end with" name="Defense Evasion - DLL Boo Lang">Boo.Lang.dll</ImageLoaded>
             <ImageLoaded condition="end with" name="Defense Evasion - DLL Side Loading">CLRJIT.DLL</ImageLoaded>
@@ -582,7 +598,7 @@
 		    <ImageLoaded condition="end with" name="Defense Evasion - DLL Side Loading">chrome_frame_helper.dll</ImageLoaded>
 		    <ImageLoaded condition="end with" name="Defense Evasion - DLL Side Loading">DESqmWrapper.dll</ImageLoaded>
 		    <ImageLoaded condition="end with" name="Defense Evasion - DLL Side Loading">fslapi.dll</ImageLoaded>
-                    <ImageLoaded condition="is" name="Defense Evasion - DLL Hijack">C:\Users\USER\AppData\Local\Microsoft\WindowsApps\vulkan-1.dll</ImageLoaded>
+		    <ImageLoaded condition="is" name="Defense Evasion - DLL Hijack">C:\Users\USER\AppData\Local\Microsoft\WindowsApps\vulkan-1.dll</ImageLoaded>
 			<ImageLoaded condition="end with" name="Debugging DLL Loaded">dbgeng.dll</ImageLoaded>
 			<ImageLoaded condition="end with" name="Debugging DLL Loaded">dbghelp.dll</ImageLoaded>
             <ImageLoaded condition="end with" name="Debuging DLL Loaded">dbgcore.dll</ImageLoaded>
@@ -959,7 +975,15 @@
 			<Image condition="end with">splunk-admon.exe</Image><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
 			<Rule groupRelation="and">
                 <Image condition="is">c:\windows\system32\windowspowershell\v1.0\powershell.exe</Image>
-                <ImageLoaded condition="end with">system.management.automation.ni.dll</ImageLoaded>
+            <ImageLoaded condition="end with">system.management.automation.ni.dll</ImageLoaded>
+            </Rule>
+            <Rule groupRelation="and">
+            <Image condition="is">c:\windows\system32\windowspowershell\v1.0\powershell.exe</Image>
+            <ImageLoaded condition="begin with">C:\Windows\assembly\NativeImages_v4.0.30319_64\System.Transactions\</ImageLoaded>
+            </Rule>
+            <Rule groupRelation="and">
+            <Image condition="is">c:\windows\system32\windowspowershell\v1.0\powershell.exe</Image>
+            <ImageLoaded condition="begin with">C:\Windows\assembly\NativeImages_v4.0.30319_64\System.Transactions\</ImageLoaded>
             </Rule>
             <Rule groupRelation="and">
 			<Signature condition="contains">Microsoft</Signature>
@@ -1335,6 +1359,14 @@
 			<TargetFilename condition="begin with">C:\programdata\diagnosis\</TargetFilename>
 			</Rule>
 			<Rule groupRelation="and">
+			<Image condition="is">C:\WINDOWS\system32\wermgr.exe</Image>
+			<TargetFilename condition="begin with">C:\ProgramData\Microsoft\Windows\WER</TargetFilename>
+			</Rule>
+			<Rule groupRelation="and">
+			<Image condition="is">C:\Program Files (x86)\Microsoft Office\Root\Office16\SDXHelper.exe</Image>
+			<TargetFilename condition="begin with">C:\Users\Host\AppData\Local\Microsoft\Office\SolutionPackages</TargetFilename>
+			</Rule>
+			<Rule groupRelation="and">
 			<Image condition="is">c:\windows\system32\werfault.exe</Image>
 			<TargetFilename condition="begin with">c:\programdata\microsoft\windows\wer\reportarchive\</TargetFilename>
 			</Rule>
@@ -1412,9 +1444,12 @@
 			<TargetObject condition="contains" name="PrivEsc - UACBypass - SDCLT">exefile\shell\runas\command\IsolatedCommand</TargetObject>
 			<TargetObject condition="contains" name="PrivEsc - UACBypass UACME-34">\environment\windir</TargetObject>
 			<TargetObject condition="contains" name="PrivEsc - UACBypass Perfmon">\Volatile Environment\SYSTEMROOT</TargetObject>
+			<TargetObject condition="contains" name="Defense Evasion - Macro Auto Open Warning Disbaled">\Security\AccessVBOM</TargetObject>
+			<TargetObject condition="contains" name="Cred Gathering - RDP BMC cache files access">\Local\Microsoft\Terminal Server Client\Cache</TargetObject>
 			<TargetObject condition="contains" name="PrivEsc - UACBypass UACME-45">\exefile\shell\open\command\(Default)</TargetObject>
 			<TargetObject condition="contains" name="PrivEsc - UACBypass UACME-53">\Folder\shell\open\command\(Default)</TargetObject>
 			<TargetObject condition="contains" name="PrivEsc - UACBypass UACME-33">\ms-settings\shell\open\command</TargetObject>
+			<TargetObject condition="contains" name="Defensive Evasino - DLL Safe Search Order setting accessed">\System\CurrentControlSet\Control\Session Manager\SafeDllSearchMode</TargetObject>
 			<TargetObject condition="contains" name="PrivEsc - UACBypass">Software\Microsoft\Windows\CurrentVersion\App Paths\control.exe</TargetObject>	 
 			<TargetObject condition="begin with" name="Defense Evasion - UAC Config Changed">SOFTWARE\Microsoft\Security Center\UacDisableNotify</TargetObject>
 			<TargetObject condition="begin with" name="Defense Evasion - UACBypass">HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\System\EnableLUA</TargetObject>
@@ -2007,6 +2042,7 @@
 			<QueryName condition="end with">.windowsupdate.com</QueryName> <!--Microsoft-->
 			<QueryName condition="end with">.xboxlive.com</QueryName> <!--Microsoft-->
 			<QueryName condition="is">login.windows.net</QueryName> <!--Microsoft-->
+			<QueryName condition="is">officecdn.microsoft.com.edgesuite.net</QueryName> <!--Microsoft-->
 			<!--Microsoft:Office365/AzureAD-->
 			<QueryName condition="end with">.activedirectory.windowsazure.com</QueryName> <!--Microsoft: AzureAD-->
 			<QueryName condition="end with">.aria.microsoft.com</QueryName> <!--Microsoft: OneDrive/SharePoint-->
@@ -2045,9 +2081,11 @@
 			<QueryName condition="is">fonts.googleapis.com</QueryName> <!--Google fonts-->
 			<QueryName condition="end with">.typekit.net</QueryName> <!--Adobe fonts-->
 			<QueryName condition="is">cdnjs.cloudflare.com</QueryName>
-
+			<QueryName condition="end with">.stackoverflow.com</QueryName>
+			<QueryName condition="end with">.akamaiedge.net</QueryName>
 			<!--Personal-->
 			<QueryName condition="end with">.steamcontent.com</QueryName> <!--If you seriously host malware C2 in game binaries in Steam, I give up-->
+			<QueryName condition="end with">.adblockplus.org</QueryName> 
 			<!--Web resources-->
 			<QueryName condition="end with">.disqus.com</QueryName> <!--Microsoft default exclusion-->
 			<QueryName condition="end with">.fontawesome.com</QueryName>
