@@ -56,7 +56,7 @@
   - The "image" filter is usable on any field. Same as "is" but can either match entire string, or only the text after last "\". Credit: @mattifestation
 -->
 
-<Sysmon schemaversion="4.50">
+<Sysmon schemaversion="4.70">
 	<!--SYSMON META CONFIG-->
 	<HashAlgorithms>sha256,IMPHASH</HashAlgorithms> <!-- Both MD5 and SHA256 are the industry-standard algorithms for identifying files -->
 	<CheckRevocation/> <!-- Check loaded drivers, log if their code-signing certificate has been revoked, in case malware stole one to sign a kernel driver -->
