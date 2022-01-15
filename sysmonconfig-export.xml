@@ -79,6 +79,7 @@
 			<!--SECTION: Microsoft Windows-->
 			<IntegrityLevel condition="is">AppContainer</IntegrityLevel> <!--Microsoft:Windows: Don't care about sandboxed processes-->
 			<Image condition="is">C:\Windows\System32\usocoreworker.exe</Image>
+			<Image condition="is">C:\Windows\System32\SpatialAudioLicenseSrv.exe</Image>
 			<Image condition="is">c:\riot games\league of legends\leagueclient.exe</Image><!-- Could miss things if you comment this, but it also reduces noise-->
 			<Image condition="is">c:\program files (x86)\microsoft visual studio\2019\community\common7\servicehub\hosts\servicehub.host.clr.x64\servicehub.datawarehousehost.exe</Image>
 			<Image condition="is">C:\Windows\System32\UsoClient.exe</Image>
@@ -217,44 +218,46 @@
 			<Image condition="is">C:\Program Files\Dell\SupportAssist\koala.exe</Image> <!--Dell:SupportAssist: routine actions-->
 			<CurrentDirectory condition="is">C:\Program Files (x86)\ossec-agent\</CurrentDirectory><!-- Could miss things if you comment this, but it also reduces noise-->
 			<ParentCommandLine condition="end with">"-outc=C:\ProgramData\Dell\CommandUpdate\inventory.xml" "-logc=C:\ProgramData\Dell\CommandUpdate\scanerrs.xml" "-lang=en" "-enc=UTF-16" </ParentCommandLine><!-- Could miss things if you comment this, but it also reduces noise-->
-			
-			<!--SECTION: Drivers-->
+			<!--Nosie EXEs-->
 			<Rule groupRelation="and">
-			<Image condition="is">C:\Windows\system32\wermgr.exe</Image>
-			<CommandLine condition="contains">-p</CommandLine>
+			<Image condition="is">C:\Windows\System32\MoUsoCoreWorker.exe</Image>
+			<CommandLine condition="begin with">C:\Windows\System32\mousocoreworker.exe -Embedding</CommandLine>
 			</Rule>
 			<Rule groupRelation="and"><!-- Could miss things if you comment this, but it also reduces noise-->
 			<Image condition="is">C:\Windows\system32\DllHost.exe</Image>
-			<CommandLine condition="contains">/Processid</CommandLine>
+			<CommandLine condition="begin with"> "C:\WINDOWS\SysWOW64\DllHost.exe" /Processid:</CommandLine>
+			</Rule>
+			<Rule groupRelation="and"><!-- Could miss things if you comment this, but it also reduces noise-->
+			<Image condition="is"> C:\Windows\SysWOW64\dllhost.exe</Image>
+			<CommandLine condition="begin with"> "C:\WINDOWS\SysWOW64\DllHost.exe" /Processid:</CommandLine>
+			</Rule>
+			<Rule groupRelation="and">
+			<Image condition="is">C:\Windows\system32\wermgr.exe</Image>
+			<CommandLine condition="contains">-p</CommandLine>
 			</Rule>
 			<Rule groupRelation="and">
 			<Image condition="is">C:\Windows\system32\wermgr.exe</Image>
 			<CommandLine condition="contains">shared Global</CommandLine>
 			</Rule>
-			
 			<Rule groupRelation="and">
 			<Image condition="is">C:\Windows\system32\rundll32.exe</Image>
 			<CommandLine condition="is">C:\Windows\system32\rundll32.exe /d sdengin2.dll,ExecuteScheduledBackup</CommandLine>
-			</Rule>
-			
+			</Rule>		
 			<Rule groupRelation="and">
 			<Image condition="is">c:\Windows\system32\taskhostw.exe</Image>
 			<ParentImage condition="is">c:\Windows\system32\svchost.exe</ParentImage>
-			</Rule>
-			
+			</Rule>	
 			<Rule groupRelation="and">
 			<Image condition="is">C:\Windows\System32\smartscreen.exe</Image>
 			<ParentImage condition="is">C:\Windows\System32\svchost.exe</ParentImage>
-			</Rule>
-			
+			</Rule>	
 			<Rule groupRelation="and">
 			<Image condition="is">C:\Windows\System32\wbem\WmiPrvSE.exe</Image>
 			<ParentImage condition="is">C:\Windows\System32\svchost.exe</ParentImage>
 			<CommandLine condition="is">C:\Windows\system32\wbem\wmiprvse.exe -secured -Embedding</CommandLine>
 			<ParentCommandLine condition="is">C:\Windows\system32\svchost.exe -k DcomLaunch -p</ParentCommandLine>
 			<User condition="is">NT AUTHORITY\NETWORK SERVICE</User>
-			</Rule>
-			
+			</Rule>	
 			<Rule groupRelation="and">
 			<Image condition="is">C:\Windows\System32\wermgr.exe</Image>
 			<ParentImage condition="is">C:\Windows\System32\svchost.exee</ParentImage>
@@ -306,12 +309,12 @@
 		<!--DATA: UtcTime, ProcessGuid, ProcessId, Image, TargetFilename, CreationUtcTime, PreviousCreationUtcTime-->
 		<RuleGroup name="FileCreateTime Include" groupRelation="or">
 		<FileCreateTime onmatch="include">		 		
-			<Image name="FileCreateTime(TimeStomped) changed from file in Windows Temp" condition="begin with">C:\Windows\Temp</Image>
-			<Image name="FileCreateTime(TimeStomped) changed from file in ProgramData" condition="begin with">C:\Program Data</Image>
-			<Image name="FileCreateTime(TimeStomped) changed from file in RecycleBin" condition="begin with">C:\$Recycle.Bin</Image>
-			<Image name="FileCreateTime(TimeStomped) changed from file in ProgramData" condition="begin with">C:\Program Files</Image>
-			<Image name="FileCreateTime(TimeStomped) changed from file in Users Folder" condition="begin with">C:\Users</Image> <!--Look for timestomping in user area-->
-			<TargetFilename name="FileCreateTime(TimeStomped) changed a file located in RecycleBin" condition="begin with">C:\$Recycle.Bin</TargetFilename>
+			<Image name="FileCreateTime (TimeStomped) changed from file in Windows Temp" condition="begin with">C:\Windows\Temp</Image>
+			<Image name="FileCreateTime (TimeStomped) changed from file in ProgramData" condition="begin with">C:\Program Data</Image>
+			<Image name="FileCreateTime (TimeStomped) changed from file in RecycleBin" condition="begin with">C:\$Recycle.Bin</Image>
+			<Image name="FileCreateTime (TimeStomped) changed from file in ProgramData" condition="begin with">C:\Program Files</Image>
+			<Image name="FileCreateTime (TimeStomped) changed from file in Users Folder" condition="begin with">C:\Users</Image> <!--Look for timestomping in user area-->
+			<TargetFilename name="FileCreateTime (TimeStomped) changed a file located in RecycleBin" condition="begin with">C:\$Recycle.Bin</TargetFilename>
 			<TargetFilename name="persistence - office templates trusted location" condition="contains" >AppData\Roaming\Microsoft\Templates</TargetFilename>
 			<TargetFilename name="KeeFarce.exe default injected DLL name-" condition="end with">BootStrapDLL.dll</TargetFilename><!-- KeeFarce.exe default injected DLL name-->
 			<TargetFilename name="persistence - backdoored default docm template" condition="end with" >Templates\Normal.dotm</TargetFilename>
@@ -320,9 +323,9 @@
 			<TargetFilename name="persistence - Word Library Add-Ins" condition="contains" >Roaming\Microsoft\Word\Startup\</TargetFilename>
 			<TargetFilename name="persistence - Excel VBA Add-Ins" condition="contains" >Roaming\Microsoft\Excel\XLSTART\</TargetFilename>
 			<TargetFilename name="persistence - Powerpoint and Excel VBA Add-Ins Trusted Location" condition="contains" >Roaming\Microsoft\AddIns</TargetFilename>
-			<TargetFilename name="FileCreateTime(TimeStomped) changed a file located in Appdata" condition="contains">\AppData\</TargetFilename>
-			<TargetFilename name="FileCreateTime(TimeStomped) changed a file located in Users folder" condition="begin with">C:\Users\</TargetFilename>
-			<TargetFilename name="FileCreateTime(TimeStomped) changed a file located in Windows folder" condition="begin with">C:\Windows\</TargetFilename>
+			<TargetFilename name="FileCreateTime (TimeStomped) changed a file located in Appdata" condition="contains">\AppData\</TargetFilename>
+			<TargetFilename name="FileCreateTime (TimeStomped) changed a file located in Users folder" condition="begin with">C:\Users\</TargetFilename>
+			<TargetFilename name="FileCreateTime (TimeStomped) changed a file located in Windows folder" condition="begin with">C:\Windows\</TargetFilename>
 			<TargetFilename name="Possible Memory dump file" condition="end with">.dmp</TargetFilename>
 			<TargetFilename name="Very likely LSASS Memory dump file" condition="contains">lsass</TargetFilename>
 			<TargetFilename name="Confirmed LSASS Memory dump file" condition="contains">lsass.dmp</TargetFilename>
@@ -352,6 +355,8 @@
 		
 		<RuleGroup name="FileCreateTime Exclude" groupRelation="or">
 		<FileCreateTime onmatch="exclude">
+			<Image condition="end with">\XboxAppServices.exe</Image>
+			<TargetFilename condition="end with">\AppData\Local\Microsoft\Windows\Explorer\iconcache_custom_stream.db</TargetFilename>
 			<Image condition="is">C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\devenv.exe</Image>
 			<Image condition="is">C:\Program Files (x86)\Notepad++\notepad++.exe</Image>
 			<Image condition="is">C:\Program Files (x86)\Mozilla Firefox\firefox.exe</Image>
@@ -470,6 +475,7 @@
 		<ProcessTerminate onmatch="exclude">
 			<Image condition="is">C:\Windows\System32\SearchProtocolHost.exe</Image>
 			<Image condition="is">C:\Windows\System32\smartscreen.exe</Image>
+			<Image condition="end with">AppData\Local\Programs\Microsoft VS Code\Code.exe</Image>
 			<Image condition="begin with">C:\Program Files (x86)\</Image><!-- Could miss things if you comment this, but it also reduces noise-->
 			<Image condition="begin with">C:\Program Files\</Image><!-- Could miss things if you comment this, but it also reduces noise-->
 			<Image condition="is">C:\Windows\System32\conhost.exe</Image>
@@ -484,6 +490,8 @@
 			<Image condition="end with">\SWELF.exe</Image><!-- Could miss things if you comment this, but it also reduces noise-->
 			<Image condition="is">c:\Windows\syswow64\cmd.exe</Image><!-- Could miss things if you comment this, but it also reduces noise-->
 			<Image condition="is">C:\Windows\System32\ctfmon.exe</Image>
+			<Image condition="is">C:\Windows\System32\SpatialAudioLicenseSrv.exe</Image>
+			<Image condition="is">C:\Windows\System32\MoUsoCoreWorker.exe</Image>
 		</ProcessTerminate>
 		</RuleGroup>
 		
@@ -573,8 +581,9 @@
 		    <ImageLoaded condition="end with" name="Defense Evasion - DLL Side Loading">msfte.dll</ImageLoaded> <!-- searchindexer.exe and searchprotocolhost.exe -->
 		    <ImageLoaded condition="end with" name="Defense Evasion - DLL Side Loading">Flash Video Extension.dll</ImageLoaded> <!-- Adobe AcroTranscoder.exe -->
 		    <ImageLoaded condition="end with" name="Defense Evasion - DLL Side Loading">UxTheme.dll</ImageLoaded> <!-- Adobe FlashPlayerApp.exe -->
-		    <ImageLoaded condition="end with" name="Dfense Evasion - DLL Side Loading">WeChatWin.dll</ImageLoaded> <!-- WeChat.exe -->
-		    <ImageLoaded condition="end with" name="Dfense Evasion - DLL Side Loading">coccocpdate.dll</ImageLoaded> <!-- CocCocUpdate.exe -->
+		    <ImageLoaded condition="end with" name="Defense Evasion - DLL Side Loading">WeChatWin.dll</ImageLoaded> <!-- WeChat.exe -->
+		    <ImageLoaded condition="end with" name="Defense Evasion - DLL Side Loading">coccocpdate.dll</ImageLoaded> <!-- CocCocUpdate.exe -->
+			<ImageLoaded condition="end with" name="Keefarce attack tool dll load">BootStrapDLL.dll</ImageLoaded> 
 		    <ImageLoaded condition="end with" name="Defense Evasion - DLL Side Loading">chrome_elf.dll</ImageLoaded> <!-- 360se.exe -->
 		    <ImageLoaded condition="end with" name="Defense Evasion - DLL Side Loading, possible minidump of lsass">dbghelp.dll</ImageLoaded> <!-- 360 SoftManager.exe -->
 		    <ImageLoaded condition="end with" name="Defense Evasion - DLL Side Loading">FaultRep.dll</ImageLoaded> <!-- FontsSet.exe -->
@@ -2219,6 +2228,10 @@
 			<Image condition="is">C:\Program Files (x86)\Mozilla Firefox\firefox.exe</Image>
 			<TargetFilename condition="contains">\AppData\Local\Mozilla\Firefox\Profiles\</TargetFilename>
 			</Rule>
+			<Rule groupRelation="and"><!-- Could miss things if you comment this, but it also reduces noise-->
+			<Image condition="is">C:\WINDOWS\Sysmon.exe</Image>
+			<TargetFilename condition="is">C:\Sysmon\CLIP-</TargetFilename>
+			</Rule>
 			<Image condition="is">c:\riot games\riot client\riotclientservices.exe</Image>
 			<TargetFilename condition="begin with">C:\Windows\System32\Tasks\OfficeSoftwareProtectionPlatform\SvcRestartTask</TargetFilename><!-- Could miss things if you comment this, but it also reduces noise-->
 			<TargetFilename condition="begin with">C:\Windows\system32\DriverStore\Temp\</TargetFilename> <!-- Microsoft:Windows: Temp files by DrvInst.exe-->
@@ -2596,7 +2609,11 @@
 			</Rule>
 			<Rule groupRelation="and">
 			<Image condition="is">C:\Program Files (x86)\Google\Update\GoogleUpdate.exe</Image><!--noisy-->
-			<TargetObject condition="begin with">HKLM\SOFTWARE\WOW6432Node\Google\Update\ClientState </TargetObject>
+			<TargetObject condition="begin with">HKLM\SOFTWARE\WOW6432Node\Google\Update\ClientState</TargetObject>
+			</Rule>
+			<Rule groupRelation="and">
+			<Image condition="is">C:\WINDOWS\Explorer.EXE</Image><!--noisy-->
+			<TargetObject condition="end with">\SOFTWARE\Microsoft\Windows\Shell\Bags\1\Desktop\IconLayouts</TargetObject>
 			</Rule>
             <Rule groupRelation="and">
 			<Image condition="is">C:\Windows\system32\svchost.exe</Image><!--noisy-->
@@ -2808,6 +2825,10 @@
 			<PipeName condition="is">\SQLLocal\RTCLOCAL</PipeName>
 			<PipeName condition="is">\SQLLocal\RTC</PipeName>
 			<PipeName condition="is">\SQLLocal\TMSM</PipeName>
+			<Rule groupRelation="and">
+				<Image condition="is">C:\WINDOWS\system32\sihost.exe</Image>
+				<PipeName condition="contains">\AppContracts_</PipeName>
+			</Rule>
 		</PipeEvent>
 		</RuleGroup>
 	    
@@ -2863,6 +2884,7 @@
 			<!--Network noise-->
 			<QueryName condition="end with">.suite.office.com</QueryName>
 			<QueryName condition="is">cdn.onenote.net</QueryName>
+			<QueryName condition="is">catalog.gamepass.com</QueryName>
 			<QueryName condition="is">t.co</QueryName>
 			<QueryName condition="end with">.arpa.</QueryName> <!--Design decision to not log reverse DNS lookups. You will need to decide.-->
 			<QueryName condition="end with">.arpa</QueryName> <!--Design decision to not log reverse DNS lookups. You will need to decide.-->
@@ -3013,6 +3035,7 @@
 			<QueryName condition="end with">.serving-sys.com</QueryName> <!--Ads | Microsoft default exclusion-->
 			<QueryName condition="end with">.sharethrough.com</QueryName> <!--Ads-->
 			<QueryName condition="end with">.Windowsupdate.com</QueryName>
+			<QueryName condition="end with">.vo.msecnd.net</QueryName>
 			<QueryName condition="end with">.sitescout.com</QueryName> <!--Ads-->
 			<QueryName condition="end with">.smartadserver.com</QueryName> <!--Ads-->
 			<QueryName condition="end with">.snapads.com</QueryName> <!--Ads-->
