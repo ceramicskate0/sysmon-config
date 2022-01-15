@@ -80,14 +80,14 @@
 			<IntegrityLevel condition="is">AppContainer</IntegrityLevel> <!--Microsoft:Windows: Don't care about sandboxed processes-->
 			<Image condition="is">C:\Windows\System32\usocoreworker.exe</Image>
 			<Image condition="is">C:\Windows\System32\SpatialAudioLicenseSrv.exe</Image>
-			<Image condition="is">c:\riot games\league of legends\leagueclient.exe</Image><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
+			<Image condition="is">c:\riot games\league of legends\leagueclient.exe</Image><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 			<Image condition="is">c:\program files (x86)\microsoft visual studio\2019\community\common7\servicehub\hosts\servicehub.host.clr.x64\servicehub.datawarehousehost.exe</Image>
 			<Image condition="is">C:\Windows\System32\UsoClient.exe</Image>
 			<Image condition="is">c:\Windows\system32\sdclt.exe</Image>
 			<Image condition="is">c:\Windows\system32\mmc.exe</Image>
 			<Image condition="is">C:\Windows\System32\CompPkgSrv.exe</Image>
 			<Image condition="is">c:\Windows\system32\sgrmbroker.exe</Image>
-			<Image condition="is">C:\Windows\System32\WerFault.exe</Image><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
+			<Image condition="is">C:\Windows\System32\WerFault.exe</Image><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 			<Image condition="is">C:\Program Files (x86)\Microsoft Office\root\VFS\ProgramFilesCommonX86\Microsoft Shared\OFFICE16\SDXHelper.exe</Image>
 			<Image condition="end with">AppData\Roaming\Resilio Sync\Resilio Sync.exe</Image> <!--Resilio Sync-->
 			<Image condition="is">C:\Windows\ImmersiveControlPanel\SystemSettings.exe</Image>
@@ -96,19 +96,19 @@
 			<Image condition="is">c:\Windows\system32\conhost.exe</Image><!-- Child process of conhost not very good tell, parent of conhost is better for detection. But this is useful if you want to track who is using console per process-->
 			<Image condition="is">C:\Program Files\Common Files\microsoft shared\ink\TabTip.exe</Image>
 			<Image condition="is">C:\Program Files (x86)\Common Files\microsoft shared\ink\TabTip32.exe</Image> <!--Microsoft:Windows: Touch Keyboard and Handwriting Panel Helper-->
-			<Image condition="is">C:\Windows\System32\SearchFilterHost.exe</Image><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
+			<Image condition="is">C:\Windows\System32\SearchFilterHost.exe</Image><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 			<Image condition="is">C:\Windows\System32\audiodg.exe</Image>
 			<Image condition="is">C:\Windows\System32\wsqmcons.exe</Image>
 			<Image condition="is">C:\Windows\System32\RuntimeBroker.exe</Image>
 			<Image condition="is">C:\Program Files (x86)\Notepad++\notepad++.exe</Image>
-			<Image condition="is">C:\Windows\System32\SearchProtocolHost.exe</Image><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
+			<Image condition="is">C:\Windows\System32\SearchProtocolHost.exe</Image><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 			<Image condition="is">C:\Program Files\Oracle\VirtualBox\VBoxHeadless.exe</Image>
 			<Image condition="is">C:\Program Files\Oracle\VirtualBox\VBoxNetDHCP.exe</Image>
-			<Image condition="begin with">C:\Program Files (x86)\NVIDIA Corporation\Update Core\</Image><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-			<Image condition="begin with">C:\Program Files (x86)\Fortinet\FortiClient\</Image><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-			<Image condition="begin with">C:\Program Files\Fortinet\FortiClient\</Image><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-			<Image condition="begin with">C:\Program Files\Fortinet\FortiClient\</Image><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-			<Image condition="is">C:\Program Files (x86)\SWELF\SWELF.exe</Image><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
+			<Image condition="begin with">C:\Program Files (x86)\NVIDIA Corporation\Update Core\</Image><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+			<Image condition="begin with">C:\Program Files (x86)\Fortinet\FortiClient\</Image><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+			<Image condition="begin with">C:\Program Files\Fortinet\FortiClient\</Image><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+			<Image condition="begin with">C:\Program Files\Fortinet\FortiClient\</Image><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+			<Image condition="is">C:\Program Files (x86)\SWELF\SWELF.exe</Image><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 			<Image condition="is">C:\Program Files\Common Files\microsoft shared\ink\TabTip.exe</Image>
 			<Image condition="is">C:\Program Files (x86)\Fortinet\FortiClient\update_task.exe</Image>
 			<Image condition="is">C:\Windows\system32\CompatTelRunner.exe</Image> <!--Microsoft:Windows: Customer Experience Improvement-->
@@ -136,10 +136,10 @@
 			<Image condition="is">C:\Program Files\Microsoft Office\Office16\msoia.exe</Image> <!--Microsoft:Office: Telemetry collector-->
 			<Image condition="is">C:\Program Files (x86)\Microsoft Office\root\Office16\officebackgroundtaskhandler.exe</Image>			
 			<Image condition="is">C:\Windows\System32\TokenBrokerCookies.exe</Image> <!--Microsoft:Windows: SSO sign-in assistant for MicrosoftOnline.com-->
-			<Image condition="end with">\ngentask.exe</Image><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-			<Image condition="end with">\ngen.exe</Image> <!--Microsoft:DotNet--><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-			<Image condition="end with">\mscorsvw.exe</Image> <!--Microsoft:DotNet--><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-			<Image condition="end with">\ngentask.exe</Image> <!--Microsoft:DotNet: Spawns thousands of ngen.exe processes--><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
+			<Image condition="end with">\ngentask.exe</Image><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+			<Image condition="end with">\ngen.exe</Image> <!--Microsoft:DotNet--><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+			<Image condition="end with">\mscorsvw.exe</Image> <!--Microsoft:DotNet--><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+			<Image condition="end with">\ngentask.exe</Image> <!--Microsoft:DotNet: Spawns thousands of ngen.exe processes--><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 			<!--Microsoft:Visual Studio 2019-->
 			<Image condition="is">c:\program files (x86)\microsoft visual studio\2019\community\team tools\static analysis tools\fxcop\fxcopcmd.exe</Image>
 			<ParentImage condition="is">C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\devenv.exe</ParentImage>
@@ -157,9 +157,9 @@
 			<Image condition="is">c:\program files (x86)\microsoft visual studio\2019\community\common7\servicehub\hosts\servicehub.host.clr.anycpu\servicehub.testWindowstorehost.exe</Image>
 			<Image condition="is">c:\program files (x86)\microsoft visual studio\installer\resources\app\servicehub\services\microsoft.visualstudio.setup.service\backgrounddownload.exe</Image>
 			<!-- Commandline excludes are weak at best -->
-			<Image condition="is">C:\Windows\system32\SearchIndexer.exe</Image> <!--Microsoft:Windows: Search Indexer--><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-			<Image condition="is">C:\Windows\System32\smss.exe</Image> <!--Microsoft:Bootup: Windows Session Manager--><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-			<Image condition="is">C:\Windows\system32\autochk.exe </Image> <!--Microsoft:Bootup: Auto Check Utility--><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
+			<Image condition="is">C:\Windows\system32\SearchIndexer.exe</Image> <!--Microsoft:Windows: Search Indexer--><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+			<Image condition="is">C:\Windows\System32\smss.exe</Image> <!--Microsoft:Bootup: Windows Session Manager--><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+			<Image condition="is">C:\Windows\system32\autochk.exe </Image> <!--Microsoft:Bootup: Auto Check Utility--><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 			<Image condition="is">C:\Program Files\Mozilla Firefox\firefox.exe</Image>	
 			<!--Microsoft:Office: -->
 			<ParentImage condition="end with">C:\Program Files\Common Files\Microsoft Shared\ClickToRun\OfficeClickToRun.exe</ParentImage> <!--Microsoft:Office: Background process-->
@@ -202,9 +202,9 @@
 			<ParentImage condition="end with">C:\Program Files (x86)\Adobe\Adobe Creative Cloud\ACC\Creative Cloud.exe</ParentImage>
 			<ParentImage condition="end with">C:\Program Files (x86)\Adobe\Adobe Creative Cloud\CCXProcess\CCXProcess.exe</ParentImage>
 			<ParentImage condition="end with">C:\Program Files (x86)\Adobe\Adobe Creative Cloud\CoreSync\CoreSync.exe</ParentImage>
-			<ParentCommandLine condition="contains">\system32\csrss.exe ObjectDirectory=\Windows</ParentCommandLine> <!--Microsoft:Windows:CommandShell: Triggered when programs use the command shell, but doesn't provide attribution for what caused it--><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-			<ParentCommandLine condition="begin with">C:\Windows\system32\wermgr.exe -queuereporting</ParentCommandLine> <!--Microsoft:Windows:Windows error reporting/telemetry--><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-			<ParentImage condition="is">C:\Windows\system32\SearchIndexer.exe</ParentImage> <!--Microsoft:Windows:Search: Launches many uninteresting sub-processes--><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
+			<ParentCommandLine condition="contains">\system32\csrss.exe ObjectDirectory=\Windows</ParentCommandLine> <!--Microsoft:Windows:CommandShell: Triggered when programs use the command shell, but doesn't provide attribution for what caused it--><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+			<ParentCommandLine condition="begin with">C:\Windows\system32\wermgr.exe -queuereporting</ParentCommandLine> <!--Microsoft:Windows:Windows error reporting/telemetry--><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+			<ParentImage condition="is">C:\Windows\system32\SearchIndexer.exe</ParentImage> <!--Microsoft:Windows:Search: Launches many uninteresting sub-processes--><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 			<!--SECTION: Cisco-->
 			<ParentImage condition="end with">C:\Program Files (x86)\Cisco\Cisco AnyConnect Secure Mobility Client\vpnagent.exe</ParentImage> <!--Cisco: Calls netsh to change settings on connect-->
 			<ParentImage condition="end with">C:\Program Files\Realtek\Audio\HDA\RtkAudioService64.exe</ParentImage> <!--Realtek:Driver: routine actions-->
@@ -216,8 +216,8 @@
 			<ParentImage condition="end with">C:\Program Files\DellTPad\HidMonitorSvc.exe</ParentImage>
 			<Image condition="is">C:\Program Files\Dell\SupportAssist\pcdrcui.exe</Image> <!--Dell:SupportAssist: routine actions-->
 			<Image condition="is">C:\Program Files\Dell\SupportAssist\koala.exe</Image> <!--Dell:SupportAssist: routine actions-->
-			<CurrentDirectory condition="is">C:\Program Files (x86)\ossec-agent\</CurrentDirectory><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-			<ParentCommandLine condition="end with">"-outc=C:\ProgramData\Dell\CommandUpdate\inventory.xml" "-logc=C:\ProgramData\Dell\CommandUpdate\scanerrs.xml" "-lang=en" "-enc=UTF-16" </ParentCommandLine><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
+			<CurrentDirectory condition="is">C:\Program Files (x86)\ossec-agent\</CurrentDirectory><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+			<ParentCommandLine condition="end with">"-outc=C:\ProgramData\Dell\CommandUpdate\inventory.xml" "-logc=C:\ProgramData\Dell\CommandUpdate\scanerrs.xml" "-lang=en" "-enc=UTF-16" </ParentCommandLine><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 			<!--Nosie EXEs-->
 			<Rule groupRelation="and">
 			<Image condition="is">C:\Windows\System32\MoUsoCoreWorker.exe</Image>
@@ -227,11 +227,11 @@
 			<Image condition="is">C:\Windows\System32\smartscreen.exe</Image>
 			<CommandLine condition="begin with">C:\Windows\System32\smartscreen.exe -Embedding</CommandLine>
 			</Rule>
-			<Rule groupRelation="and"><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
+			<Rule groupRelation="and"><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 			<Image condition="is">C:\Windows\system32\DllHost.exe</Image>
 			<CommandLine condition="begin with"> "C:\WINDOWS\SysWOW64\DllHost.exe" /Processid:</CommandLine>
 			</Rule>
-			<Rule groupRelation="and"><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
+			<Rule groupRelation="and"><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 			<Image condition="is"> C:\Windows\SysWOW64\dllhost.exe</Image>
 			<CommandLine condition="begin with"> "C:\WINDOWS\SysWOW64\DllHost.exe" /Processid:</CommandLine>
 			</Rule>
@@ -365,20 +365,20 @@
 			<Image condition="is">C:\Program Files (x86)\Notepad++\notepad++.exe</Image>
 			<Image condition="is">C:\Program Files (x86)\Mozilla Firefox\firefox.exe</Image>
 			<Image condition="is">C:\program files (x86)\adobe\acrobat reader dc\reader\acrocef\rdrservicesupdater.exe</Image>
-			<Image condition="end with">\OneDrive.exe</Image> <!--OneDrive constantly changes file times--><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
+			<Image condition="end with">\OneDrive.exe</Image> <!--OneDrive constantly changes file times--><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 			<Image condition="is">C:\Windows\system32\backgroundTaskHost.exe</Image>
-			<Image condition="contains">setup</Image> <!--Ignore setups--><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-			<Image condition="contains">install</Image> <!--Ignore setups--><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-			<Image condition="contains">\Update\</Image> <!--Ignore setups--><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-			<Image condition="end with">\redist.exe</Image> <!--Ignore setups--><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-			<Image condition="is">TrustedInstaller.exe</Image> <!--Ignore setups--><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-			<Image condition="end with">\notepad++.exe</Image> <!--Ignore setups--><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-			<Image condition="end with">\SWELF.exe</Image> <!--Ignore setups--><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
+			<Image condition="contains">setup</Image> <!--Ignore setups--><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+			<Image condition="contains">install</Image> <!--Ignore setups--><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+			<Image condition="contains">\Update\</Image> <!--Ignore setups--><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+			<Image condition="end with">\redist.exe</Image> <!--Ignore setups--><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+			<Image condition="is">TrustedInstaller.exe</Image> <!--Ignore setups--><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+			<Image condition="end with">\notepad++.exe</Image> <!--Ignore setups--><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+			<Image condition="end with">\SWELF.exe</Image> <!--Ignore setups--><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 			<Image condition="begin with">C:\Windows\winsxs\amd64_microsoft-Windows</Image> <!-- Windows: Windows update-->
 			<Image condition="is">C:\Windows\system32\igfxCUIService.exe</Image>
 			<TargetFilename condition="begin with">C:\$Windows.~BT\Sources\</TargetFilename> <!-- Windows: Feature updates containing lots of .exe and .sys-->
-			<TargetFilename condition="end with">.temp</TargetFilename><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-			<TargetFilename condition="end with">.tmp</TargetFilename><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
+			<TargetFilename condition="end with">.temp</TargetFilename><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+			<TargetFilename condition="end with">.tmp</TargetFilename><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 			<TargetFilename condition="begin with">C:\Windows\SoftwareDistribution\Download\</TargetFilename>
 		</FileCreateTime>
 		</RuleGroup>
@@ -398,21 +398,21 @@
 		<NetworkConnect onmatch="exclude">
 			<!--<Image condition="contains">C:\Windows\System32\svchost.exe</Image>-->
 			<Image condition="begin with">C:\Windows\SystemApps\Microsoft.Windows.Search</Image>
-			<Image condition="begin with">c:\riot games\riot client\</Image><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-			<Image condition="begin with">c:\program files\Windowsapps\</Image><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-			<Image condition="begin with">c:\riot games\league of legends\</Image><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-			<Image condition="begin with">c:\program files (x86)\steam\steam.exe</Image><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
+			<Image condition="begin with">c:\riot games\riot client\</Image><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+			<Image condition="begin with">c:\program files\Windowsapps\</Image><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+			<Image condition="begin with">c:\riot games\league of legends\</Image><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+			<Image condition="begin with">c:\program files (x86)\steam\steam.exe</Image><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 			<Image condition="is">C:\program files\nvidia corporation\nvcontainer\nvcontainer.exe</Image>
 			<Image condition="is">C:\program files (x86)\steam\bin\cef\cef.win7x64\steamwebhelper.exe</Image>
 			<Image condition="end with">\g2ax_comm_expert.exe</Image> <!--GoToMeeting-->
 			<Image condition="end with">\g2mcomm.exe</Image> <!--GoToMeeting-->
-			<Image condition="end with">\SWELF.exe</Image><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-			<Image condition="end with">\chrome.exe</Image><!--Browser--><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-			<Image condition="end with">\firefox.exe</Image><!--Browser--><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-			<Image condition="end with">\iexplore.exe</Image><!--Browser--><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-			<Image condition="end with">MicrosoftEdge.exe</Image><!--Browser--><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
+			<Image condition="end with">\SWELF.exe</Image><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+			<Image condition="end with">\chrome.exe</Image><!--Browser--><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+			<Image condition="end with">\firefox.exe</Image><!--Browser--><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+			<Image condition="end with">\iexplore.exe</Image><!--Browser--><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+			<Image condition="end with">MicrosoftEdge.exe</Image><!--Browser--><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 			<Image condition="is">C:\Windows\System32\dns.exe</Image><!-- noisy for dns -->
-			<Image condition="begin with">c:\program files\oracle\virtualbox\</Image><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
+			<Image condition="begin with">c:\program files\oracle\virtualbox\</Image><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 			<Image condition="is">c:\program files (x86)\microsoft office\root\office16\sdxhelper.exe</Image>
 			<Image condition="is">c:\Windows\system32\usocoreworker.exe</Image>
 			<Image condition="is">c:\Windows\system32\dxgiadaptercache.exe</Image>
@@ -440,25 +440,25 @@
 			<Image condition="is">C:\Program Files (x86)\BigFix Enterprise\BES Server\BESRootServer.exe</Image>
 			<Image condition="is">C:\Program Files (x86)\Trend Micro\Control Manager\CmdProcessor.exe</Image>
 			<Image condition="is">D:\Program Files (x86)\Symantec\LiveUpdate Administrator\pgsql\bin\postgres.exe</Image>
-			<Image condition="begin with">C:\Program Files\Fortinet\FortiClient\</Image><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
+			<Image condition="begin with">C:\Program Files\Fortinet\FortiClient\</Image><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 			<Image condition="is">C:\Program Files (x86)\ossec-agent\ossec-agent.exe</Image>			
-			<Image condition="begin with">C:\ProgramData\Microsoft\Windows Defender\Platform\</Image><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-			<Image condition="begin with">C:\Program Files (x86)\Fortinet\FortiClient\</Image><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-			<Image condition="begin with">C:\Program Files\Fortinet\FortiClient\</Image><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-			<Image condition="begin with">C:\Program Files (x86)\OpenDNS Updater\</Image><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-			<Image condition="end with">AppData\Local\Microsoft\Teams\current\Teams.exe</Image> <!--Microsoft: Teams--><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-			<Image condition="begin with">C:\Program Files\HP Inc\</Image><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-			<Image condition="begin with">C:\Program Files (x86)\Trend Micro\</Image><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-			<Image condition="begin with">C:\Program Files\Trend Micro\</Image><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-			<Image condition="begin with">C:\Program Files (x86)\Microsoft Visual Studio\</Image><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-			<Image condition="begin with">C:\Program Files\Microsoft Office\root\</Image><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-			<Image condition="begin with">C:\Program Files (x86)\Symantec\Symantec Endpoint Protection\</Image><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
+			<Image condition="begin with">C:\ProgramData\Microsoft\Windows Defender\Platform\</Image><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+			<Image condition="begin with">C:\Program Files (x86)\Fortinet\FortiClient\</Image><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+			<Image condition="begin with">C:\Program Files\Fortinet\FortiClient\</Image><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+			<Image condition="begin with">C:\Program Files (x86)\OpenDNS Updater\</Image><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+			<Image condition="end with">AppData\Local\Microsoft\Teams\current\Teams.exe</Image> <!--Microsoft: Teams--><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+			<Image condition="begin with">C:\Program Files\HP Inc\</Image><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+			<Image condition="begin with">C:\Program Files (x86)\Trend Micro\</Image><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+			<Image condition="begin with">C:\Program Files\Trend Micro\</Image><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+			<Image condition="begin with">C:\Program Files (x86)\Microsoft Visual Studio\</Image><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+			<Image condition="begin with">C:\Program Files\Microsoft Office\root\</Image><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+			<Image condition="begin with">C:\Program Files (x86)\Symantec\Symantec Endpoint Protection\</Image><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 			<Image condition="is">c:\riot games\league of legends\leagueclient.exe</Image>
 			<Image condition="is">c:\Windows\system32\svchost.exe</Image>
 			<Image condition="is">c:\program files (x86)\steam\steam.exe</Image>
 			<Image condition="is">c:\riot games\riot client\riotclientservices.exe</Image>
 			<Image condition="is">c:\riot games\league of legends\game\league of legends.exe</Image>
-			<Image condition="is">c:\Windows\sysmon.exe</Image><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
+			<Image condition="is">c:\Windows\sysmon.exe</Image><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 			<Image condition="is">c:\program files\Windowsapps\microsoft.xboxgamingoverlay_3.38.25003.0_x64__8wekyb3d8bbwe\gamebar.exe</Image>
 			<Image condition="is">c:\Windows\system32\gamebarpresencewriter.exe</Image>
 			<DestinationHostname condition="end with">microsoft.com</DestinationHostname> <!--Microsoft:Update delivery-->
@@ -480,8 +480,8 @@
 			<Image condition="is">C:\Windows\System32\SearchProtocolHost.exe</Image>
 			<Image condition="is">C:\Windows\System32\smartscreen.exe</Image>
 			<Image condition="end with">AppData\Local\Programs\Microsoft VS Code\Code.exe</Image>
-			<Image condition="begin with">C:\Program Files (x86)\</Image><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-			<Image condition="begin with">C:\Program Files\</Image><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
+			<Image condition="begin with">C:\Program Files (x86)\</Image><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+			<Image condition="begin with">C:\Program Files\</Image><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 			<Image condition="is">C:\Windows\System32\conhost.exe</Image>
 			<Image condition="is">C:\Windows\System32\dllhost.exe</Image>
 			<Image condition="is">C:\Windows\System32\svchost.exe</Image>
@@ -491,8 +491,8 @@
 			<Image condition="is">C:\Windows\system32\backgroundtaskhost.exe</Image>
 			<Image condition="is">C:\Windows\System32\SearchFilterHost.exe</Image>
 			<Image condition="is">C:\Windows\System32\UsoClient.exe</Image>
-			<Image condition="end with">\SWELF.exe</Image><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-			<Image condition="is">c:\Windows\syswow64\cmd.exe</Image><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
+			<Image condition="end with">\SWELF.exe</Image><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+			<Image condition="is">c:\Windows\syswow64\cmd.exe</Image><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 			<Image condition="is">C:\Windows\System32\ctfmon.exe</Image>
 			<Image condition="is">C:\Windows\System32\SpatialAudioLicenseSrv.exe</Image>
 			<Image condition="is">C:\Windows\System32\MoUsoCoreWorker.exe</Image>
@@ -1696,28 +1696,28 @@
 			  <ImageLoaded condition="is">C:\Windows\System32\msi.dll</ImageLoaded>
 			  <ImageLoaded condition="is">C:\Windows\System32\userenv.dll</ImageLoaded>
 			  <ImageLoaded condition="is">C:\Windows\System32\winmm.dll</ImageLoaded>
-			  <ImageLoaded condition="end with">.exe</ImageLoaded><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
+			  <ImageLoaded condition="end with">.exe</ImageLoaded><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 			  <Image condition="is">C:\Program Files (x86)\Google\Update\GoogleUpdate.exe</Image>
 			  <Image condition="is">C:\Windows\System32\taskeng.exe</Image>
 			  <Image condition="is">C:\Program Files\VMware\VMware Tools\TPAutoConnect.exe</Image>
 			  <Image condition="is">C:\Program Files\Windows Defender\NisSrv.exe</Image>
 			  <Image condition="is">C:\Program Files\Windows Defender\MsMpEng.exe</Image>
-			  <Image condition="is">C:\Windows\System32\dllhost.exe</Image><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-			  <Image condition="begin with">C:\Windows\Microsoft.NET\Framework64\</Image><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
+			  <Image condition="is">C:\Windows\System32\dllhost.exe</Image><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+			  <Image condition="begin with">C:\Windows\Microsoft.NET\Framework64\</Image><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 			  <Image condition="is">C:\Windows\System32\DeviceCensus.exe</Image>
 			  <Image condition="is">C:\Windows\System32\systeminfo.exe</Image>
 			  <Image condition="is">C:\Windows\System32\LockAppHost.exe</Image>
 			  <Image condition="is">C:\Program Files\Google\Update\GoogleUpdate.exe</Image>
-			  <Image condition="is">C:\Windows\System32\wbem\WmiPrvSE.exe</Image><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
+			  <Image condition="is">C:\Windows\System32\wbem\WmiPrvSE.exe</Image><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 			  <Image condition="is">C:\Windows\System32\SrTasks.exe</Image>
 			  <Image condition="begin with">C:\Windows\Microsoft.NET\Framework\</Image>
 			  <Image condition="is">C:\Windows\System32\wbem\WmiApSrv.exe</Image>
 			  <Image condition="is">C:\Windows\SysWOW64\wbem\WmiPrvSE.exe</Image>
 			  <Image condition="is">C:\Program Files\Microsoft Policy Platform\policyHost.exe</Image>
-			  <Image condition="is">C:\Windows\System32\SearchProtocolHost.exe</Image><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-			  <Image condition="is">C:\Windows\System32\SearchFilterHost.exe</Image><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
+			  <Image condition="is">C:\Windows\System32\SearchProtocolHost.exe</Image><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+			  <Image condition="is">C:\Windows\System32\SearchFilterHost.exe</Image><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 			  <Image condition="is">C:\Windows\System32\backgroundTaskHost.exe</Image>
-			  <Image condition="is">C:\Windows\servicing\TrustedInstaller.exe</Image><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
+			  <Image condition="is">C:\Windows\servicing\TrustedInstaller.exe</Image><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 			  <Image condition="begin with">C:\Windows\System32\taskhost</Image>
 			  <Image condition="is">C:\Windows\System32\LogonUI.exe</Image>
 			  <Image condition="is">C:\Windows\System32\wifitask.exe</Image>
@@ -1727,11 +1727,11 @@
 			  <Image condition="is">C:\Program Files (x86)\Google\Chrome\Application\chrome.exe</Image>
 			  <Image condition="is">C:\Windows\System32\raserver.exe</Image>
 			  <Image condition="is">C:\Windows\System32\RuntimeBroker.exe</Image>
-			  <Image condition="begin with">C:\Windows\SystemApps\</Image><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
+			  <Image condition="begin with">C:\Windows\SystemApps\</Image><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 			  <Image condition="is">C:\Windows\System32\SearchIndexer.exe</Image>
-			  <Image condition="is">C:\Windows\explorer.exe</Image><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
+			  <Image condition="is">C:\Windows\explorer.exe</Image><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 			  <Image condition="is">C:\Windows\System32\sppsvc.exe</Image><!-- noisy for taskschd.dll-->
-			  <Image condition="is">C:\Program Files\Internet Explorer\iexplore.exe</Image><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
+			  <Image condition="is">C:\Program Files\Internet Explorer\iexplore.exe</Image><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 			  <Image condition="begin with">C:\Windows\CCM\</Image>
 			  <Image condition="is">C:\Program Files\Manufacturer\Endpoint Agent\edpa.exe</Image>
 			  <Image condition="is">C:\Program Files\Microsoft Data Protection Manager\DPM\bin\DPMClientService.exe</Image>
@@ -1741,9 +1741,9 @@
 			  <Image condition="is">C:\Windows\System32\mmc.exe</Image>
 			  <Image condition="is">C:\Program Files\Synaptics\SynTP\SynTPEnh.exe</Image>
 			  <Image condition="is">C:\Windows\System32\wlanext.exe</Image>
-			  <Image condition="begin with">C:\Program Files\Microsoft SQL Server\</Image><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
+			  <Image condition="begin with">C:\Program Files\Microsoft SQL Server\</Image><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 			  <Image condition="is">C:\Windows\System32\ibtsiva.exe</Image>
-			  <Image condition="is">C:\Windows\System32\lsass.exe</Image><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
+			  <Image condition="is">C:\Windows\System32\lsass.exe</Image><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 			  <Image condition="is">C:\Windows\System32\dwm.exe</Image>
 			  <Image condition="is">C:\Windows\System32\MicTray64.exe</Image>
 			  <Image condition="is">C:\Program Files\Intel\WiFi\bin\EvtEng.exe</Image>
@@ -1763,11 +1763,11 @@
 			  <Image condition="is">C:\Program Files (x86)\Kontiki\KHost.exe</Image>
 			  <Image condition="is">C:\Windows\System32\tasklist.exe</Image>
 			  <Image condition="is">C:\Program Files (x86)\Google\Update\GoogleUpdate.exe</Image>
-			  <Image condition="end with">procexp64.exe</Image><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-			  <Image condition="end with">procmon.exe</Image><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-			  <Image condition="end with">procexp.exe</Image><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-			  <Image condition="end with">wmic.exe</Image><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-			  <Image condition="end with">AppData\Local\Microsoft\OneDrive\OneDrive.exe</Image><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
+			  <Image condition="end with">procexp64.exe</Image><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+			  <Image condition="end with">procmon.exe</Image><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+			  <Image condition="end with">procexp.exe</Image><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+			  <Image condition="end with">wmic.exe</Image><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+			  <Image condition="end with">AppData\Local\Microsoft\OneDrive\OneDrive.exe</Image><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 			  <ImageLoaded condition="begin with">C:\ProgramData\Microsoft\Windows Defender\Platform\</ImageLoaded>
 			  <Image>C:\Windows\System32\ClipRenew.exe</Image>
 			  <ImageLoaded condition="is">C:\Windows\SysWOW64\msi.dll</ImageLoaded>
@@ -1787,13 +1787,13 @@
 			<Image condition="is">C:\Windows\System32\mmc.exe</Image>
 			<Image condition="is">C:\Windows\sysmon64.exe</Image>
 			<Image condition="is">C:\Windows\sysmon.exe</Image>
-			<Image condition="end with">\SWELF.exe</Image><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
+			<Image condition="end with">\SWELF.exe</Image><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 			<Image condition="is">C:\Windows\System32\svchost.exe</Image>
 			<Image condition="is">C:\Windows\System32\inetsrv\w3wp.exe</Image>
 			<Image condition="is">C:\Program Files (x86)\VMware\Infrastructure\Virtual Infrastructure Client\Launcher\VpxClient.exe</Image>
 			<Image condition="is">C:\Windows\System32\backgroundTaskHost.exe</Image> <!-- Windows Store apps unsigned -->
-			<Image condition="contains">SQL Server</Image><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-			<Image condition="contains">Exchange Server</Image><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
+			<Image condition="contains">SQL Server</Image><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+			<Image condition="contains">Exchange Server</Image><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 			<ImageLoaded condition="contains">Exchange Server</ImageLoaded>
 			<ImageLoaded condition="contains">SQL Server</ImageLoaded>
 			<ImageLoaded condition="begin with">C:\Program Files\WindowsApps</ImageLoaded>
@@ -1815,13 +1815,13 @@
 			<ImageLoaded condition="begin with">C:\Program Files\WindowsApps</ImageLoaded>
 			<ImageLoaded condition="is">C:\Program Files\Microsoft SQL Server\100\Shared\dbghelp.dll</ImageLoaded>
 			<!-- Exclude SPLUNK HEY! NOTE This needs to point to the exact path of your splunk install to avoid a blind spot if you dont want to log it-->
-			<Image condition="end with">splunkd.exe</Image><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-			<Image condition="end with">splunk-MonitorNoHandle.exe</Image><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-			<Image condition="end with">splunk-regmon.exe</Image><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-			<Image condition="end with">splunk-netmon.exe</Image><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-			<Image condition="end with">splunk-powershell.exe</Image><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-			<Image condition="end with">splunk-winprintmon.exe</Image><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-			<Image condition="end with">splunk-admon.exe</Image><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
+			<Image condition="end with">splunkd.exe</Image><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+			<Image condition="end with">splunk-MonitorNoHandle.exe</Image><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+			<Image condition="end with">splunk-regmon.exe</Image><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+			<Image condition="end with">splunk-netmon.exe</Image><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+			<Image condition="end with">splunk-powershell.exe</Image><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+			<Image condition="end with">splunk-winprintmon.exe</Image><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+			<Image condition="end with">splunk-admon.exe</Image><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 			<Rule groupRelation="and">
                 <Image condition="is">c:\Windows\system32\Windowspowershell\v1.0\powershell.exe</Image>
             <ImageLoaded condition="end with">system.management.automation.ni.dll</ImageLoaded>
@@ -1903,10 +1903,10 @@
 		<RuleGroup name="CreateRemoteThread exclude" groupRelation="or">
 		<CreateRemoteThread onmatch="exclude">
 			<!--COMMENT: Exclude mostly-safe sources and log anything else.-->
-			<SourceImage condition="begin with">C:\Program Files\HP Inc\</SourceImage><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
+			<SourceImage condition="begin with">C:\Program Files\HP Inc\</SourceImage><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 			<SourceImage condition="begin with">C:\Program Files (x86)\Trend Micro\</SourceImage>
-			<SourceImage condition="is">C:\Windows\System32\wbem\WmiPrvSE.exe</SourceImage><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-			<SourceImage condition="is">C:\Windows\SysWOW64\wbem\WmiPrvSE.exe</SourceImage> <!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
+			<SourceImage condition="is">C:\Windows\System32\wbem\WmiPrvSE.exe</SourceImage><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+			<SourceImage condition="is">C:\Windows\SysWOW64\wbem\WmiPrvSE.exe</SourceImage> <!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 			<SourceImage condition="is">C:\Windows\Explorer.EXE</SourceImage>
 			<SourceImage condition="is">C:\Program Files\Trend Micro\AMSP\coreServiceShell.exe</SourceImage>
 			<SourceImage condition="is">C:\Windows\system32\svchost.exe</SourceImage>
@@ -1918,8 +1918,8 @@
 			<!--<StartModule condition="is">C:\Windows\system32\kernel32.dll</StartModule>This does createremote thread for injection as well as other things-->
 			<SourceImage condition="is">C:\Program Files (x86)\Webroot\WRSA.exe</SourceImage>
 			<SourceImage condition="begin with">C:\Program Files (x86)\Fortinet\FortiClient\</SourceImage>
-			<SourceImage condition="begin with">C:\Program Files (x86)\</SourceImage><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-			<SourceImage condition="begin with">C:\Program Files\</SourceImage><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
+			<SourceImage condition="begin with">C:\Program Files (x86)\</SourceImage><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+			<SourceImage condition="begin with">C:\Program Files\</SourceImage><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 			<TargetImage condition="end with">Google\Chrome\Application\chrome.exe</TargetImage>
 		    <StartFunction>EtwpNotificationThread</StartFunction><!-- observed as FP from -->
 			<StartFunction>RtlpQueryProcessDebugInformationRemote</StartFunction><!-- observed as a FP from procexp64.exe -->
@@ -1936,11 +1936,11 @@
 		<!--DATA: UtcTime, ProcessGuid, ProcessId, Image, Device-->
 		<RuleGroup name="RawAccessRead exclude" groupRelation="or">
 		<RawAccessRead onmatch="exclude">
-			<Image condition="begin with">C:\Program Files (x86)\</Image> <!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-			<Image condition="begin with">C:\Program Files \</Image> <!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-			<Image condition="begin with">C:\Windows\</Image><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-			<Image condition="begin with">C:\ProgramData\Microsoft\Windows Defender\Platform\</Image><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-			<Image condition="is">system</Image><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
+			<Image condition="begin with">C:\Program Files (x86)\</Image> <!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+			<Image condition="begin with">C:\Program Files \</Image> <!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+			<Image condition="begin with">C:\Windows\</Image><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+			<Image condition="begin with">C:\ProgramData\Microsoft\Windows Defender\Platform\</Image><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+			<Image condition="is">system</Image><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 			<Image condition="is">C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.1907.4-0\MsMpEng.exe</Image>
 			<Image condition="is">C:\Windows\System32\svchost.exe</Image>
 			<Image condition="is">C:\Program Files\VMWare\VMWare Tools\vmtoolsd.exe</Image>
@@ -2049,10 +2049,10 @@
 		
 		<RuleGroup name="ProcessAccess exclude" groupRelation="or">
 		<ProcessAccess onmatch="exclude">
-		  <SourceImage condition="begin with">C:\ProgramData\Microsoft\Windows Defender\platform\</SourceImage><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-		  <SourceImage condition="end with">\Bin\FMS.exe</SourceImage> <!-- Exchange Process --><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
+		  <SourceImage condition="begin with">C:\ProgramData\Microsoft\Windows Defender\platform\</SourceImage><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+		  <SourceImage condition="end with">\Bin\FMS.exe</SourceImage> <!-- Exchange Process --><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 		  <SourceImage condition="end with">C:\Windows\System32\smss.exe</SourceImage>
-		  <SourceImage condition="end with">\Google\Update\GoogleUpdate.exe</SourceImage><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
+		  <SourceImage condition="end with">\Google\Update\GoogleUpdate.exe</SourceImage><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 		  <SourceImage condition="is">C:\Program Files\Trend Micro\AMSP\coreServiceShell.exe</SourceImage>
 		  <SourceImage condition="is">C:\Program Files (x86)\Webroot\WRSA.exe</SourceImage>
 		  <SourceImage condition="is">C:\Program Files\Webroot\WRSA.exe</SourceImage>
@@ -2065,35 +2065,35 @@
 		  <SourceImage condition="end with">\Common Files\Adobe\AdobeGCClient\AGSService.exe</SourceImage>
 		  <SourceImage condition="begin with">C:\ProgramData\WebEx\webex\</SourceImage>
 		  <SourceImage condition="begin with">b:\steamlibrary\steamapps\</SourceImage><!-- Could miss things if you leave this uncommented, but it also reduces noise for me-->
-		  <SourceImage condition="end with">\Dropbox\Update\DropboxUpdate.exe</SourceImage><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-		  <SourceImage condition="end with">LTSvc\LTSVC.exe</SourceImage><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-		  <SourceImage condition="end with">\Trusteer\Rapport\bin\RapportMgmtService.exe</SourceImage><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-		  <SourceImage condition="end with">Adobe\AdobeGCClient\AGMService.exe</SourceImage><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-		  <SourceImage condition="end with">NT-ware Shared\MomAdmSvc\MomAdmSvc.exe</SourceImage><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-		  <SourceImage condition="end with">\Autodesk\Autodesk Desktop App\AdAppMgrSvc.exe</SourceImage><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-		  <SourceImage condition="is">c:\Windows\system32\wbem\wmiprvse.exe</SourceImage><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-		  <SourceImage condition="is">C:\Windows\sysWOW64\wbem\wmiprvse.exe</SourceImage><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-		  <SourceImage condition="end with">\vmtoolsd.exe</SourceImage><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-		  <SourceImage condition="end with">\VBoxService.exe</SourceImage><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-		  <SourceImage condition="end with">\LTSVC.exe</SourceImage><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-		  <SourceImage condition="end with">\taskmgr.exe</SourceImage><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-		  <SourceImage condition="end with">\procexp64.exe</SourceImage><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-		  <SourceImage condition="end with">\procmon.exe</SourceImage><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-		  <SourceImage condition="end with">\procexp.exe</SourceImage> <!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
+		  <SourceImage condition="end with">\Dropbox\Update\DropboxUpdate.exe</SourceImage><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+		  <SourceImage condition="end with">LTSvc\LTSVC.exe</SourceImage><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+		  <SourceImage condition="end with">\Trusteer\Rapport\bin\RapportMgmtService.exe</SourceImage><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+		  <SourceImage condition="end with">Adobe\AdobeGCClient\AGMService.exe</SourceImage><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+		  <SourceImage condition="end with">NT-ware Shared\MomAdmSvc\MomAdmSvc.exe</SourceImage><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+		  <SourceImage condition="end with">\Autodesk\Autodesk Desktop App\AdAppMgrSvc.exe</SourceImage><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+		  <SourceImage condition="is">c:\Windows\system32\wbem\wmiprvse.exe</SourceImage><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+		  <SourceImage condition="is">C:\Windows\sysWOW64\wbem\wmiprvse.exe</SourceImage><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+		  <SourceImage condition="end with">\vmtoolsd.exe</SourceImage><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+		  <SourceImage condition="end with">\VBoxService.exe</SourceImage><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+		  <SourceImage condition="end with">\LTSVC.exe</SourceImage><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+		  <SourceImage condition="end with">\taskmgr.exe</SourceImage><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+		  <SourceImage condition="end with">\procexp64.exe</SourceImage><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+		  <SourceImage condition="end with">\procmon.exe</SourceImage><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+		  <SourceImage condition="end with">\procexp.exe</SourceImage> <!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 		  <SourceImage condition="is">C:\Windows\system32\csrss.exe</SourceImage> 
 		  <SourceImage condition="is">C:\Windows\system32\wininit.exe</SourceImage> 
 		  <SourceImage condition="is">C:\Windows\System32\lsm.exe</SourceImage>
 		  <SourceImage condition="is">C:\Windows\system32\MRT.exe</SourceImage> 
-		  <SourceImage condition="end with">\Citrix\System32\wfshell.exe</SourceImage> <!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
+		  <SourceImage condition="end with">\Citrix\System32\wfshell.exe</SourceImage> <!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 		  <SourceImage condition="is">C:\Program Files (x86)\Kontiki\KService.exe</SourceImage>
 		  <SourceImage condition="is">C:\Windows\system32\dgagent\DSAGENT.exe</SourceImage>
 		  <SourceImage condition="is">C:\Program Files (x86)\BigFix Enterprise\BES Client\BESClient.exe</SourceImage>
-		  <SourceImage condition="begin with">C:\ProgramData\Microsoft\Windows Defender\platform\</SourceImage><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
+		  <SourceImage condition="begin with">C:\ProgramData\Microsoft\Windows Defender\platform\</SourceImage><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 		  <SourceImage condition="is">C:\Program Files\Trend Micro\Deep Security Agent\dsa.exe</SourceImage> 
-		  <SourceImage condition="end with">AppData\Local\Microsoft\Teams\current\Teams.exe</SourceImage><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-		  <SourceImage condition="end with">Microsoft.Identity.AadConnect.Health.AadSync.Host.exe</SourceImage><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
+		  <SourceImage condition="end with">AppData\Local\Microsoft\Teams\current\Teams.exe</SourceImage><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+		  <SourceImage condition="end with">Microsoft.Identity.AadConnect.Health.AadSync.Host.exe</SourceImage><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 		  <SourceImage condition="is">C:\Program Files (x86)\Cisco\Cisco AnyConnect Secure Mobility Client\vpnagent.exe</SourceImage>
-		  <SourceImage condition="end with">Commvault\ContentStore\Base\cvd.exe</SourceImage><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
+		  <SourceImage condition="end with">Commvault\ContentStore\Base\cvd.exe</SourceImage><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 		  <SourceImage condition="is">C:\Program Files (x86)\Webroot\WRSA.exe</SourceImage>
 		  <SourceImage condition="is">C:\Program Files\Webroot\WRSA.exe</SourceImage>
 		  <SourceImage condition="is">C:\Program Files\Windows Defender\MsMpEng.exe</SourceImage>
@@ -2111,15 +2111,15 @@
 			  <SourceImage condition="begin with">C:\Windows\syswow64\</SourceImage>
 			  <SourceImage condition="is">C:\Program Files (x86)\N-able Technologies\Windows Agent\bin\agent.exe</SourceImage>
 			  <SourceImage condition="is">C:\Program Files\N-able Technologies\AVDefender\EPUpdateService.exe</SourceImage>
-			  <SourceImage condition="end with">\EMET_Service.exe</SourceImage><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-			  <SourceImage condition="end with">\EMET_GUI.exe</SourceImage><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-			  <SourceImage condition="end with">\procexp64.exe</SourceImage><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-			  <SourceImage condition="end with">\procmon64.exe</SourceImage><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-			  <SourceImage condition="end with">\software_reporter_tool.exe</SourceImage><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-			  <SourceImage condition="end with">\NGenTask.exe</SourceImage><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-			  <SourceImage condition="end with">\Autoruns.exe</SourceImage><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-			  <SourceImage condition="end with">\Autorunsc.exe</SourceImage><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-			  <SourceImage condition="contains">\processhacker</SourceImage><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
+			  <SourceImage condition="end with">\EMET_Service.exe</SourceImage><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+			  <SourceImage condition="end with">\EMET_GUI.exe</SourceImage><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+			  <SourceImage condition="end with">\procexp64.exe</SourceImage><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+			  <SourceImage condition="end with">\procmon64.exe</SourceImage><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+			  <SourceImage condition="end with">\software_reporter_tool.exe</SourceImage><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+			  <SourceImage condition="end with">\NGenTask.exe</SourceImage><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+			  <SourceImage condition="end with">\Autoruns.exe</SourceImage><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+			  <SourceImage condition="end with">\Autorunsc.exe</SourceImage><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+			  <SourceImage condition="contains">\processhacker</SourceImage><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 			<SourceImage condition="end with">\AppData\Local\Programs\Microsoft VS Code\Code.exe</SourceImage><!--VSCode path for default install-->
 			<SourceImage condition="is">C:\Program Files (x86)\VMware\VMWare Player\vmware-authd.exe</SourceImage>
 			<SourceImage condition="is">C:\Program Files\Microsoft Security Client\MsMpEng.exe</SourceImage>
@@ -2129,18 +2129,18 @@
 			<SourceImage condition="is">C:\Program Files\WinZip\FAHWindow64.exe</SourceImage>
 			<SourceImage condition="is">C:\Program Files (x86)\VMware\VMware Workstation\vmware-authd.exe</SourceImage>
 			<SourceImage condition="is">C:\Windows\CCM\CcmExec.exe</SourceImage>
-			<SourceImage condition="end with">\procexp64.exe</SourceImage><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-			<SourceImage condition="begin with">C:\Windows\</SourceImage> <!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-			<SourceImage condition="begin with">C:\Program Files (x86)\</SourceImage> <!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-			<SourceImage condition="begin with">C:\Program Files\</SourceImage> <!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
+			<SourceImage condition="end with">\procexp64.exe</SourceImage><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+			<SourceImage condition="begin with">C:\Windows\</SourceImage> <!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+			<SourceImage condition="begin with">C:\Program Files (x86)\</SourceImage> <!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+			<SourceImage condition="begin with">C:\Program Files\</SourceImage> <!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 			<SourceImage condition="begin with">C:\programdata\microsoft\Windows defender\platform\</SourceImage>
-			<SourceImage condition="end with">\GoogleUpdate.exe</SourceImage><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-			<SourceImage condition="end with">\LTSVC.exe</SourceImage><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-			<SourceImage condition="end with">\SWELF.exe</SourceImage><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-			<SourceImage condition="end with">\taskmgr.exe</SourceImage><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-			<SourceImage condition="begin with">C:\Program Files\Fortinet\FortiClient\</SourceImage><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-			<SourceImage condition="end with">\VBoxService.exe</SourceImage> <!-- Virtual Box --><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-			<SourceImage condition="end with">\vmtoolsd.exe</SourceImage> <!-- VMWare --><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
+			<SourceImage condition="end with">\GoogleUpdate.exe</SourceImage><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+			<SourceImage condition="end with">\LTSVC.exe</SourceImage><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+			<SourceImage condition="end with">\SWELF.exe</SourceImage><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+			<SourceImage condition="end with">\taskmgr.exe</SourceImage><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+			<SourceImage condition="begin with">C:\Program Files\Fortinet\FortiClient\</SourceImage><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+			<SourceImage condition="end with">\VBoxService.exe</SourceImage> <!-- Virtual Box --><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+			<SourceImage condition="end with">\vmtoolsd.exe</SourceImage> <!-- VMWare --><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 			<SourceImage condition="end with">\Citrix\System32\wfshell.exe</SourceImage> <!--Citrix process in C:\Program Files (x86)\Citrix\System32\wfshell.exe -->
 			<SourceImage condition="is">C:\Windows\System32\lsm.exe</SourceImage> <!-- System process under C:\Windows\System32\lsm.exe -->
 			<SourceImage condition="end with">\Microsoft.Identity.AadConnect.Health.AadSync.Host.exe</SourceImage> <!-- Microsoft Azure AD Connect Health Sync Agent -->
@@ -2179,11 +2179,11 @@
 			<Image condition="is">C:\Program Files (x86)\Notepad++\notepad++.exe</Image>
 			<Image condition="is">C:\ProgramData\Microsoft\Windows Defender\platform\4.18.1907.4-0\MsMpEng.exe</Image>
 			<Image condition="begin with">C:\ProgramData\Microsoft\Windows Defender\platform\</Image>
-			<Image condition="begin with">C:\Program Files\Fortinet\FortiClient\</Image><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-			<Image condition="end with">\SearchUI.exe</Image><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-			<Image condition="begin with">C:\Program Files\Fortinet\FortiClient\</Image><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-			<Image condition="end with">\AppData\Local\Microsoft\Teams\current\Teams.exe</Image><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-			<Image condition="begin with">C:\Program Files\Mozilla Firefox\</Image><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
+			<Image condition="begin with">C:\Program Files\Fortinet\FortiClient\</Image><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+			<Image condition="end with">\SearchUI.exe</Image><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+			<Image condition="begin with">C:\Program Files\Fortinet\FortiClient\</Image><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+			<Image condition="end with">\AppData\Local\Microsoft\Teams\current\Teams.exe</Image><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+			<Image condition="begin with">C:\Program Files\Mozilla Firefox\</Image><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 			<Image condition="is">C:\Windows\SystemApps\Microsoft.Windows.Cortana_cw5n1h2txyewy\SearchUI.exe</Image>
 			<Image condition="begin with">C:\Program Files (x86)\Fortinet\FortiClient\</Image> 
 			<Image condition="is">C:\Program Files (x86)\EMET 5.5\EMET_Service.exe</Image> <!--Microsoft:EMET: Writes to C:\Windows\AppPatch\-->
@@ -2236,27 +2236,27 @@
 			<Image condition="is">C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe</Image>
 			<TargetFilename condition="contains">\AppData\Local\Microsoft\Edge\User Data\Default\Service Worker\CacheStorage\</TargetFilename>
 			</Rule>
-			<Rule groupRelation="and"><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
+			<Rule groupRelation="and"><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 			<Image condition="is">C:\Program Files (x86)\Mozilla Firefox\firefox.exe</Image>
 			<TargetFilename condition="contains">\AppData\Local\Mozilla\Firefox\Profiles\</TargetFilename>
 			</Rule>
-			<Rule groupRelation="and"><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
+			<Rule groupRelation="and"><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 			<Image condition="is">C:\WINDOWS\Sysmon.exe</Image>
 			<TargetFilename condition="is">C:\Sysmon\CLIP-</TargetFilename>
 			</Rule>
 			<Image condition="is">c:\riot games\riot client\riotclientservices.exe</Image>
-			<TargetFilename condition="begin with">C:\Windows\System32\Tasks\OfficeSoftwareProtectionPlatform\SvcRestartTask</TargetFilename><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
+			<TargetFilename condition="begin with">C:\Windows\System32\Tasks\OfficeSoftwareProtectionPlatform\SvcRestartTask</TargetFilename><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 			<TargetFilename condition="begin with">C:\Windows\system32\DriverStore\Temp\</TargetFilename> <!-- Microsoft:Windows: Temp files by DrvInst.exe-->
-			<TargetFilename condition="begin with">C:\Program Files\WindowsApps\</TargetFilename><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
+			<TargetFilename condition="begin with">C:\Program Files\WindowsApps\</TargetFilename><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 			<TargetFilename condition="begin with">C:\Windows\system32\wbem\Performance\</TargetFilename> <!-- Microsoft:Windows: Created in wbem by WMIADAP.exe-->
 			<TargetFilename condition="end with">WRITABLE.TST</TargetFilename> <!-- Microsoft:Windows: Created in wbem by svchost-->
 			<TargetFilename condition="end with">.cdownload</TargetFilename> 
-			<TargetFilename condition="end with">.tmp</TargetFilename> <!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
+			<TargetFilename condition="end with">.tmp</TargetFilename> <!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 			<TargetFilename condition="end with">.etl</TargetFilename>
 			<TargetFilename condition="end with">.pf</TargetFilename>
-			<TargetFilename condition="end with">.log</TargetFilename><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
+			<TargetFilename condition="end with">.log</TargetFilename><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 			<TargetFilename condition="end with">.rslc</TargetFilename> 
-			<TargetFilename condition="begin with">C:\Windows\SoftwareDistribution\Download\</TargetFilename><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
+			<TargetFilename condition="begin with">C:\Windows\SoftwareDistribution\Download\</TargetFilename><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 			<TargetFilename condition="begin with">C:\Windows\Installer\</TargetFilename> <!--Microsoft:Windows:Installer: Ignore MSI installer files caching-->
 			<TargetFilename condition="begin with">C:\$Windows.~BT\Sources\</TargetFilename> <!-- Microsoft:Windows: Feature updates containing lots of .exe and .sys-->
 			<TargetFilename condition="is">C:\Windows\System32\Tasks\Adobe Acrobat Update Task</TargetFilename>
@@ -2264,9 +2264,9 @@
 			<TargetFilename condition="begin with">C:\Windows\System32\LogFiles\</TargetFilename>
 			<TargetFilename condition="is">C:\Tools\SysinternalsSuite\Sysmon64.exe</TargetFilename> 
 			<TargetFilename condition="is">C:\Windows\microsoft.net\ngennicupdatelock.dat</TargetFilename>
-			<TargetFilename condition="begin with">C:\Program Files\Fortinet\FortiClient\</TargetFilename> <!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-			<TargetFilename condition="contains">\AppData\Roaming\Mozilla\Firefox\Profiles\</TargetFilename><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
-			<TargetFilename condition="contains">\AppData\Roaming\Microsoft\Teams\</TargetFilename><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
+			<TargetFilename condition="begin with">C:\Program Files\Fortinet\FortiClient\</TargetFilename> <!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+			<TargetFilename condition="contains">\AppData\Roaming\Mozilla\Firefox\Profiles\</TargetFilename><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+			<TargetFilename condition="contains">\AppData\Roaming\Microsoft\Teams\</TargetFilename><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 		</FileCreate>
 		</RuleGroup>
 		
@@ -2595,7 +2595,7 @@
 			<Image condition="is">C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\ServiceHub\Hosts\ServiceHub.Host.CLR.x86\ServiceHub.RoslynCodeAnalysisService32.exe</Image>
 			<Image condition="is">C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\ServiceHub\Hosts\ServiceHub.Host.CLR.x86\ServiceHub.Host.CLR.x86.exe</Image>
 			<Image condition="is">C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\ServiceHub\Hosts\ServiceHub.Host.CLR.x64\ServiceHub.DataWarehouseHost.exe</Image>
-			<Image condition="end with">\SWELF.exe</Image><!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->
+			<Image condition="end with">\SWELF.exe</Image><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 			<Image condition="is">C:\Program Files (x86)\Notepad++\notepad++.exe</Image>
 			<Image condition="is">C:\Program Files (x86)\Microsoft Office\Root\VFS\ProgramFilesCommonX86\Microsoft Shared\OFFICE16\SDXHelper.exe</Image>
 			<Image condition="is">C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\PrivateAssemblies\ScriptedSandbox64.exe</Image> <!--Microsoft:Windows: Changes association registry keys-->
