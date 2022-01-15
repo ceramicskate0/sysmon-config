@@ -223,6 +223,10 @@
 			<Image condition="is">C:\Windows\System32\MoUsoCoreWorker.exe</Image>
 			<CommandLine condition="begin with">C:\Windows\System32\mousocoreworker.exe -Embedding</CommandLine>
 			</Rule>
+			<Rule groupRelation="and">
+			<Image condition="is">C:\Windows\System32\smartscreen.exe</Image>
+			<CommandLine condition="begin with">C:\Windows\System32\smartscreen.exe -Embedding</CommandLine>
+			</Rule>
 			<Rule groupRelation="and"><!-- Could miss things if you comment this, but it also reduces noise-->
 			<Image condition="is">C:\Windows\system32\DllHost.exe</Image>
 			<CommandLine condition="begin with"> "C:\WINDOWS\SysWOW64\DllHost.exe" /Processid:</CommandLine>
@@ -2211,6 +2215,10 @@
 			<Rule groupRelation="and">
 			<Image condition="is">C:\Program Files (x86)\Microsoft Office\Root\Office16\SDXHelper.exe</Image>
 			<TargetFilename condition="contains">\AppData\Local\Microsoft\Office\SolutionPackages</TargetFilename>
+			</Rule>
+			<Rule groupRelation="and">
+			<Image condition="end with">\AppData\Local\Programs\Microsoft VS Code\Code.exe</Image>
+			<TargetFilename condition="contains">AppData\Roaming\Code\Backups\</TargetFilename>
 			</Rule>
 			<Rule groupRelation="and">
 			<Image condition="is">c:\Windows\system32\werfault.exe</Image>
