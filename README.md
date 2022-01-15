@@ -6,7 +6,7 @@ Ceramicskate0's fork of SwiftOnSecurity's sysmon config differs in 1 key area. W
 # Things you need to know:
 Due to ongoing research please search the config file for the comment:
 
-``<!-- Could find things if you comment this, but it also reduces noise when its uncommnted-->`` 
+``<!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->`` 
 
 and review each one (yes there are alot) to see if that EventID and that object on that line is something you want to monitor or not. If you dont want to have that object excluded, comment or remove the line in the config if its in the excluded ruleset. These are decisions I cant make for you. Some of them are good files that I know could be used for evil BUT they do generate alot of noise doing normal activities. I do try and narrow them down to a smaller list but I can only do so much.
 
