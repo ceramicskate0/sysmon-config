@@ -79,35 +79,35 @@
 			<!--SECTION: Microsoft Windows-->
 			<IntegrityLevel condition="is">AppContainer</IntegrityLevel> <!--Microsoft:Windows: Don't care about sandboxed processes-->
 			<Image condition="is">C:\Windows\System32\usocoreworker.exe</Image>
-			<Image condition="is">c:\riot games\league of legends\leagueclient.exe</Image><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
+			<Image condition="is">c:\riot games\league of legends\leagueclient.exe</Image><!-- Could miss things if you comment this, but it also reduces noise-->
 			<Image condition="is">c:\program files (x86)\microsoft visual studio\2019\community\common7\servicehub\hosts\servicehub.host.clr.x64\servicehub.datawarehousehost.exe</Image>
 			<Image condition="is">C:\Windows\System32\UsoClient.exe</Image>
-			<Image condition="is">c:\windows\system32\sdclt.exe</Image>
-			<Image condition="is">c:\windows\system32\mmc.exe</Image>
+			<Image condition="is">c:\Windows\system32\sdclt.exe</Image>
+			<Image condition="is">c:\Windows\system32\mmc.exe</Image>
 			<Image condition="is">C:\Windows\System32\CompPkgSrv.exe</Image>
-			<Image condition="is">c:\windows\system32\sgrmbroker.exe</Image>
-			<Image condition="is">C:\Windows\System32\WerFault.exe</Image><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
+			<Image condition="is">c:\Windows\system32\sgrmbroker.exe</Image>
+			<Image condition="is">C:\Windows\System32\WerFault.exe</Image><!-- Could miss things if you comment this, but it also reduces noise-->
 			<Image condition="is">C:\Program Files (x86)\Microsoft Office\root\VFS\ProgramFilesCommonX86\Microsoft Shared\OFFICE16\SDXHelper.exe</Image>
 			<Image condition="end with">AppData\Roaming\Resilio Sync\Resilio Sync.exe</Image> <!--Resilio Sync-->
 			<Image condition="is">C:\Windows\ImmersiveControlPanel\SystemSettings.exe</Image>
 			<Image condition="begin with">C:\ProgramData\Microsoft\Windows Defender\Platform\</Image>
 			<Image condition="begin with">C:\Program Files\Windows Defender</Image> <!--Microsoft:Windows:Defender in Win10-->
-			<Image condition="is">c:\windows\system32\conhost.exe</Image><!-- Child process of conhost not very good tell, parent of conhost is better for detection. But this is useful if you want to track who is using console per process-->
+			<Image condition="is">c:\Windows\system32\conhost.exe</Image><!-- Child process of conhost not very good tell, parent of conhost is better for detection. But this is useful if you want to track who is using console per process-->
 			<Image condition="is">C:\Program Files\Common Files\microsoft shared\ink\TabTip.exe</Image>
 			<Image condition="is">C:\Program Files (x86)\Common Files\microsoft shared\ink\TabTip32.exe</Image> <!--Microsoft:Windows: Touch Keyboard and Handwriting Panel Helper-->
-			<Image condition="is">C:\Windows\System32\SearchFilterHost.exe</Image><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
+			<Image condition="is">C:\Windows\System32\SearchFilterHost.exe</Image><!-- Could miss things if you comment this, but it also reduces noise-->
 			<Image condition="is">C:\Windows\System32\audiodg.exe</Image>
 			<Image condition="is">C:\Windows\System32\wsqmcons.exe</Image>
 			<Image condition="is">C:\Windows\System32\RuntimeBroker.exe</Image>
 			<Image condition="is">C:\Program Files (x86)\Notepad++\notepad++.exe</Image>
-			<Image condition="is">C:\Windows\System32\SearchProtocolHost.exe</Image><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
+			<Image condition="is">C:\Windows\System32\SearchProtocolHost.exe</Image><!-- Could miss things if you comment this, but it also reduces noise-->
 			<Image condition="is">C:\Program Files\Oracle\VirtualBox\VBoxHeadless.exe</Image>
 			<Image condition="is">C:\Program Files\Oracle\VirtualBox\VBoxNetDHCP.exe</Image>
-			<Image condition="begin with">C:\Program Files (x86)\NVIDIA Corporation\Update Core\</Image><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			<Image condition="begin with">C:\Program Files (x86)\Fortinet\FortiClient\</Image><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			<Image condition="begin with">C:\Program Files\Fortinet\FortiClient\</Image><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			<Image condition="begin with">C:\Program Files\Fortinet\FortiClient\</Image><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			<Image condition="is">C:\Program Files (x86)\SWELF\SWELF.exe</Image><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
+			<Image condition="begin with">C:\Program Files (x86)\NVIDIA Corporation\Update Core\</Image><!-- Could miss things if you comment this, but it also reduces noise-->
+			<Image condition="begin with">C:\Program Files (x86)\Fortinet\FortiClient\</Image><!-- Could miss things if you comment this, but it also reduces noise-->
+			<Image condition="begin with">C:\Program Files\Fortinet\FortiClient\</Image><!-- Could miss things if you comment this, but it also reduces noise-->
+			<Image condition="begin with">C:\Program Files\Fortinet\FortiClient\</Image><!-- Could miss things if you comment this, but it also reduces noise-->
+			<Image condition="is">C:\Program Files (x86)\SWELF\SWELF.exe</Image><!-- Could miss things if you comment this, but it also reduces noise-->
 			<Image condition="is">C:\Program Files\Common Files\microsoft shared\ink\TabTip.exe</Image>
 			<Image condition="is">C:\Program Files (x86)\Fortinet\FortiClient\update_task.exe</Image>
 			<Image condition="is">C:\Windows\system32\CompatTelRunner.exe</Image> <!--Microsoft:Windows: Customer Experience Improvement-->
@@ -135,10 +135,10 @@
 			<Image condition="is">C:\Program Files\Microsoft Office\Office16\msoia.exe</Image> <!--Microsoft:Office: Telemetry collector-->
 			<Image condition="is">C:\Program Files (x86)\Microsoft Office\root\Office16\officebackgroundtaskhandler.exe</Image>			
 			<Image condition="is">C:\Windows\System32\TokenBrokerCookies.exe</Image> <!--Microsoft:Windows: SSO sign-in assistant for MicrosoftOnline.com-->
-			<Image condition="end with">\ngentask.exe</Image><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			<Image condition="end with">\ngen.exe</Image> <!--Microsoft:DotNet--><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			<Image condition="end with">\mscorsvw.exe</Image> <!--Microsoft:DotNet--><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			<Image condition="end with">\ngentask.exe</Image> <!--Microsoft:DotNet: Spawns thousands of ngen.exe processes--><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
+			<Image condition="end with">\ngentask.exe</Image><!-- Could miss things if you comment this, but it also reduces noise-->
+			<Image condition="end with">\ngen.exe</Image> <!--Microsoft:DotNet--><!-- Could miss things if you comment this, but it also reduces noise-->
+			<Image condition="end with">\mscorsvw.exe</Image> <!--Microsoft:DotNet--><!-- Could miss things if you comment this, but it also reduces noise-->
+			<Image condition="end with">\ngentask.exe</Image> <!--Microsoft:DotNet: Spawns thousands of ngen.exe processes--><!-- Could miss things if you comment this, but it also reduces noise-->
 			<!--Microsoft:Visual Studio 2019-->
 			<Image condition="is">c:\program files (x86)\microsoft visual studio\2019\community\team tools\static analysis tools\fxcop\fxcopcmd.exe</Image>
 			<ParentImage condition="is">C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\devenv.exe</ParentImage>
@@ -149,17 +149,16 @@
 			<Image condition="is">C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\Roslyn\VBCSCompiler.exe</Image>
 			<Image condition="is">C:\Windows\system32\svchost.exe</Image>
 			<Image condition="is">c:\program files (x86)\notepad++\updater\gup.exe</Image>
-			<Image condition="is">c:\windows\system32\xblgamesavetask.exe</Image>
-			<Image condition="is">c:\windows\system32\provtool.exe</Image>
-			<Image condition="is">c:\windows\system32\surfaceservice.exe</Image>
+			<Image condition="is">c:\Windows\system32\xblgamesavetask.exe</Image>
+			<Image condition="is">c:\Windows\system32\provtool.exe</Image>
+			<Image condition="is">c:\Windows\system32\surfaceservice.exe</Image>
 			<Image condition="is">c:\program files (x86)\microsoft office\root\office16\sdxhelper.exe</Image>
-			<Image condition="is">c:\program files (x86)\microsoft visual studio\2019\community\common7\servicehub\hosts\servicehub.host.clr.anycpu\servicehub.testwindowstorehost.exe</Image>
+			<Image condition="is">c:\program files (x86)\microsoft visual studio\2019\community\common7\servicehub\hosts\servicehub.host.clr.anycpu\servicehub.testWindowstorehost.exe</Image>
 			<Image condition="is">c:\program files (x86)\microsoft visual studio\installer\resources\app\servicehub\services\microsoft.visualstudio.setup.service\backgrounddownload.exe</Image>
 			<!-- Commandline excludes are weak at best -->
-			<CommandLine condition="begin with">C:\Windows\system32\DllHost.exe /Processid</CommandLine><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			<Image condition="is">C:\Windows\system32\SearchIndexer.exe</Image> <!--Microsoft:Windows: Search Indexer--><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			<Image condition="is">C:\Windows\System32\smss.exe</Image> <!--Microsoft:Bootup: Windows Session Manager--><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			<Image condition="is">C:\WINDOWS\system32\autochk.exe </Image> <!--Microsoft:Bootup: Auto Check Utility--><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
+			<Image condition="is">C:\Windows\system32\SearchIndexer.exe</Image> <!--Microsoft:Windows: Search Indexer--><!-- Could miss things if you comment this, but it also reduces noise-->
+			<Image condition="is">C:\Windows\System32\smss.exe</Image> <!--Microsoft:Bootup: Windows Session Manager--><!-- Could miss things if you comment this, but it also reduces noise-->
+			<Image condition="is">C:\Windows\system32\autochk.exe </Image> <!--Microsoft:Bootup: Auto Check Utility--><!-- Could miss things if you comment this, but it also reduces noise-->
 			<Image condition="is">C:\Program Files\Mozilla Firefox\firefox.exe</Image>	
 			<!--Microsoft:Office: -->
 			<ParentImage condition="end with">C:\Program Files\Common Files\Microsoft Shared\ClickToRun\OfficeClickToRun.exe</ParentImage> <!--Microsoft:Office: Background process-->
@@ -202,9 +201,9 @@
 			<ParentImage condition="end with">C:\Program Files (x86)\Adobe\Adobe Creative Cloud\ACC\Creative Cloud.exe</ParentImage>
 			<ParentImage condition="end with">C:\Program Files (x86)\Adobe\Adobe Creative Cloud\CCXProcess\CCXProcess.exe</ParentImage>
 			<ParentImage condition="end with">C:\Program Files (x86)\Adobe\Adobe Creative Cloud\CoreSync\CoreSync.exe</ParentImage>
-			<ParentCommandLine condition="begin with">%%SystemRoot%%\system32\csrss.exe ObjectDirectory=\Windows</ParentCommandLine> <!--Microsoft:Windows:CommandShell: Triggered when programs use the command shell, but doesn't provide attribution for what caused it--><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			<ParentCommandLine condition="is">C:\windows\system32\wermgr.exe -queuereporting</ParentCommandLine> <!--Microsoft:Windows:Windows error reporting/telemetry--><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			<ParentImage condition="is">C:\Windows\system32\SearchIndexer.exe</ParentImage> <!--Microsoft:Windows:Search: Launches many uninteresting sub-processes--><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
+			<ParentCommandLine condition="contains">\system32\csrss.exe ObjectDirectory=\Windows</ParentCommandLine> <!--Microsoft:Windows:CommandShell: Triggered when programs use the command shell, but doesn't provide attribution for what caused it--><!-- Could miss things if you comment this, but it also reduces noise-->
+			<ParentCommandLine condition="begin with">C:\Windows\system32\wermgr.exe -queuereporting</ParentCommandLine> <!--Microsoft:Windows:Windows error reporting/telemetry--><!-- Could miss things if you comment this, but it also reduces noise-->
+			<ParentImage condition="is">C:\Windows\system32\SearchIndexer.exe</ParentImage> <!--Microsoft:Windows:Search: Launches many uninteresting sub-processes--><!-- Could miss things if you comment this, but it also reduces noise-->
 			<!--SECTION: Cisco-->
 			<ParentImage condition="end with">C:\Program Files (x86)\Cisco\Cisco AnyConnect Secure Mobility Client\vpnagent.exe</ParentImage> <!--Cisco: Calls netsh to change settings on connect-->
 			<ParentImage condition="end with">C:\Program Files\Realtek\Audio\HDA\RtkAudioService64.exe</ParentImage> <!--Realtek:Driver: routine actions-->
@@ -216,27 +215,31 @@
 			<ParentImage condition="end with">C:\Program Files\DellTPad\HidMonitorSvc.exe</ParentImage>
 			<Image condition="is">C:\Program Files\Dell\SupportAssist\pcdrcui.exe</Image> <!--Dell:SupportAssist: routine actions-->
 			<Image condition="is">C:\Program Files\Dell\SupportAssist\koala.exe</Image> <!--Dell:SupportAssist: routine actions-->
-			<CurrentDirectory condition="is">C:\Program Files (x86)\ossec-agent\</CurrentDirectory><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			<ParentCommandLine condition="end with">"-outc=C:\ProgramData\Dell\CommandUpdate\inventory.xml" "-logc=C:\ProgramData\Dell\CommandUpdate\scanerrs.xml" "-lang=en" "-enc=UTF-16" </ParentCommandLine><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
+			<CurrentDirectory condition="is">C:\Program Files (x86)\ossec-agent\</CurrentDirectory><!-- Could miss things if you comment this, but it also reduces noise-->
+			<ParentCommandLine condition="end with">"-outc=C:\ProgramData\Dell\CommandUpdate\inventory.xml" "-logc=C:\ProgramData\Dell\CommandUpdate\scanerrs.xml" "-lang=en" "-enc=UTF-16" </ParentCommandLine><!-- Could miss things if you comment this, but it also reduces noise-->
 			
 			<!--SECTION: Drivers-->
 			<Rule groupRelation="and">
-			<Image condition="is">C:\WINDOWS\system32\wermgr.exe</Image>
+			<Image condition="is">C:\Windows\system32\wermgr.exe</Image>
 			<CommandLine condition="contains">-p</CommandLine>
 			</Rule>
+			<Rule groupRelation="and"><!-- Could miss things if you comment this, but it also reduces noise-->
+			<Image condition="is">C:\Windows\system32\DllHost.exe</Image>
+			<CommandLine condition="contains">/Processid</CommandLine>
+			</Rule>
 			<Rule groupRelation="and">
-			<Image condition="is">C:\WINDOWS\system32\wermgr.exe</Image>
+			<Image condition="is">C:\Windows\system32\wermgr.exe</Image>
 			<CommandLine condition="contains">shared Global</CommandLine>
 			</Rule>
 			
 			<Rule groupRelation="and">
-			<Image condition="is">C:\WINDOWS\system32\rundll32.exe</Image>
-			<CommandLine condition="is">C:\WINDOWS\system32\rundll32.exe /d sdengin2.dll,ExecuteScheduledBackup</CommandLine>
+			<Image condition="is">C:\Windows\system32\rundll32.exe</Image>
+			<CommandLine condition="is">C:\Windows\system32\rundll32.exe /d sdengin2.dll,ExecuteScheduledBackup</CommandLine>
 			</Rule>
 			
 			<Rule groupRelation="and">
-			<Image condition="is">c:\windows\system32\taskhostw.exe</Image>
-			<ParentImage condition="is">c:\windows\system32\svchost.exe</ParentImage>
+			<Image condition="is">c:\Windows\system32\taskhostw.exe</Image>
+			<ParentImage condition="is">c:\Windows\system32\svchost.exe</ParentImage>
 			</Rule>
 			
 			<Rule groupRelation="and">
@@ -247,31 +250,31 @@
 			<Rule groupRelation="and">
 			<Image condition="is">C:\Windows\System32\wbem\WmiPrvSE.exe</Image>
 			<ParentImage condition="is">C:\Windows\System32\svchost.exe</ParentImage>
-			<CommandLine condition="is">C:\WINDOWS\system32\wbem\wmiprvse.exe -secured -Embedding</CommandLine>
-			<ParentCommandLine condition="is">C:\WINDOWS\system32\svchost.exe -k DcomLaunch -p</ParentCommandLine>
+			<CommandLine condition="is">C:\Windows\system32\wbem\wmiprvse.exe -secured -Embedding</CommandLine>
+			<ParentCommandLine condition="is">C:\Windows\system32\svchost.exe -k DcomLaunch -p</ParentCommandLine>
 			<User condition="is">NT AUTHORITY\NETWORK SERVICE</User>
 			</Rule>
 			
 			<Rule groupRelation="and">
 			<Image condition="is">C:\Windows\System32\wermgr.exe</Image>
 			<ParentImage condition="is">C:\Windows\System32\svchost.exee</ParentImage>
-			<CommandLine condition="is">C:\WINDOWS\system32\wermgr.exe -upload</CommandLine>
-			<ParentCommandLine condition="is">C:\WINDOWS\system32\svchost.exe -k netsvcs -p -s Schedule</ParentCommandLine>
+			<CommandLine condition="is">C:\Windows\system32\wermgr.exe -upload</CommandLine>
+			<ParentCommandLine condition="is">C:\Windows\system32\svchost.exe -k netsvcs -p -s Schedule</ParentCommandLine>
 			</Rule>
 			
 			<Rule groupRelation="and">
-			<Image condition="is">c:\windows\system32\logonui.exe</Image>
-			<ParentImage condition="is">c:\windows\system32\winlogon.exe</ParentImage>
+			<Image condition="is">c:\Windows\system32\logonui.exe</Image>
+			<ParentImage condition="is">c:\Windows\system32\winlogon.exe</ParentImage>
 			</Rule>
 			
 			<Rule groupRelation="and">
 			<Image condition="is">C:\Windows\System32\ctfmon.exe</Image>
 			<ParentImage condition="is">C:\Windows\System32\svchost.exe</ParentImage>
-			<ParentCommandLine condition="is">C:\WINDOWS\System32\svchost.exe -k LocalSystemNetworkRestricted -p -s TabletInputService</ParentCommandLine>
+			<ParentCommandLine condition="is">C:\Windows\System32\svchost.exe -k LocalSystemNetworkRestricted -p -s TabletInputService</ParentCommandLine>
 			</Rule>
 			
 			<Rule groupRelation="and">
-			<Image condition="is">c:\windows\syswow64\cmd.exe</Image>
+			<Image condition="is">c:\Windows\syswow64\cmd.exe</Image>
 			<ParentImage condition="is">c:\program files (x86)\microsoft visual studio\2019\community\common7\ide\devenv.exe</ParentImage>
 			</Rule>
 			
@@ -320,15 +323,19 @@
 			<TargetFilename name="FileCreateTime(TimeStomped) changed a file located in Appdata" condition="contains">\AppData\</TargetFilename>
 			<TargetFilename name="FileCreateTime(TimeStomped) changed a file located in Users folder" condition="begin with">C:\Users\</TargetFilename>
 			<TargetFilename name="FileCreateTime(TimeStomped) changed a file located in Windows folder" condition="begin with">C:\Windows\</TargetFilename>
-			<TargetFilename name="Memory dump file extension" condition="end with">.dmp</TargetFilename>	
+			<TargetFilename name="Possible Memory dump file" condition="end with">.dmp</TargetFilename>
+			<TargetFilename name="Very likely LSASS Memory dump file" condition="contains">lsass</TargetFilename>
+			<TargetFilename name="Confirmed LSASS Memory dump file" condition="contains">lsass.dmp</TargetFilename>
+			<TargetFilename name="Possible Kerbroasting" condition="end with">.ccache</TargetFilename>
+			<TargetFilename name="Possible Kerbroasting" condition="end with">.kirbi</TargetFilename>
 			<TargetFilename name="possible wmi persistence" condition="end with">.mof</TargetFilename> <!-- wmi persistence -->
 			<TargetFilename name="XML Script file extension" condition="end with">.xsl</TargetFilename> <!-- XML Script -->
 			<TargetFilename name="Schedule task creation" condition="begin with">C:\Windows\Tasks\</TargetFilename>
-			<TargetFilename name="Schedule task creation" condition="begin with">c:\windows\system32\tasks\</TargetFilename>
+			<TargetFilename name="Schedule task creation" condition="begin with">c:\Windows\system32\tasks\</TargetFilename>
 			<TargetFilename name="Web server dir file added" condition="contains">Exchange Server\ClientAccess\Owa\</TargetFilename> <!-- webshell stuff on exchange CAS -->
 			<TargetFilename name="Web server dir file added" condition="contains">\inetpub\wwwroot\</TargetFilename><!-- webshell stuff -->			
 			<TargetFilename condition="begin with">C:\Windows\AppPatch\Custom</TargetFilename>
-			<TargetFilename condition="begin with">c:\windows\AppPatch64\Custom</TargetFilename>			
+			<TargetFilename condition="begin with">c:\Windows\AppPatch64\Custom</TargetFilename>			
 			<TargetFilename name="Persistence - Outlook VBA Backdoor" condition="end with" >VBAProject.OTM</TargetFilename> <!-- office less famous extensions -->
 			<TargetFilename name="UAC Bypass via rogue manifest" condition="end with">wscript.exe</TargetFilename><!-- UAC Bypass via rogue manifest -->
 			<TargetFilename name="Possible  persist or hijack exec flow via appcompat shim database" condition="end with">.sdb</TargetFilename> <!-- persist or hijack exec flow via appcompat shim database -->
@@ -347,21 +354,22 @@
 		<FileCreateTime onmatch="exclude">
 			<Image condition="is">C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\devenv.exe</Image>
 			<Image condition="is">C:\Program Files (x86)\Notepad++\notepad++.exe</Image>
+			<Image condition="is">C:\Program Files (x86)\Mozilla Firefox\firefox.exe</Image>
 			<Image condition="is">C:\program files (x86)\adobe\acrobat reader dc\reader\acrocef\rdrservicesupdater.exe</Image>
-			<Image condition="end with">\OneDrive.exe</Image> <!--OneDrive constantly changes file times--><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
+			<Image condition="end with">\OneDrive.exe</Image> <!--OneDrive constantly changes file times--><!-- Could miss things if you comment this, but it also reduces noise-->
 			<Image condition="is">C:\Windows\system32\backgroundTaskHost.exe</Image>
-			<Image condition="contains">setup</Image> <!--Ignore setups--><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			<Image condition="contains">install</Image> <!--Ignore setups--><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			<Image condition="contains">\Update\</Image> <!--Ignore setups--><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			<Image condition="end with">\redist.exe</Image> <!--Ignore setups--><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			<Image condition="is">TrustedInstaller.exe</Image> <!--Ignore setups--><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			<Image condition="end with">\notepad++.exe</Image> <!--Ignore setups--><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			<Image condition="end with">\SWELF.exe</Image> <!--Ignore setups--><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			<Image condition="begin with">C:\Windows\winsxs\amd64_microsoft-windows</Image> <!-- Windows: Windows update-->
+			<Image condition="contains">setup</Image> <!--Ignore setups--><!-- Could miss things if you comment this, but it also reduces noise-->
+			<Image condition="contains">install</Image> <!--Ignore setups--><!-- Could miss things if you comment this, but it also reduces noise-->
+			<Image condition="contains">\Update\</Image> <!--Ignore setups--><!-- Could miss things if you comment this, but it also reduces noise-->
+			<Image condition="end with">\redist.exe</Image> <!--Ignore setups--><!-- Could miss things if you comment this, but it also reduces noise-->
+			<Image condition="is">TrustedInstaller.exe</Image> <!--Ignore setups--><!-- Could miss things if you comment this, but it also reduces noise-->
+			<Image condition="end with">\notepad++.exe</Image> <!--Ignore setups--><!-- Could miss things if you comment this, but it also reduces noise-->
+			<Image condition="end with">\SWELF.exe</Image> <!--Ignore setups--><!-- Could miss things if you comment this, but it also reduces noise-->
+			<Image condition="begin with">C:\Windows\winsxs\amd64_microsoft-Windows</Image> <!-- Windows: Windows update-->
 			<Image condition="is">C:\Windows\system32\igfxCUIService.exe</Image>
-			<TargetFilename condition="begin with">C:\$WINDOWS.~BT\Sources\</TargetFilename> <!-- Windows: Feature updates containing lots of .exe and .sys-->
-			<TargetFilename condition="end with">.temp</TargetFilename><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			<TargetFilename condition="end with">.tmp</TargetFilename><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
+			<TargetFilename condition="begin with">C:\$Windows.~BT\Sources\</TargetFilename> <!-- Windows: Feature updates containing lots of .exe and .sys-->
+			<TargetFilename condition="end with">.temp</TargetFilename><!-- Could miss things if you comment this, but it also reduces noise-->
+			<TargetFilename condition="end with">.tmp</TargetFilename><!-- Could miss things if you comment this, but it also reduces noise-->
 			<TargetFilename condition="begin with">C:\Windows\SoftwareDistribution\Download\</TargetFilename>
 		</FileCreateTime>
 		</RuleGroup>
@@ -381,24 +389,24 @@
 		<NetworkConnect onmatch="exclude">
 			<!--<Image condition="contains">C:\Windows\System32\svchost.exe</Image>-->
 			<Image condition="begin with">C:\Windows\SystemApps\Microsoft.Windows.Search</Image>
-			<Image condition="begin with">c:\riot games\riot client\</Image><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			<Image condition="begin with">c:\program files\windowsapps\</Image><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			<Image condition="begin with">c:\riot games\league of legends\</Image><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			<Image condition="begin with">c:\program files (x86)\steam\steam.exe</Image><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
+			<Image condition="begin with">c:\riot games\riot client\</Image><!-- Could miss things if you comment this, but it also reduces noise-->
+			<Image condition="begin with">c:\program files\Windowsapps\</Image><!-- Could miss things if you comment this, but it also reduces noise-->
+			<Image condition="begin with">c:\riot games\league of legends\</Image><!-- Could miss things if you comment this, but it also reduces noise-->
+			<Image condition="begin with">c:\program files (x86)\steam\steam.exe</Image><!-- Could miss things if you comment this, but it also reduces noise-->
 			<Image condition="is">C:\program files\nvidia corporation\nvcontainer\nvcontainer.exe</Image>
 			<Image condition="is">C:\program files (x86)\steam\bin\cef\cef.win7x64\steamwebhelper.exe</Image>
 			<Image condition="end with">\g2ax_comm_expert.exe</Image> <!--GoToMeeting-->
 			<Image condition="end with">\g2mcomm.exe</Image> <!--GoToMeeting-->
-			<Image condition="end with">\SWELF.exe</Image><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			<Image condition="end with">\chrome.exe</Image><!--Browser--><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			<Image condition="end with">\firefox.exe</Image><!--Browser--><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			<Image condition="end with">\iexplore.exe</Image><!--Browser--><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			<Image condition="end with">MicrosoftEdge.exe</Image><!--Browser--><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
+			<Image condition="end with">\SWELF.exe</Image><!-- Could miss things if you comment this, but it also reduces noise-->
+			<Image condition="end with">\chrome.exe</Image><!--Browser--><!-- Could miss things if you comment this, but it also reduces noise-->
+			<Image condition="end with">\firefox.exe</Image><!--Browser--><!-- Could miss things if you comment this, but it also reduces noise-->
+			<Image condition="end with">\iexplore.exe</Image><!--Browser--><!-- Could miss things if you comment this, but it also reduces noise-->
+			<Image condition="end with">MicrosoftEdge.exe</Image><!--Browser--><!-- Could miss things if you comment this, but it also reduces noise-->
 			<Image condition="is">C:\Windows\System32\dns.exe</Image><!-- noisy for dns -->
-			<Image condition="begin with">c:\program files\oracle\virtualbox\</Image><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
+			<Image condition="begin with">c:\program files\oracle\virtualbox\</Image><!-- Could miss things if you comment this, but it also reduces noise-->
 			<Image condition="is">c:\program files (x86)\microsoft office\root\office16\sdxhelper.exe</Image>
-			<Image condition="is">c:\windows\system32\usocoreworker.exe</Image>
-			<Image condition="is">c:\windows\system32\dxgiadaptercache.exe</Image>
+			<Image condition="is">c:\Windows\system32\usocoreworker.exe</Image>
+			<Image condition="is">c:\Windows\system32\dxgiadaptercache.exe</Image>
 			<Image condition="is">C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\devenv.exe</Image>
 			<Image condition="is">C:\Windows\System32\smartscreen.exe</Image><!-- noisy -->
 			<Image condition="is">C:\Windows\System32\svchost.exe</Image><!-- noisy for dns and ldap -->
@@ -423,27 +431,27 @@
 			<Image condition="is">C:\Program Files (x86)\BigFix Enterprise\BES Server\BESRootServer.exe</Image>
 			<Image condition="is">C:\Program Files (x86)\Trend Micro\Control Manager\CmdProcessor.exe</Image>
 			<Image condition="is">D:\Program Files (x86)\Symantec\LiveUpdate Administrator\pgsql\bin\postgres.exe</Image>
-			<Image condition="begin with">C:\Program Files\Fortinet\FortiClient\</Image><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
+			<Image condition="begin with">C:\Program Files\Fortinet\FortiClient\</Image><!-- Could miss things if you comment this, but it also reduces noise-->
 			<Image condition="is">C:\Program Files (x86)\ossec-agent\ossec-agent.exe</Image>			
-			<Image condition="begin with">C:\ProgramData\Microsoft\Windows Defender\Platform\</Image><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			<Image condition="begin with">C:\Program Files (x86)\Fortinet\FortiClient\</Image><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			<Image condition="begin with">C:\Program Files\Fortinet\FortiClient\</Image><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			<Image condition="begin with">C:\Program Files (x86)\OpenDNS Updater\</Image><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			<Image condition="end with">AppData\Local\Microsoft\Teams\current\Teams.exe</Image> <!--Microsoft: Teams--><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			<Image condition="begin with">C:\Program Files\HP Inc\</Image><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			<Image condition="begin with">C:\Program Files (x86)\Trend Micro\</Image><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			<Image condition="begin with">C:\Program Files\Trend Micro\</Image><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			<Image condition="begin with">C:\Program Files (x86)\Microsoft Visual Studio\</Image><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			<Image condition="begin with">C:\Program Files\Microsoft Office\root\</Image><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			<Image condition="begin with">C:\Program Files (x86)\Symantec\Symantec Endpoint Protection\</Image><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
+			<Image condition="begin with">C:\ProgramData\Microsoft\Windows Defender\Platform\</Image><!-- Could miss things if you comment this, but it also reduces noise-->
+			<Image condition="begin with">C:\Program Files (x86)\Fortinet\FortiClient\</Image><!-- Could miss things if you comment this, but it also reduces noise-->
+			<Image condition="begin with">C:\Program Files\Fortinet\FortiClient\</Image><!-- Could miss things if you comment this, but it also reduces noise-->
+			<Image condition="begin with">C:\Program Files (x86)\OpenDNS Updater\</Image><!-- Could miss things if you comment this, but it also reduces noise-->
+			<Image condition="end with">AppData\Local\Microsoft\Teams\current\Teams.exe</Image> <!--Microsoft: Teams--><!-- Could miss things if you comment this, but it also reduces noise-->
+			<Image condition="begin with">C:\Program Files\HP Inc\</Image><!-- Could miss things if you comment this, but it also reduces noise-->
+			<Image condition="begin with">C:\Program Files (x86)\Trend Micro\</Image><!-- Could miss things if you comment this, but it also reduces noise-->
+			<Image condition="begin with">C:\Program Files\Trend Micro\</Image><!-- Could miss things if you comment this, but it also reduces noise-->
+			<Image condition="begin with">C:\Program Files (x86)\Microsoft Visual Studio\</Image><!-- Could miss things if you comment this, but it also reduces noise-->
+			<Image condition="begin with">C:\Program Files\Microsoft Office\root\</Image><!-- Could miss things if you comment this, but it also reduces noise-->
+			<Image condition="begin with">C:\Program Files (x86)\Symantec\Symantec Endpoint Protection\</Image><!-- Could miss things if you comment this, but it also reduces noise-->
 			<Image condition="is">c:\riot games\league of legends\leagueclient.exe</Image>
-			<Image condition="is">c:\windows\system32\svchost.exe</Image>
+			<Image condition="is">c:\Windows\system32\svchost.exe</Image>
 			<Image condition="is">c:\program files (x86)\steam\steam.exe</Image>
 			<Image condition="is">c:\riot games\riot client\riotclientservices.exe</Image>
 			<Image condition="is">c:\riot games\league of legends\game\league of legends.exe</Image>
-			<Image condition="is">c:\windows\sysmon.exe</Image><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			<Image condition="is">c:\program files\windowsapps\microsoft.xboxgamingoverlay_3.38.25003.0_x64__8wekyb3d8bbwe\gamebar.exe</Image>
-			<Image condition="is">c:\windows\system32\gamebarpresencewriter.exe</Image>
+			<Image condition="is">c:\Windows\sysmon.exe</Image><!-- Could miss things if you comment this, but it also reduces noise-->
+			<Image condition="is">c:\program files\Windowsapps\microsoft.xboxgamingoverlay_3.38.25003.0_x64__8wekyb3d8bbwe\gamebar.exe</Image>
+			<Image condition="is">c:\Windows\system32\gamebarpresencewriter.exe</Image>
 			<DestinationHostname condition="end with">microsoft.com</DestinationHostname> <!--Microsoft:Update delivery-->
 			<DestinationHostname condition="end with">microsoft.com.akadns.net</DestinationHostname> <!--Microsoft:Update delivery-->
 			<DestinationHostname condition="end with">microsoft.com.nsatc.net</DestinationHostname> <!--Microsoft:Update delivery-->
@@ -462,19 +470,19 @@
 		<ProcessTerminate onmatch="exclude">
 			<Image condition="is">C:\Windows\System32\SearchProtocolHost.exe</Image>
 			<Image condition="is">C:\Windows\System32\smartscreen.exe</Image>
-			<Image condition="begin with">C:\Program Files (x86)\</Image><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			<Image condition="begin with">C:\Program Files\</Image><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
+			<Image condition="begin with">C:\Program Files (x86)\</Image><!-- Could miss things if you comment this, but it also reduces noise-->
+			<Image condition="begin with">C:\Program Files\</Image><!-- Could miss things if you comment this, but it also reduces noise-->
 			<Image condition="is">C:\Windows\System32\conhost.exe</Image>
 			<Image condition="is">C:\Windows\System32\dllhost.exe</Image>
 			<Image condition="is">C:\Windows\System32\svchost.exe</Image>
 			<Image condition="is">C:\Windows\System32\wbem\WmiPrvSE.exe</Image>
 			<Image condition="is">C:\Windows\SysWOW64\wbem\WMIC.exe</Image>
-			<Image condition="is">C:\WINDOWS\system32\RuntimeBroker.exe</Image>
-			<Image condition="is">C:\WINDOWS\system32\backgroundtaskhost.exe</Image>
+			<Image condition="is">C:\Windows\system32\RuntimeBroker.exe</Image>
+			<Image condition="is">C:\Windows\system32\backgroundtaskhost.exe</Image>
 			<Image condition="is">C:\Windows\System32\SearchFilterHost.exe</Image>
 			<Image condition="is">C:\Windows\System32\UsoClient.exe</Image>
-			<Image condition="end with">\SWELF.exe</Image><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			<Image condition="is">c:\windows\syswow64\cmd.exe</Image><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
+			<Image condition="end with">\SWELF.exe</Image><!-- Could miss things if you comment this, but it also reduces noise-->
+			<Image condition="is">c:\Windows\syswow64\cmd.exe</Image><!-- Could miss things if you comment this, but it also reduces noise-->
 			<Image condition="is">C:\Windows\System32\ctfmon.exe</Image>
 		</ProcessTerminate>
 		</RuleGroup>
@@ -487,14 +495,17 @@
 		<!--DATA: UtcTime, ImageLoaded, Hashes, Signed, Signature, SignatureStatus-->
 		<RuleGroup name="DriverLoad exclude" groupRelation="or">
 		<DriverLoad onmatch="exclude">
-			<Signature condition="begin with">Fortinet Technologies (Canada) Inc.</Signature> <!--Exclude signed Intel drivers-->
+			<Rule groupRelation="and">
+			<Signature condition="begin with">Fortinet Technologies (Canada) Inc.</Signature>
+			<SignatureStatus condition="is">Valid</SignatureStatus>
+			</Rule>
 			<!--Exclude signed Microsoft drivers-->
 			<Rule groupRelation="and">
 			<Signature condition="contains">Microsoft</Signature>
 			<SignatureStatus condition="is">Valid</SignatureStatus>
 			</Rule>
 			<Rule groupRelation="and">
-			<Signature condition="contains">windows</Signature>
+			<Signature condition="contains">Windows</Signature>
 			<SignatureStatus condition="is">Valid</SignatureStatus>
 			</Rule>
 			<!--Exclude signed Inter drivers-->
@@ -518,9 +529,8 @@
 		<RuleGroup name="ImageLoad include" groupRelation="or">
 		<ImageLoad onmatch="include">
 			<Image condition="end with">mshta.exe</Image>
-			<Image condition="end with">Dism.exe</Image>
-            
-		    <Image name="MitreRef=T1128,Technique=Netsh Helper Beacon DLL,Tactic=Persistence, also it manages windows firewall." condition="end with">netsh.exe</Image>
+			<Image condition="end with">Dism.exe</Image>  
+		    <Image name="MitreRef=T1128,Technique=Netsh Helper Beacon DLL,Tactic=Persistence, also it manages Windows firewall." condition="end with">netsh.exe</Image>
 		    <ImageLoaded name="technique_id=T1047,technique_name=Windows Management Instrumentation" condition="end with">wmiutils.dll</ImageLoaded>
 			<ImageLoaded condition="end with" name="comsvcs dll load- Look for Possible minidump or com bypass">comsvcs.dll</ImageLoaded><!-- This DLL is known to be able to minidump lsass using minidump arg -->
 		    <ImageLoaded condition="begin with" name="Execution - Image Loaded from suspicious path">\\</ImageLoaded><!-- loaded from network file share -->
@@ -538,6 +548,8 @@
 		    <ImageLoaded condition="end with" name="Defense Evasion - Unusual Module Extension">.log</ImageLoaded>
 		    <ImageLoaded condition="end with" name="Persistence - Winword Library Addin Loaded">.wll</ImageLoaded>
 		    <ImageLoaded condition="end with" name="Persistence - Excel Library Addin Loaded">.xll</ImageLoaded>
+			<ImageLoaded condition="end with" name="Persistence - Office Library Addin Loaded">.pll</ImageLoaded>
+			<ImageLoaded condition="end with" name="Abnormal dll load with odd extension">.log</ImageLoaded>
 		    <ImageLoaded condition="begin with" name="Execution - Image Loaded from suspicious path">c:\programdata\</ImageLoaded>
 		    <ImageLoaded condition="begin with" name="Execution - Image Loaded from suspicious path">C:\Windows\Media\</ImageLoaded>
 		    <ImageLoaded condition="begin with" name="Execution - Image Loaded from suspicious path">C:\Windows\addins\</ImageLoaded>
@@ -570,28 +582,26 @@
 			<ImageLoaded condition="end with" name="Defense Evasion - RDP DLL's used for lateral movement.">MSTSCLib.dll</ImageLoaded>
 			<ImageLoaded condition="end with" name="Defense Evasion - RDP DLL's used for lateral movement.">AxMSTSCLib.dll</ImageLoaded>
             <ImageLoaded condition="end with" name="Defense Evasion - DLL Side Loading">ActCtx.dll</ImageLoaded>
-			<!--
-			Might not need this info for rule but:
-			image=update.exe
-			image=teams.exe
-			image=code.exe
-			-->
-			<ImageLoaded condition="end with" name="Defense Evasion - Teams DLL HIJACK">\AppData\Local\Microsoft\Teams\current\WINSTA.dll</ImageLoaded>
-			<ImageLoaded condition="end with" name="Defense Evasion - Teams DLL HIJACK">\AppData\Local\Microsoft\Teams\current\WINSTA.dll</ImageLoaded>
+			<ImageLoaded condition="end with" name="Defense Evasion - Teams DLL HIJACK">WINSTA.dll</ImageLoaded>
+			<!--TEAMS DLL Hijack rules -->
+			<ImageLoaded condition="end with" name="Defense Evasion - Teams DLL HIJACK Teams">\AppData\Local\Microsoft\Teams\current\WINSTA.dll</ImageLoaded>
 			<ImageLoaded condition="end with" name="Defense Evasion - Teams DLL HIJACK">\AppData\Local\Microsoft\Teams\current\ntshrui.dll</ImageLoaded>
 			<ImageLoaded condition="end with" name="Defense Evasion - Teams DLL HIJACK">\AppData\Local\Microsoft\Teams\current\ntshrui.dll</ImageLoaded>
-			<ImageLoaded condition="end with" name="Defense Evasion - Teams DLL HIJACKng">\AppData\Local\Microsoft\Teams\current\cscapi.dll</ImageLoaded>
+			<ImageLoaded condition="end with" name="Defense Evasion - Teams DLL HIJACK">\AppData\Local\Microsoft\Teams\current\cscapi.dll</ImageLoaded>
 			<ImageLoaded condition="end with" name="Defense Evasion - Teams DLL HIJACK">\AppData\Local\Microsoft\Teams\current\WindowsCodecs.dll</ImageLoaded>
 			<ImageLoaded condition="end with" name="Defense Evasion - Teams DLL HIJACK">\AppData\Local\Microsoft\Teams\current\TextInputFramework.dll</ImageLoaded>
-			<!--TEAMS DLL Hijack rules above -->
-            <ImageLoaded condition="end with" name="Defense Evasion - DLL Boo Lang">Boo.Lang.Compiler.dll</ImageLoaded>
+            <!--BOO DLL rules -->
+			<ImageLoaded condition="end with" name="Defense Evasion - DLL Boo Lang">Boo.Lang.Compiler.dll</ImageLoaded>
             <ImageLoaded condition="end with" name="Defense Evasion - DLL Boo Lang">Boo.Lang.dll</ImageLoaded>
+			<ImageLoaded condition="end with" name="Defense Evasion - DLL Boo Lang">Boo.Lang.Parser.dll</ImageLoaded>
+
             <ImageLoaded condition="end with" name="Defense Evasion - DLL Side Loading">CLRJIT.DLL</ImageLoaded>
-            <ImageLoaded condition="end with" name="Defense Evasion - DLL Boo Lang">Boo.Lang.Parser.dll</ImageLoaded>
+			<ImageLoaded condition="end with" name="Defense Evasion - DLL Side Loading - dcdiag.exe">msftedit.DLL</ImageLoaded>
+			<ImageLoaded condition="end with" name="Defense Evasion - DLL Side Loading">dwmapi.DLL</ImageLoaded>
 		    <ImageLoaded condition="end with" name="Defense Evasion - DLL Side Loading">product_info.dll</ImageLoaded> <!-- Kasper avpla.exe -->
 		    <ImageLoaded condition="end with" name="Defense Evasion - DLL Side Loading">wsc.dll</ImageLoaded> <!-- Avast wsc_proxy.exe -->
 		    <ImageLoaded condition="end with" name="Defense Evasion - DLL Side Loading">winspool.drv</ImageLoaded><!-- loaded by avz.exe free AV https://www.welivesecurity.com/2019/07/11/buhtrap-zero-day-espionage-campaigns/ -->
-		    <ImageLoaded condition="end with" name="Defense Evasion - DLL Side Loading">WptsExtensions.dll</ImageLoaded> <!-- https://remoteawesomethoughts.blogspot.com/2019/05/windows-10-task-schedulerservice.html -->
+		    <ImageLoaded condition="end with" name="Defense Evasion - DLL Side Loading">WptsExtensions.dll</ImageLoaded> <!-- https://remoteawesomethoughts.blogspot.com/2019/05/Windows-10-task-schedulerservice.html -->
 		    <ImageLoaded condition="end with" name="Defense Evasion - DLL Side Loading">NvSmartMax.dll</ImageLoaded> <!--https://quequero.org/2013/09/quick-analysissome-observation-about-a-low-detection-flash_update-exe/ -->
 		    <ImageLoaded condition="end with" name="Defense Evasion - DLL Side Loading">Duser.dll</ImageLoaded> <!-- https://app.any.run/tasks/3fcfd265-ef80-4749-a24b-39364a079802 loaded by credwiz.exe -->
 		    <ImageLoaded condition="end with" name="Defense Evasion - DLL Side Loading">AShldRes.DLL</ImageLoaded>
@@ -599,16 +609,19 @@
 		    <ImageLoaded condition="end with" name="Defense Evasion - DLL Side Loading">chrome_frame_helper.dll</ImageLoaded>
 		    <ImageLoaded condition="end with" name="Defense Evasion - DLL Side Loading">DESqmWrapper.dll</ImageLoaded>
 		    <ImageLoaded condition="end with" name="Defense Evasion - DLL Side Loading">fslapi.dll</ImageLoaded>
-		    <ImageLoaded condition="is" name="Defense Evasion - DLL Hijack">C:\Users\USER\AppData\Local\Microsoft\WindowsApps\vulkan-1.dll</ImageLoaded>
+		    <ImageLoaded condition="end with" name="Defense Evasion - DLL Hijack">vulkan-1.dll</ImageLoaded>
+			<!--DLL PROC DUMP rules -->
 			<ImageLoaded condition="end with" name="Debugging DLL Loaded">dbgeng.dll</ImageLoaded>
 			<ImageLoaded condition="end with" name="Debugging DLL Loaded">dbghelp.dll</ImageLoaded>
             <ImageLoaded condition="end with" name="Debuging DLL Loaded">dbgcore.dll</ImageLoaded>
+			<!--Loading c#/.Net rule -->
+		    <ImageLoaded condition="end with" name="Possible Defense Evasion - .Net Code loaded">clr.dll</ImageLoaded><!-- This is a dll loaded often by both good ware and .Net malware. Its required for .Net --><!-- https://www.youtube.com/watch?v=FuxpMXTgV9s&feature=emb_logo-->
 		    <ImageLoaded condition="end with" name="Defense Evasion - DLL Side Loading">FSPMAPI.dll</ImageLoaded>
+			<ImageLoaded condition="end with" name="Defense Evasion - DLL Side Loading service IKEET">wlbsctrl.dll</ImageLoaded>
 		    <ImageLoaded condition="end with" name="Defense Evasion - DLL Side Loading">Sidebar.dll</ImageLoaded>
 		    <ImageLoaded condition="end with" name="Defense Evasion - DLL Side Loading">hha.dll</ImageLoaded>
 		    <ImageLoaded condition="end with" name="Defense Evasion - DLL Side Loading">hccutils.dll</ImageLoaded>
-		    <ImageLoaded condition="end with" name="Possible Defense Evasion - .Net Code capability loaded">clr.dll</ImageLoaded><!-- This is a dll loaded often by both good ware and .Net malware. Its required for .Net --><!-- https://www.youtube.com/watch?v=FuxpMXTgV9s&feature=emb_logo-->
-		    <ImageLoaded condition="end with" name="Defense Evasion - DLL Side Loading">NtUserEx.dll</ImageLoaded>
+			<ImageLoaded condition="end with" name="Defense Evasion - DLL Side Loading">NtUserEx.dll</ImageLoaded>
 		    <ImageLoaded condition="end with" name="Defense Evasion - DLL Side Loading">McUtil.dll</ImageLoaded>
 		    <ImageLoaded condition="end with" name="Defense Evasion - DLL Side Loading">MpSvc.dll</ImageLoaded>
 		    <ImageLoaded condition="end with" name="Defense Evasion - DLL Side Loading">mPclient.dll</ImageLoaded>
@@ -650,14 +663,14 @@
 			<ImageLoaded condition="contains" name="Attempts to ID Microsoft DLL used to allow injection and other suspicious activities.">Reflection</ImageLoaded> 
 			<ImageLoaded condition="contains" name="Attempts to ID Microsoft DLL loaded that is often used in Malware to add functionality to do things like injection">runtime</ImageLoaded> 
 			<ImageLoaded condition="contains" name="Attempts to ID Microsoft DLL loaded that is often used in Malware to add functionality to do things like injection">InteropServices</ImageLoaded>
-			<ImageLoaded condition="contains" name="Attempts to ID Microsoft DLL loaded that is often used in Malware to add functionality to do things like native windows execution and injection">Win32</ImageLoaded>
+			<ImageLoaded condition="contains" name="Attempts to ID Microsoft DLL loaded that is often used in Malware to add functionality to do things like native Windows execution and injection">Win32</ImageLoaded>
 			<ImageLoaded condition="contains" name="Attempts to ID Microsoft DLL loaded that is often used in Malware to add functionality to do things like encrypt and encrypt data, files, and other things in memory and on disk.">Cryptography</ImageLoaded>
 			<ImageLoaded condition="contains" name="Attempts to ID Microsoft DLL loaded that is often used in Malware to add functionality to do things like encrypt and encrypt data, files, and other things in memory and on disk.">System.Security.Cryptography.X509Certificates</ImageLoaded>
 			<ImageLoaded condition="end with" name="Alert=Ramnit Banker Malware!" >rmnsoft.dll</ImageLoaded>
 			<ImageLoaded condition="begin with" name=".Net Assembly used">C:\Windows\assembly\NativeImages</ImageLoaded>
 			<ImageLoaded condition="contains" name="Mitre: https://attack.mitre.org/wiki/Technique/T1098">samlib.dll</ImageLoaded>
 			<ImageLoaded condition="contains" name="Mitre: https://attack.mitre.org/wiki/Technique/T1098">WinSCard.dll</ImageLoaded>
-			<ImageLoaded condition="is" name="fxsst.dll loaded">C:\windows\system32\fxsst.dll</ImageLoaded>
+			<ImageLoaded condition="is" name="fxsst.dll loaded">C:\Windows\system32\fxsst.dll</ImageLoaded>
 			<ImageLoaded condition="contains" name="Powershell Lib loaded" >powershell</ImageLoaded> 
 			<ImageLoaded condition="contains" name="CSharp(C#) Lib loaded" >clr.dll</ImageLoaded> 
 			<ImageLoaded condition="end with" name="oci.dll loaded">oci.dll</ImageLoaded>
@@ -676,25 +689,24 @@
 			<ImageLoaded condition="end with" name="PrivEsc - UACBypass - DLL hijack Cliconfig">NTWDBLIB.dll</ImageLoaded>
 			<ImageLoaded condition="contains" name="MitreRef=T1128,Technique=Netsh Helper Beacon DLL,Tactic=Persistence,Alert=Cobalt Strike Netsh Helper Beacon">NetshHelperBeacon</ImageLoaded>
 			<ImageLoaded name="technique_id=T1170,technique_name=MSHTA with AMSI Bypass" condition="end with">jscript9.dll</ImageLoaded>
-			<SignatureStatus condition="is" name="DLL loaded with Invalid signature. Suspicous.">Unavailable</SignatureStatus>
-			<SignatureStatus name="DLL loaded with Invalid signature. Suspicous.">Invalid</SignatureStatus>			
-			<Signature condition="is not" name="Non Micrsoft DLL found">Microsoft Windows</Signature>
-			<Signed condition="is" name="DLL loaded with Invalid Hash Signature. Suspicous.">Invalid hash</Signed>
-			<Signed condition="is" name="Unsigned DLL loaded">false</Signed>
+			<!--Check for loading of the PowerShell engine-->
+			<ImageLoaded name="technique_id=T1086,technique_name=PowerShell Engine" condition="end with">System.Management.Automation.ni.dll</ImageLoaded>
+			<ImageLoaded name="technique_id=T1086,technique_name=PowerShell Engine" condition="end with">System.Management.Automation.dll</ImageLoaded>
+
 			<!--Default named C# OffSec Tooling, Google name with Word Github at the end to find it-->
-			<Rule groupRelation="or">
+			<Rule groupRelation="and">
 			<Image condition="end with">Control.exe</Image>
 			<ImageLoaded condition="end with" name="Defense Evasion -Application Whitelisting Bypasses. Lolbins">.cpl</ImageLoaded>
 			</Rule>
-			<Rule groupRelation="or">
+			<Rule groupRelation="and">
 			<Image condition="end with">rundll32.exe</Image>
 			<ImageLoaded condition="end with" name="Defense Evasion - Unusual Module Extension">.cpl</ImageLoaded>
 			</Rule>
-			<Rule groupRelation="or">
+			<Rule groupRelation="and">
 			<Image condition="end with">SubWCRev.exe</Image>
 			<ImageLoaded condition="end with" name="Defense Evasion - Application Whitelisting Bypasses">crshhndl.dll</ImageLoaded>
 			</Rule>
-			<Rule groupRelation="or">
+			<Rule groupRelation="and">
 			<Image condition="end with">PotPlayer.exe</Image>
 			<ImageLoaded condition="end with" name="Defense Evasion - Application Whitelisting Bypasses">PotPlayer.dll</ImageLoaded>
 			</Rule>
@@ -720,11 +732,6 @@
 				<ImageLoaded name="technique_id=T1064,technique_name=Windows Scripting Host Component" condition="end with">scrrun.dll</ImageLoaded>
 				<ImageLoaded name="technique_id=T1064,technique_name=Windows Scripting Host Component" condition="end with">vbscript.dll</ImageLoaded>
 			</Rule>
-			<!--Check for loading of the PowerShell engine-->
-			<Rule groupRelation="or">
-				<ImageLoaded name="technique_id=T1086,technique_name=PowerShell Engine" condition="end with">System.Management.Automation.ni.dll</ImageLoaded>
-				<ImageLoaded name="technique_id=T1086,technique_name=PowerShell Engine" condition="end with">System.Management.Automation.dll</ImageLoaded>
-			</Rule>
 			<Rule groupRelation="or">
 				<ImageLoaded condition="end with" name="Defense Evasion - Unusual EXE Extension loaded as DLL">.exe</ImageLoaded>
 				<Signed condition="is" name="Unsigned DLL loaded" >false</Signed>
@@ -747,7 +754,7 @@
 			
 			<Rule groupRelation="and">
 				<Image condition="is not">C:\Windows\System32\vaultcmd.exe</Image>
-				<ImageLoaded name="technique_id=T1003,technique_name=Credential Dumping via access to windows cred vault by Suspicious Process" condition="is">C:\Windows\System32\vaultcli.dll</ImageLoaded> <!--Mitre T1098--> <!--Mitre T1075--> <!--Mitre T1003-->
+				<ImageLoaded name="technique_id=T1003,technique_name=Credential Dumping via access to Windows cred vault by Suspicious Process" condition="is">C:\Windows\System32\vaultcli.dll</ImageLoaded> <!--Mitre T1098--> <!--Mitre T1075--> <!--Mitre T1003-->
 			</Rule>
 			<ImageLoaded name="technique_id=T1073,technique_name=DLL Side-Loading" condition="contains any" >admin$;c$;\\;\appdata\;\temp\</ImageLoaded><!-- loaded from network file share -->   
 			<!--Detect execution of HTA using the IE Javascript engine to bypass AMSI-->
@@ -808,9 +815,840 @@
 				<Image condition="end with">outlook.exe</Image>
 				<ImageLoaded condition="end with" name="MS outlook loading WMI">wbemsvc.dll</ImageLoaded>
 			</Rule>
-		</ImageLoad>
+			<!-- Begin Rules from https://github.com/XForceIR/SideLoadHunter/blob/main/Sysmon-SideLoadHunter/sideloadhunter.xml -->
+			<Rule name="AppVStreamingUX_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">AppVStreamingUX.exe</Image>
+					<ImageLoaded condition="contains">DWMAPI.dll</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="AppVStreamingUX_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">AppVStreamingUX.exe</Image>
+					<ImageLoaded condition="contains">d3d9.dll</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="AppVStreamingUX_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">AppVStreamingUX.exe</Image>
+					<ImageLoaded condition="contains">igdumdim64.dll</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="calc_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">calc.exe</Image>
+					<ImageLoaded condition="contains">PROPSYS.dll</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="calc_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">calc.exe</Image>
+					<ImageLoaded condition="contains">Secur32.dll</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="calc_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">calc.exe</Image>
+					<ImageLoaded condition="contains">MLANG.dll</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="calc_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">calc.exe</Image>
+					<ImageLoaded condition="contains">WININET.dll</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="certreq_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">certreq.exe</Image>
+					<ImageLoaded condition="contains">rdpendp.dll</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="change_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">change.exe</Image>
+					<ImageLoaded condition="contains">utildll.dll</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="charmap_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">charmap.exe</Image>
+					<ImageLoaded condition="contains">MSFTEDIT.DLL</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="chglogon_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">chglogon.exe</Image>
+					<ImageLoaded condition="contains">utildll.dll</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="DeviceCensus_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">DeviceCensus.exe</Image>
+					<ImageLoaded condition="contains">dcntel.dll</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="DeviceCensus_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">DeviceCensus.exe</Image>
+					<ImageLoaded condition="contains">rdpendp.dll</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="DeviceCensus_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">DeviceCensus.exe</Image>
+					<ImageLoaded condition="contains">igd10iumd64.dll</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="DeviceCensus_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">DeviceCensus.exe</Image>
+					<ImageLoaded condition="contains">igd12umd64.dll</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="DeviceCensus_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">DeviceCensus.exe</Image>
+					<ImageLoaded condition="contains">igd12umd64.dll</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="DeviceCensus_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">DeviceCensus.exe</Image>
+					<ImageLoaded condition="contains">igdusc64.dll</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="DeviceCensus_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">DeviceCensus.exe</Image>
+					<ImageLoaded condition="contains">dxilconv.dll</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="DeviceCensus_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">DeviceCensus.exe</Image>
+					<ImageLoaded condition="contains">utcutil.dll</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="DeviceCensus_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">DeviceCensus.exe</Image>
+					<ImageLoaded condition="contains">appraiser.dll</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="DeviceCensus_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">DeviceCensus.exe</Image>
+					<ImageLoaded condition="contains">updatepolicy.dll</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="dispdiag_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">dispdiag.exe</Image>
+					<ImageLoaded condition="contains">DXVA2.dll</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="dispdiag_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">dispdiag.exe</Image>
+					<ImageLoaded condition="contains">DXVA2.dll</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="djoin_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">djoin.exe</Image>
+					<ImageLoaded condition="contains">wdscore.dll</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="dnscacheugc_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">dnscacheugc.exe</Image>
+					<ImageLoaded condition="contains">wdscore.dll</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="dxdiag_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">dxdiag.exe</Image>
+					<ImageLoaded condition="contains">dsound.dll</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="dxdiag_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">dxdiag.exe</Image>
+					<ImageLoaded condition="contains">dsound.dll</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="dxdiag_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">dxdiag.exe</Image>
+					<ImageLoaded condition="contains">rdpendp.dll</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="dxdiag_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">dxdiag.exe</Image>
+					<ImageLoaded condition="contains">DispBroker.dll</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="dxdiag_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">dxdiag.exe</Image>
+					<ImageLoaded condition="contains">MSFTEDIT.DLL</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="fixmapi_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">fixmapi.exe</Image>
+					<ImageLoaded condition="contains">mapistub.dll</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="FXSCOVER_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">FXSCOVER.exe</Image>
+					<ImageLoaded condition="contains">FXSRESM.DLL</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="licensingdiag_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">licensingdiag.exe</Image>
+					<ImageLoaded condition="contains">cryptnet.dll</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="logman_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">logman.exe</Image>
+					<ImageLoaded condition="contains">pdh.dll</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="mcbuilder_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">mcbuilder.exe</Image>
+					<ImageLoaded condition="contains">mrmcoreR.dll</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="msdtc_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">msdtc.exe</Image>
+					<ImageLoaded condition="contains">COMRES.DLL</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="msdtc_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">msdtc.exe</Image>
+					<ImageLoaded condition="contains">msdtcVSp1res.dll</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="mspaint_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">mspaint.exe</Image>
+					<ImageLoaded condition="contains">MSFTEDIT.DLL</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="MuiUnattend_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">MuiUnattend.exe</Image>
+					<ImageLoaded condition="contains">wdscore.dll</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="netbtugc_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">netbtugc.exe</Image>
+					<ImageLoaded condition="contains">wdscore.dll</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="netsh_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">netsh.exe</Image>
+					<ImageLoaded condition="contains">IFMON.DLL</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="netsh_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">netsh.exe</Image>
+					<ImageLoaded condition="contains">RASMONTR.DLL</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="netsh_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">netsh.exe</Image>
+					<ImageLoaded condition="contains">AUTHFWCFG.DLL</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="netsh_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">netsh.exe</Image>
+					<ImageLoaded condition="contains">DHCPCMONITOR.DLL</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="netsh_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">netsh.exe</Image>
+					<ImageLoaded condition="contains">DOT3CFG.DLL</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="netsh_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">netsh.exe</Image>
+					<ImageLoaded condition="contains">FWCFG.DLL</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="netsh_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">netsh.exe</Image>
+					<ImageLoaded condition="contains">HNETMON.DLL</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="netsh_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">netsh.exe</Image>
+					<ImageLoaded condition="contains">NETIOHLP.DLL</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="netsh_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">netsh.exe</Image>
+					<ImageLoaded condition="contains">NETTRACE.DLL</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="netsh_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">netsh.exe</Image>
+					<ImageLoaded condition="contains">NSHHTTP.DLL</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="netsh_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">netsh.exe</Image>
+					<ImageLoaded condition="contains">NSHIPSEC.DLL</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="netsh_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">netsh.exe</Image>
+					<ImageLoaded condition="contains">NSHWFP.DLL</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="netsh_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">netsh.exe</Image>
+					<ImageLoaded condition="contains">P2PNETSH.DLL</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="netsh_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">netsh.exe</Image>
+					<ImageLoaded condition="contains">PEERDISTSH.DLL</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="netsh_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">netsh.exe</Image>
+					<ImageLoaded condition="contains">RPCNSH.DLL</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="netsh_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">netsh.exe</Image>
+					<ImageLoaded condition="contains">WCNNETSH.DLL</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="netsh_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">netsh.exe</Image>
+					<ImageLoaded condition="contains">WHHELPER.DLL</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="netsh_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">netsh.exe</Image>
+					<ImageLoaded condition="contains">WLANCFG.DLL</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="netsh_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">netsh.exe</Image>
+					<ImageLoaded condition="contains">WSHELPER.DLL</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="netsh_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">netsh.exe</Image>
+					<ImageLoaded condition="contains">WWANCFG.DLL</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="netsh_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">netsh.exe</Image>
+					<ImageLoaded condition="contains">userenv.dll</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="netsh_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">netsh.exe</Image>
+					<ImageLoaded condition="contains">userenv.dll</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="netsh_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">netsh.exe</Image>
+					<ImageLoaded condition="contains">wcmapi.dll</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="oobeldr_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">oobeldr.exe</Image>
+					<ImageLoaded condition="contains">wdscore.dll</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="phoneactivate_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">phoneactivate.exe</Image>
+					<ImageLoaded condition="contains">igdusc64.dll</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="PnPUnattend_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">PnPUnattend.exe</Image>
+					<ImageLoaded condition="contains">wdscore.dll</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="powershell_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">powershell.exe</Image>
+					<ImageLoaded condition="contains">amsi.dll</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="powershell_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">powershell.exe</Image>
+					<ImageLoaded condition="contains">USERENV.dll</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="powershell_ise_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">powershell_ise.exe</Image>
+					<ImageLoaded condition="contains">DWMAPI.dll</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="powershell_ise_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">powershell_ise.exe</Image>
+					<ImageLoaded condition="contains">igdumdim64.dll</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="powershell_ise_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">powershell_ise.exe</Image>
+					<ImageLoaded condition="contains">amsi.dll</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="powershell_ise_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">powershell_ise.exe</Image>
+					<ImageLoaded condition="contains">USERENV.dll</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="powershell_ise_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">powershell_ise.exe</Image>
+					<ImageLoaded condition="contains">avrt.dll</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="PrintIsolationHost_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">PrintIsolationHost.exe</Image>
+					<ImageLoaded condition="contains">PrintIsolationProxy.dll</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="de" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">de</Image>
+					<ImageLoaded condition="contains">cscapi.dll</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="query_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">query.exe</Image>
+					<ImageLoaded condition="contains">utildll.dll</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="ReAgentc_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">ReAgentc.exe</Image>
+					<ImageLoaded condition="contains">wdscore.dll</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="RMActivate_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">RMActivate.exe</Image>
+					<ImageLoaded condition="contains">msdrm.dll</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="RMActivate_isv_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">RMActivate_isv.exe</Image>
+					<ImageLoaded condition="contains">msdrm.dll</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="RMActivate_ssp_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">RMActivate_ssp.exe</Image>
+					<ImageLoaded condition="contains">msdrm.dll</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="RMActivate_ssp_isv_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">RMActivate_ssp_isv.exe</Image>
+					<ImageLoaded condition="contains">msdrm.dll</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="RpcPing_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">RpcPing.exe</Image>
+					<ImageLoaded condition="contains">rpchttp.dll</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="rwinsta_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">rwinsta.exe</Image>
+					<ImageLoaded condition="contains">utildll.dll</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="SlideToShutDown_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">SlideToShutDown.exe</Image>
+					<ImageLoaded condition="contains">igd10iumd64.dll</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="SlideToShutDown_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">SlideToShutDown.exe</Image>
+					<ImageLoaded condition="contains">igdusc64.dll</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="stordiag_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">stordiag.exe</Image>
+					<ImageLoaded condition="contains">wldp.dll</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="stordiag_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">stordiag.exe</Image>
+					<ImageLoaded condition="contains">amsi.dll</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="stordiag_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">stordiag.exe</Image>
+					<ImageLoaded condition="contains">USERENV.dll</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="stordiag_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">stordiag.exe</Image>
+					<ImageLoaded condition="contains">storageusage.dll</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="tscon_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">tscon.exe</Image>
+					<ImageLoaded condition="contains">utildll.dll</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="tskill_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">tskill.exe</Image>
+					<ImageLoaded condition="contains">utildll.dll</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="UNPUXHost_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">UNPUXHost.exe</Image>
+					<ImageLoaded condition="contains">PROPSYS.dll</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="UNPUXHost_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">UNPUXHost.exe</Image>
+					<ImageLoaded condition="contains">MLANG.dll</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="UNPUXHost_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">UNPUXHost.exe</Image>
+					<ImageLoaded condition="contains">WININET.dll</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="WFS_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">WFS.exe</Image>
+					<ImageLoaded condition="contains">WfsR.dll</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="WFS_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">WFS.exe</Image>
+					<ImageLoaded condition="contains">mapistub.dll</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="WFS_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">WFS.exe</Image>
+					<ImageLoaded condition="contains">MSI.DLL</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="WFS_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">WFS.exe</Image>
+					<ImageLoaded condition="contains">srpapi.dll</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="WFS_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">WFS.exe</Image>
+					<ImageLoaded condition="contains">FxsCompose.dll</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="WFS_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">WFS.exe</Image>
+					<ImageLoaded condition="contains">scansetting.dll</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="WFS_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">WFS.exe</Image>
+					<ImageLoaded condition="contains">WindowsCodecs.dll</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+			<Rule name="wsqmcons_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">wsqmcons.exe</Image>
+					<ImageLoaded condition="contains">KtmW32.dll</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>	
+			<Rule name="onedrivestandaloneupdater_sideload" groupRelation="and">
+				<!-- Log only image loads where modules match these conditions -->
+				<ImageLoad onmatch="include">
+					<Image condition="contains">onedrivestandaloneupdater.exe</Image>
+					<ImageLoaded condition="contains">wofutil.dll</ImageLoaded>
+					<Signature condition="is not">Microsoft Windows</Signature>
+				</ImageLoad>
+			</Rule>
+				<SignatureStatus condition="is" name="DLL loaded with unknown/cant confirm signature. Suspicous.">Unavailable</SignatureStatus>
+				<SignatureStatus name="DLL loaded with Invalid signature. Sooo Suspicous.">Invalid</SignatureStatus>
+				<Signed condition="is" name="DLL loaded with Invalid Hash Signature. Suspicous.">Invalid hash</Signed>
+				<Signed condition="is" name="Unsigned DLL loaded">false</Signed>
+			</ImageLoad>
+			</Rule>
 		</RuleGroup>
-		
+
+		<!-- END Rules from https://github.com/XForceIR/SideLoadHunter/blob/main/Sysmon-SideLoadHunter/sideloadhunter.xml -->
 		<!--SYSMON EVENT ID 7 : DLL (IMAGE) LOADED BY PROCESS [ImageLoad]-->
 		<RuleGroup name="ImageLoad exclude" groupRelation="or">
 		<ImageLoad onmatch="exclude">
@@ -823,11 +1661,11 @@
 			  <ImageLoaded condition="is">C:\Windows\Syswow64\comctl32.dll</ImageLoaded>
 			  <ImageLoaded condition="is">C:\Windows\System32\comctl32.dll</ImageLoaded>
 			  <ImageLoaded condition="is">C:\Windows\System32\Dism\LogProvider.dll</ImageLoaded>
-			  <ImageLoaded condition="is">c:\windows\SysWOW64\dism\LogProvider.dll</ImageLoaded>
+			  <ImageLoaded condition="is">c:\Windows\SysWOW64\dism\LogProvider.dll</ImageLoaded>
 			  <!-- <Image condition="is">C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe</Image> -->
 			  <ImageLoaded condition="begin with">C:\Program Files\Microsoft Office\root\Office</ImageLoaded> <!-- wwlib.dll side loading FP -->
 			  <Image condition="is">C:\Windows\System32\WinSAT.exe</Image>
-			  <Image condition="is">c:\windows\system32\surfacedtx.exe</Image>
+			  <Image condition="is">c:\Windows\system32\surfacedtx.exe</Image>
 			  <Image condition="is">c:\riot games\riot client\ux\riotclientuxrender.exe</Image>
 			  <Image condition="is">c:\riot games\riot client\riotclientcrashhandler.exe</Image>
 			  <Image condition="is">c:\riot games\league of legends\game\league of legends.exe</Image>
@@ -835,55 +1673,54 @@
 			  <Image condition="is">c:\riot games\riot client\ux\riotclientux.exe</Image>
 			  <Image condition="is">c:\riot games\league of legends\leagueclientux.exe</Image>
 			  <ImageLoaded condition="is">c: \riot games\riot client\riotclientcrashhandler.exe</ImageLoaded>
-			  <Image condition="is">c:\windows\system32\cavs\intel(r) audio service\intelaudioservice.exe</Image>
+			  <Image condition="is">c:\Windows\system32\cavs\intel(r) audio service\intelaudioservice.exe</Image>
 			  <Image condition="is">c:\program files (x86)\keepass password safe 2\keepass.exe</Image>
 			  <Image condition="is">C:\Windows\System32\wermgr.exe</Image> <!-- FP for schtask COM -->
 			  <Image condition="is">C:\Windows\System32\sdiagnhost.exe</Image><!-- FPs for wmiutil -->
 			  <ImageLoaded condition="is">C:\Windows\System32\cryptbase.dll</ImageLoaded>
 			  <ImageLoaded condition="is">C:\Windows\SysWOW64\winspool.drv</ImageLoaded>
 			  <ImageLoaded condition="is">C:\Windows\System32\winspool.drv</ImageLoaded>
-			  <ImageLoaded condition="begin with">PathC:\Windows\WinSxS</ImageLoaded>
+			  <ImageLoaded condition="begin with">C:\Windows\WinSxS</ImageLoaded>
 			  <ImageLoaded condition="is">C:\Windows\System32\amsi.dll</ImageLoaded>
 			  <ImageLoaded condition="is">C:\Windows\System32\msi.dll</ImageLoaded>
 			  <ImageLoaded condition="is">C:\Windows\System32\userenv.dll</ImageLoaded>
 			  <ImageLoaded condition="is">C:\Windows\System32\winmm.dll</ImageLoaded>
-			  <ImageLoaded condition="end with">.exe</ImageLoaded><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
+			  <ImageLoaded condition="end with">.exe</ImageLoaded><!-- Could miss things if you comment this, but it also reduces noise-->
 			  <Image condition="is">C:\Program Files (x86)\Google\Update\GoogleUpdate.exe</Image>
 			  <Image condition="is">C:\Windows\System32\taskeng.exe</Image>
 			  <Image condition="is">C:\Program Files\VMware\VMware Tools\TPAutoConnect.exe</Image>
 			  <Image condition="is">C:\Program Files\Windows Defender\NisSrv.exe</Image>
 			  <Image condition="is">C:\Program Files\Windows Defender\MsMpEng.exe</Image>
-			  <Image condition="is">C:\Windows\System32\dllhost.exe</Image><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			  <Image condition="begin with">C:\Windows\Microsoft.NET\Framework64\</Image><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
+			  <Image condition="is">C:\Windows\System32\dllhost.exe</Image><!-- Could miss things if you comment this, but it also reduces noise-->
+			  <Image condition="begin with">C:\Windows\Microsoft.NET\Framework64\</Image><!-- Could miss things if you comment this, but it also reduces noise-->
 			  <Image condition="is">C:\Windows\System32\DeviceCensus.exe</Image>
 			  <Image condition="is">C:\Windows\System32\systeminfo.exe</Image>
 			  <Image condition="is">C:\Windows\System32\LockAppHost.exe</Image>
 			  <Image condition="is">C:\Program Files\Google\Update\GoogleUpdate.exe</Image>
-			  <Image condition="is">C:\Windows\System32\wbem\WmiPrvSE.exe</Image><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
+			  <Image condition="is">C:\Windows\System32\wbem\WmiPrvSE.exe</Image><!-- Could miss things if you comment this, but it also reduces noise-->
 			  <Image condition="is">C:\Windows\System32\SrTasks.exe</Image>
 			  <Image condition="begin with">C:\Windows\Microsoft.NET\Framework\</Image>
 			  <Image condition="is">C:\Windows\System32\wbem\WmiApSrv.exe</Image>
 			  <Image condition="is">C:\Windows\SysWOW64\wbem\WmiPrvSE.exe</Image>
 			  <Image condition="is">C:\Program Files\Microsoft Policy Platform\policyHost.exe</Image>
-			  <Image condition="is">C:\Windows\System32\SearchProtocolHost.exe</Image><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			  <Image condition="is">C:\Windows\System32\SearchFilterHost.exe</Image><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
+			  <Image condition="is">C:\Windows\System32\SearchProtocolHost.exe</Image><!-- Could miss things if you comment this, but it also reduces noise-->
+			  <Image condition="is">C:\Windows\System32\SearchFilterHost.exe</Image><!-- Could miss things if you comment this, but it also reduces noise-->
 			  <Image condition="is">C:\Windows\System32\backgroundTaskHost.exe</Image>
-			  <Image condition="is">C:\Windows\servicing\TrustedInstaller.exe</Image><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
+			  <Image condition="is">C:\Windows\servicing\TrustedInstaller.exe</Image><!-- Could miss things if you comment this, but it also reduces noise-->
 			  <Image condition="begin with">C:\Windows\System32\taskhost</Image>
 			  <Image condition="is">C:\Windows\System32\LogonUI.exe</Image>
 			  <Image condition="is">C:\Windows\System32\wifitask.exe</Image>
 			  <Image condition="is">C:\Program Files\Microsoft Data Protection Manager\DPM\bin\DPMRA.exe</Image>
 			  <Image condition="is">C:\Windows\System32\VSSVC.exe</Image>
 			  <Image condition="is">C:\Windows\System32\netsh.exe</Image>
-			  <Image condition="end with">AppData\Local\Microsoft\Teams\current\Teams.exe</Image><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
 			  <Image condition="is">C:\Program Files (x86)\Google\Chrome\Application\chrome.exe</Image>
 			  <Image condition="is">C:\Windows\System32\raserver.exe</Image>
 			  <Image condition="is">C:\Windows\System32\RuntimeBroker.exe</Image>
-			  <Image condition="begin with">C:\Windows\SystemApps\</Image><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
+			  <Image condition="begin with">C:\Windows\SystemApps\</Image><!-- Could miss things if you comment this, but it also reduces noise-->
 			  <Image condition="is">C:\Windows\System32\SearchIndexer.exe</Image>
-			  <Image condition="is">C:\Windows\explorer.exe</Image><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
+			  <Image condition="is">C:\Windows\explorer.exe</Image><!-- Could miss things if you comment this, but it also reduces noise-->
 			  <Image condition="is">C:\Windows\System32\sppsvc.exe</Image><!-- noisy for taskschd.dll-->
-			  <Image condition="is">C:\Program Files\Internet Explorer\iexplore.exe</Image><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
+			  <Image condition="is">C:\Program Files\Internet Explorer\iexplore.exe</Image><!-- Could miss things if you comment this, but it also reduces noise-->
 			  <Image condition="begin with">C:\Windows\CCM\</Image>
 			  <Image condition="is">C:\Program Files\Manufacturer\Endpoint Agent\edpa.exe</Image>
 			  <Image condition="is">C:\Program Files\Microsoft Data Protection Manager\DPM\bin\DPMClientService.exe</Image>
@@ -893,9 +1730,9 @@
 			  <Image condition="is">C:\Windows\System32\mmc.exe</Image>
 			  <Image condition="is">C:\Program Files\Synaptics\SynTP\SynTPEnh.exe</Image>
 			  <Image condition="is">C:\Windows\System32\wlanext.exe</Image>
-			  <Image condition="begin with">C:\Program Files\Microsoft SQL Server\</Image><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
+			  <Image condition="begin with">C:\Program Files\Microsoft SQL Server\</Image><!-- Could miss things if you comment this, but it also reduces noise-->
 			  <Image condition="is">C:\Windows\System32\ibtsiva.exe</Image>
-			  <Image condition="is">C:\Windows\System32\lsass.exe</Image><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
+			  <Image condition="is">C:\Windows\System32\lsass.exe</Image><!-- Could miss things if you comment this, but it also reduces noise-->
 			  <Image condition="is">C:\Windows\System32\dwm.exe</Image>
 			  <Image condition="is">C:\Windows\System32\MicTray64.exe</Image>
 			  <Image condition="is">C:\Program Files\Intel\WiFi\bin\EvtEng.exe</Image>
@@ -910,16 +1747,16 @@
 			  <Image condition="is">C:\Windows\System32\sihost.exe</Image>
 			  <Image condition="is">C:\Program Files\Common Files\microsoft shared\ClickToRun\OfficeClickToRun.exe</Image>
 			  <Image condition="is">C:\Windows\System32\SettingSyncHost.exe</Image>
-			  <Image condition="is">c:\windows\system32\schtasks.exe</Image>
-			  <Image condition="is">c:\windows\syswow64\schtasks.exe</Image>
+			  <Image condition="is">c:\Windows\system32\schtasks.exe</Image>
+			  <Image condition="is">c:\Windows\syswow64\schtasks.exe</Image>
 			  <Image condition="is">C:\Program Files (x86)\Kontiki\KHost.exe</Image>
 			  <Image condition="is">C:\Windows\System32\tasklist.exe</Image>
 			  <Image condition="is">C:\Program Files (x86)\Google\Update\GoogleUpdate.exe</Image>
-			  <Image condition="end with">procexp64.exe</Image><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			  <Image condition="end with">procmon.exe</Image><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			  <Image condition="end with">procexp.exe</Image><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			  <Image condition="end with">wmic.exe</Image><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			  <Image condition="end with">AppData\Local\Microsoft\OneDrive\OneDrive.exe</Image><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
+			  <Image condition="end with">procexp64.exe</Image><!-- Could miss things if you comment this, but it also reduces noise-->
+			  <Image condition="end with">procmon.exe</Image><!-- Could miss things if you comment this, but it also reduces noise-->
+			  <Image condition="end with">procexp.exe</Image><!-- Could miss things if you comment this, but it also reduces noise-->
+			  <Image condition="end with">wmic.exe</Image><!-- Could miss things if you comment this, but it also reduces noise-->
+			  <Image condition="end with">AppData\Local\Microsoft\OneDrive\OneDrive.exe</Image><!-- Could miss things if you comment this, but it also reduces noise-->
 			  <ImageLoaded condition="begin with">C:\ProgramData\Microsoft\Windows Defender\Platform\</ImageLoaded>
 			  <Image>C:\Windows\System32\ClipRenew.exe</Image>
 			  <ImageLoaded condition="is">C:\Windows\SysWOW64\msi.dll</ImageLoaded>
@@ -939,13 +1776,13 @@
 			<Image condition="is">C:\Windows\System32\mmc.exe</Image>
 			<Image condition="is">C:\Windows\sysmon64.exe</Image>
 			<Image condition="is">C:\Windows\sysmon.exe</Image>
-			<Image condition="end with">\SWELF.exe</Image><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
+			<Image condition="end with">\SWELF.exe</Image><!-- Could miss things if you comment this, but it also reduces noise-->
 			<Image condition="is">C:\Windows\System32\svchost.exe</Image>
 			<Image condition="is">C:\Windows\System32\inetsrv\w3wp.exe</Image>
 			<Image condition="is">C:\Program Files (x86)\VMware\Infrastructure\Virtual Infrastructure Client\Launcher\VpxClient.exe</Image>
 			<Image condition="is">C:\Windows\System32\backgroundTaskHost.exe</Image> <!-- Windows Store apps unsigned -->
-			<Image condition="contains">SQL Server</Image><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			<Image condition="contains">Exchange Server</Image><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
+			<Image condition="contains">SQL Server</Image><!-- Could miss things if you comment this, but it also reduces noise-->
+			<Image condition="contains">Exchange Server</Image><!-- Could miss things if you comment this, but it also reduces noise-->
 			<ImageLoaded condition="contains">Exchange Server</ImageLoaded>
 			<ImageLoaded condition="contains">SQL Server</ImageLoaded>
 			<ImageLoaded condition="begin with">C:\Program Files\WindowsApps</ImageLoaded>
@@ -967,23 +1804,23 @@
 			<ImageLoaded condition="begin with">C:\Program Files\WindowsApps</ImageLoaded>
 			<ImageLoaded condition="is">C:\Program Files\Microsoft SQL Server\100\Shared\dbghelp.dll</ImageLoaded>
 			<!-- Exclude SPLUNK HEY! NOTE This needs to point to the exact path of your splunk install to avoid a blind spot if you dont want to log it-->
-			<Image condition="end with">splunkd.exe</Image><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			<Image condition="end with">splunk-MonitorNoHandle.exe</Image><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			<Image condition="end with">splunk-regmon.exe</Image><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			<Image condition="end with">splunk-netmon.exe</Image><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			<Image condition="end with">splunk-powershell.exe</Image><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			<Image condition="end with">splunk-winprintmon.exe</Image><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			<Image condition="end with">splunk-admon.exe</Image><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
+			<Image condition="end with">splunkd.exe</Image><!-- Could miss things if you comment this, but it also reduces noise-->
+			<Image condition="end with">splunk-MonitorNoHandle.exe</Image><!-- Could miss things if you comment this, but it also reduces noise-->
+			<Image condition="end with">splunk-regmon.exe</Image><!-- Could miss things if you comment this, but it also reduces noise-->
+			<Image condition="end with">splunk-netmon.exe</Image><!-- Could miss things if you comment this, but it also reduces noise-->
+			<Image condition="end with">splunk-powershell.exe</Image><!-- Could miss things if you comment this, but it also reduces noise-->
+			<Image condition="end with">splunk-winprintmon.exe</Image><!-- Could miss things if you comment this, but it also reduces noise-->
+			<Image condition="end with">splunk-admon.exe</Image><!-- Could miss things if you comment this, but it also reduces noise-->
 			<Rule groupRelation="and">
-                <Image condition="is">c:\windows\system32\windowspowershell\v1.0\powershell.exe</Image>
+                <Image condition="is">c:\Windows\system32\Windowspowershell\v1.0\powershell.exe</Image>
             <ImageLoaded condition="end with">system.management.automation.ni.dll</ImageLoaded>
             </Rule>
             <Rule groupRelation="and">
-            <Image condition="is">c:\windows\system32\windowspowershell\v1.0\powershell.exe</Image>
+            <Image condition="is">c:\Windows\system32\Windowspowershell\v1.0\powershell.exe</Image>
             <ImageLoaded condition="begin with">C:\Windows\assembly\NativeImages_v4.0.30319_64\System.Transactions\</ImageLoaded>
             </Rule>
             <Rule groupRelation="and">
-            <Image condition="is">c:\windows\system32\windowspowershell\v1.0\powershell.exe</Image>
+            <Image condition="is">c:\Windows\system32\Windowspowershell\v1.0\powershell.exe</Image>
             <ImageLoaded condition="begin with">C:\Windows\assembly\NativeImages_v4.0.30319_64\System.Transactions\</ImageLoaded>
             </Rule>
             <Rule groupRelation="and">
@@ -1055,11 +1892,11 @@
 		<RuleGroup name="CreateRemoteThread exclude" groupRelation="or">
 		<CreateRemoteThread onmatch="exclude">
 			<!--COMMENT: Exclude mostly-safe sources and log anything else.-->
-			<SourceImage condition="begin with">C:\Program Files\HP Inc\</SourceImage><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
+			<SourceImage condition="begin with">C:\Program Files\HP Inc\</SourceImage><!-- Could miss things if you comment this, but it also reduces noise-->
 			<SourceImage condition="begin with">C:\Program Files (x86)\Trend Micro\</SourceImage>
-			<SourceImage condition="is">C:\Windows\System32\wbem\WmiPrvSE.exe</SourceImage><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			<SourceImage condition="is">C:\Windows\SysWOW64\wbem\WmiPrvSE.exe</SourceImage> <!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			<SourceImage condition="is">C:\WINDOWS\Explorer.EXE</SourceImage>
+			<SourceImage condition="is">C:\Windows\System32\wbem\WmiPrvSE.exe</SourceImage><!-- Could miss things if you comment this, but it also reduces noise-->
+			<SourceImage condition="is">C:\Windows\SysWOW64\wbem\WmiPrvSE.exe</SourceImage> <!-- Could miss things if you comment this, but it also reduces noise-->
+			<SourceImage condition="is">C:\Windows\Explorer.EXE</SourceImage>
 			<SourceImage condition="is">C:\Program Files\Trend Micro\AMSP\coreServiceShell.exe</SourceImage>
 			<SourceImage condition="is">C:\Windows\system32\svchost.exe</SourceImage>
 			<SourceImage condition="is">C:\Windows\system32\wininit.exe</SourceImage>
@@ -1070,8 +1907,8 @@
 			<!--<StartModule condition="is">C:\Windows\system32\kernel32.dll</StartModule>This does createremote thread for injection as well as other things-->
 			<SourceImage condition="is">C:\Program Files (x86)\Webroot\WRSA.exe</SourceImage>
 			<SourceImage condition="begin with">C:\Program Files (x86)\Fortinet\FortiClient\</SourceImage>
-			<SourceImage condition="begin with">C:\Program Files (x86)\</SourceImage><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			<SourceImage condition="begin with">C:\Program Files\</SourceImage><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
+			<SourceImage condition="begin with">C:\Program Files (x86)\</SourceImage><!-- Could miss things if you comment this, but it also reduces noise-->
+			<SourceImage condition="begin with">C:\Program Files\</SourceImage><!-- Could miss things if you comment this, but it also reduces noise-->
 			<TargetImage condition="end with">Google\Chrome\Application\chrome.exe</TargetImage>
 		    <StartFunction>EtwpNotificationThread</StartFunction><!-- observed as FP from -->
 			<StartFunction>RtlpQueryProcessDebugInformationRemote</StartFunction><!-- observed as a FP from procexp64.exe -->
@@ -1088,11 +1925,11 @@
 		<!--DATA: UtcTime, ProcessGuid, ProcessId, Image, Device-->
 		<RuleGroup name="RawAccessRead exclude" groupRelation="or">
 		<RawAccessRead onmatch="exclude">
-			<Image condition="begin with">C:\Program Files (x86)\</Image> <!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			<Image condition="begin with">C:\Program Files \</Image> <!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			<Image condition="begin with">C:\Windows\</Image><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			<Image condition="begin with">C:\ProgramData\Microsoft\Windows Defender\Platform\</Image><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			<Image condition="is">system</Image><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
+			<Image condition="begin with">C:\Program Files (x86)\</Image> <!-- Could miss things if you comment this, but it also reduces noise-->
+			<Image condition="begin with">C:\Program Files \</Image> <!-- Could miss things if you comment this, but it also reduces noise-->
+			<Image condition="begin with">C:\Windows\</Image><!-- Could miss things if you comment this, but it also reduces noise-->
+			<Image condition="begin with">C:\ProgramData\Microsoft\Windows Defender\Platform\</Image><!-- Could miss things if you comment this, but it also reduces noise-->
+			<Image condition="is">system</Image><!-- Could miss things if you comment this, but it also reduces noise-->
 			<Image condition="is">C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.1907.4-0\MsMpEng.exe</Image>
 			<Image condition="is">C:\Windows\System32\svchost.exe</Image>
 			<Image condition="is">C:\Program Files\VMWare\VMWare Tools\vmtoolsd.exe</Image>
@@ -1111,7 +1948,7 @@
 			<CallTrace name="Seen doing process minidump with rundll32, taskmanager, and custom bins" condition="contains">\dbghelp.dll</CallTrace>
 			<CallTrace name="Seen doing process minidump with rundll32, taskmanager, and custom bins" condition="contains">minidump</CallTrace>
 			<SourceImage name="Process access from RecycleBin, SUSPICIOUS action" condition="begin with">C:\$Recycle.Bin</SourceImage>
-			<TargetImage name="Possible LSASS Process access, SUSPICIOUS action" condition="is">C:\WINDOWS\system32\lsass.exe</TargetImage>
+			<TargetImage name="Possible LSASS Process access, SUSPICIOUS action" condition="is">C:\Windows\system32\lsass.exe</TargetImage>
 			<TargetImage name="Possible browser inject, often done to dump passwords from browser" condition="end with">\chrome.exe</TargetImage>
 			<TargetImage name="Possible browser inject, often done to dump passwords from browser" condition="end with">\firefox.exe</TargetImage>
 			<GrantedAccess name="Possible suspicious process access,PROCESS_SUSPEND_RESUME (GrantedAccess)" condition="is">0x800</GrantedAccess>
@@ -1201,10 +2038,10 @@
 		
 		<RuleGroup name="ProcessAccess exclude" groupRelation="or">
 		<ProcessAccess onmatch="exclude">
-		  <SourceImage condition="begin with">C:\ProgramData\Microsoft\Windows Defender\platform\</SourceImage><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-		  <SourceImage condition="end with">\Bin\FMS.exe</SourceImage> <!-- Exchange Process --><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
+		  <SourceImage condition="begin with">C:\ProgramData\Microsoft\Windows Defender\platform\</SourceImage><!-- Could miss things if you comment this, but it also reduces noise-->
+		  <SourceImage condition="end with">\Bin\FMS.exe</SourceImage> <!-- Exchange Process --><!-- Could miss things if you comment this, but it also reduces noise-->
 		  <SourceImage condition="end with">C:\Windows\System32\smss.exe</SourceImage>
-		  <SourceImage condition="end with">\Google\Update\GoogleUpdate.exe</SourceImage><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
+		  <SourceImage condition="end with">\Google\Update\GoogleUpdate.exe</SourceImage><!-- Could miss things if you comment this, but it also reduces noise-->
 		  <SourceImage condition="is">C:\Program Files\Trend Micro\AMSP\coreServiceShell.exe</SourceImage>
 		  <SourceImage condition="is">C:\Program Files (x86)\Webroot\WRSA.exe</SourceImage>
 		  <SourceImage condition="is">C:\Program Files\Webroot\WRSA.exe</SourceImage>
@@ -1217,40 +2054,40 @@
 		  <SourceImage condition="end with">\Common Files\Adobe\AdobeGCClient\AGSService.exe</SourceImage>
 		  <SourceImage condition="begin with">C:\ProgramData\WebEx\webex\</SourceImage>
 		  <SourceImage condition="begin with">b:\steamlibrary\steamapps\</SourceImage><!-- Could miss things if you leave this uncommented, but it also reduces noise for me-->
-		  <SourceImage condition="end with">\Dropbox\Update\DropboxUpdate.exe</SourceImage><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-		  <SourceImage condition="end with">LTSvc\LTSVC.exe</SourceImage><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-		  <SourceImage condition="end with">\Trusteer\Rapport\bin\RapportMgmtService.exe</SourceImage><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-		  <SourceImage condition="end with">Adobe\AdobeGCClient\AGMService.exe</SourceImage><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-		  <SourceImage condition="end with">NT-ware Shared\MomAdmSvc\MomAdmSvc.exe</SourceImage><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-		  <SourceImage condition="end with">\Autodesk\Autodesk Desktop App\AdAppMgrSvc.exe</SourceImage><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-		  <SourceImage condition="is">c:\windows\system32\wbem\wmiprvse.exe</SourceImage><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-		  <SourceImage condition="is">C:\Windows\sysWOW64\wbem\wmiprvse.exe</SourceImage><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-		  <SourceImage condition="end with">\vmtoolsd.exe</SourceImage><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-		  <SourceImage condition="end with">\VBoxService.exe</SourceImage><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-		  <SourceImage condition="end with">\LTSVC.exe</SourceImage><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-		  <SourceImage condition="end with">\taskmgr.exe</SourceImage><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-		  <SourceImage condition="end with">\procexp64.exe</SourceImage><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-		  <SourceImage condition="end with">\procmon.exe</SourceImage><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-		  <SourceImage condition="end with">\procexp.exe</SourceImage> <!-- Could miss things if you leave this uncommented, but it also reduces noise-->
+		  <SourceImage condition="end with">\Dropbox\Update\DropboxUpdate.exe</SourceImage><!-- Could miss things if you comment this, but it also reduces noise-->
+		  <SourceImage condition="end with">LTSvc\LTSVC.exe</SourceImage><!-- Could miss things if you comment this, but it also reduces noise-->
+		  <SourceImage condition="end with">\Trusteer\Rapport\bin\RapportMgmtService.exe</SourceImage><!-- Could miss things if you comment this, but it also reduces noise-->
+		  <SourceImage condition="end with">Adobe\AdobeGCClient\AGMService.exe</SourceImage><!-- Could miss things if you comment this, but it also reduces noise-->
+		  <SourceImage condition="end with">NT-ware Shared\MomAdmSvc\MomAdmSvc.exe</SourceImage><!-- Could miss things if you comment this, but it also reduces noise-->
+		  <SourceImage condition="end with">\Autodesk\Autodesk Desktop App\AdAppMgrSvc.exe</SourceImage><!-- Could miss things if you comment this, but it also reduces noise-->
+		  <SourceImage condition="is">c:\Windows\system32\wbem\wmiprvse.exe</SourceImage><!-- Could miss things if you comment this, but it also reduces noise-->
+		  <SourceImage condition="is">C:\Windows\sysWOW64\wbem\wmiprvse.exe</SourceImage><!-- Could miss things if you comment this, but it also reduces noise-->
+		  <SourceImage condition="end with">\vmtoolsd.exe</SourceImage><!-- Could miss things if you comment this, but it also reduces noise-->
+		  <SourceImage condition="end with">\VBoxService.exe</SourceImage><!-- Could miss things if you comment this, but it also reduces noise-->
+		  <SourceImage condition="end with">\LTSVC.exe</SourceImage><!-- Could miss things if you comment this, but it also reduces noise-->
+		  <SourceImage condition="end with">\taskmgr.exe</SourceImage><!-- Could miss things if you comment this, but it also reduces noise-->
+		  <SourceImage condition="end with">\procexp64.exe</SourceImage><!-- Could miss things if you comment this, but it also reduces noise-->
+		  <SourceImage condition="end with">\procmon.exe</SourceImage><!-- Could miss things if you comment this, but it also reduces noise-->
+		  <SourceImage condition="end with">\procexp.exe</SourceImage> <!-- Could miss things if you comment this, but it also reduces noise-->
 		  <SourceImage condition="is">C:\Windows\system32\csrss.exe</SourceImage> 
 		  <SourceImage condition="is">C:\Windows\system32\wininit.exe</SourceImage> 
 		  <SourceImage condition="is">C:\Windows\System32\lsm.exe</SourceImage>
 		  <SourceImage condition="is">C:\Windows\system32\MRT.exe</SourceImage> 
-		  <SourceImage condition="end with">\Citrix\System32\wfshell.exe</SourceImage> <!-- Could miss things if you leave this uncommented, but it also reduces noise-->
+		  <SourceImage condition="end with">\Citrix\System32\wfshell.exe</SourceImage> <!-- Could miss things if you comment this, but it also reduces noise-->
 		  <SourceImage condition="is">C:\Program Files (x86)\Kontiki\KService.exe</SourceImage>
 		  <SourceImage condition="is">C:\Windows\system32\dgagent\DSAGENT.exe</SourceImage>
 		  <SourceImage condition="is">C:\Program Files (x86)\BigFix Enterprise\BES Client\BESClient.exe</SourceImage>
-		  <SourceImage condition="begin with">C:\ProgramData\Microsoft\Windows Defender\platform\</SourceImage><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
+		  <SourceImage condition="begin with">C:\ProgramData\Microsoft\Windows Defender\platform\</SourceImage><!-- Could miss things if you comment this, but it also reduces noise-->
 		  <SourceImage condition="is">C:\Program Files\Trend Micro\Deep Security Agent\dsa.exe</SourceImage> 
-		  <SourceImage condition="end with">AppData\Local\Microsoft\Teams\current\Teams.exe</SourceImage><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-		  <SourceImage condition="end with">Microsoft.Identity.AadConnect.Health.AadSync.Host.exe</SourceImage><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
+		  <SourceImage condition="end with">AppData\Local\Microsoft\Teams\current\Teams.exe</SourceImage><!-- Could miss things if you comment this, but it also reduces noise-->
+		  <SourceImage condition="end with">Microsoft.Identity.AadConnect.Health.AadSync.Host.exe</SourceImage><!-- Could miss things if you comment this, but it also reduces noise-->
 		  <SourceImage condition="is">C:\Program Files (x86)\Cisco\Cisco AnyConnect Secure Mobility Client\vpnagent.exe</SourceImage>
-		  <SourceImage condition="end with">Commvault\ContentStore\Base\cvd.exe</SourceImage><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
+		  <SourceImage condition="end with">Commvault\ContentStore\Base\cvd.exe</SourceImage><!-- Could miss things if you comment this, but it also reduces noise-->
 		  <SourceImage condition="is">C:\Program Files (x86)\Webroot\WRSA.exe</SourceImage>
 		  <SourceImage condition="is">C:\Program Files\Webroot\WRSA.exe</SourceImage>
 		  <SourceImage condition="is">C:\Program Files\Windows Defender\MsMpEng.exe</SourceImage>
 		  <TargetImage condition="is">C:\Program Files\Windows Defender\MsMpEng.exe</TargetImage>
-		  <SourceImage condition="is">C:\WINDOWS\CCM\CcmExec.exe</SourceImage>
+		  <SourceImage condition="is">C:\Windows\CCM\CcmExec.exe</SourceImage>
 		  <SourceImage condition="begin with">C:\Program Files\HP Inc\</SourceImage>
 		  <SourceImage condition="begin with">C:\Program Files (x86)\Trend Micro\</SourceImage>
 		  <SourceImage condition="begin with">C:\Program Files (x86)\Symantec\Symantec Endpoint Protection</SourceImage> 
@@ -1263,16 +2100,16 @@
 			  <SourceImage condition="begin with">C:\Windows\syswow64\</SourceImage>
 			  <SourceImage condition="is">C:\Program Files (x86)\N-able Technologies\Windows Agent\bin\agent.exe</SourceImage>
 			  <SourceImage condition="is">C:\Program Files\N-able Technologies\AVDefender\EPUpdateService.exe</SourceImage>
-			  <SourceImage condition="end with">\EMET_Service.exe</SourceImage><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			  <SourceImage condition="end with">\EMET_GUI.exe</SourceImage><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			  <SourceImage condition="end with">\procexp64.exe</SourceImage><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			  <SourceImage condition="end with">\procmon64.exe</SourceImage><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			  <SourceImage condition="end with">\software_reporter_tool.exe</SourceImage><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			  <SourceImage condition="end with">\NGenTask.exe</SourceImage><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			  <SourceImage condition="end with">\Autoruns.exe</SourceImage><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			  <SourceImage condition="end with">\Autorunsc.exe</SourceImage><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			  <SourceImage condition="contains">\processhacker</SourceImage><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			<SourceImage condition="is">C:\Users\Host\AppData\Local\Programs\Microsoft VS Code\Code.exe</SourceImage><!--VSCode path for default install-->
+			  <SourceImage condition="end with">\EMET_Service.exe</SourceImage><!-- Could miss things if you comment this, but it also reduces noise-->
+			  <SourceImage condition="end with">\EMET_GUI.exe</SourceImage><!-- Could miss things if you comment this, but it also reduces noise-->
+			  <SourceImage condition="end with">\procexp64.exe</SourceImage><!-- Could miss things if you comment this, but it also reduces noise-->
+			  <SourceImage condition="end with">\procmon64.exe</SourceImage><!-- Could miss things if you comment this, but it also reduces noise-->
+			  <SourceImage condition="end with">\software_reporter_tool.exe</SourceImage><!-- Could miss things if you comment this, but it also reduces noise-->
+			  <SourceImage condition="end with">\NGenTask.exe</SourceImage><!-- Could miss things if you comment this, but it also reduces noise-->
+			  <SourceImage condition="end with">\Autoruns.exe</SourceImage><!-- Could miss things if you comment this, but it also reduces noise-->
+			  <SourceImage condition="end with">\Autorunsc.exe</SourceImage><!-- Could miss things if you comment this, but it also reduces noise-->
+			  <SourceImage condition="contains">\processhacker</SourceImage><!-- Could miss things if you comment this, but it also reduces noise-->
+			<SourceImage condition="end with">\AppData\Local\Programs\Microsoft VS Code\Code.exe</SourceImage><!--VSCode path for default install-->
 			<SourceImage condition="is">C:\Program Files (x86)\VMware\VMWare Player\vmware-authd.exe</SourceImage>
 			<SourceImage condition="is">C:\Program Files\Microsoft Security Client\MsMpEng.exe</SourceImage>
 			<SourceImage condition="is">C:\Program Files\Windows Defender\MsMpEng.exe</SourceImage>
@@ -1280,19 +2117,19 @@
 			<SourceImage condition="is">C:\Program Files\McAfee\Agent\x86\macompatsvc.exe</SourceImage><!--McAfee:Agent-->
 			<SourceImage condition="is">C:\Program Files\WinZip\FAHWindow64.exe</SourceImage>
 			<SourceImage condition="is">C:\Program Files (x86)\VMware\VMware Workstation\vmware-authd.exe</SourceImage>
-			<SourceImage condition="is">C:\WINDOWS\CCM\CcmExec.exe</SourceImage>
-			<SourceImage condition="end with">\procexp64.exe</SourceImage><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			<SourceImage condition="begin with">C:\WINDOWS\</SourceImage> <!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			<SourceImage condition="begin with">C:\Program Files (x86)\</SourceImage> <!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			<SourceImage condition="begin with">C:\Program Files\</SourceImage> <!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			<SourceImage condition="begin with">C:\programdata\microsoft\windows defender\platform\</SourceImage>
-			<SourceImage condition="end with">\GoogleUpdate.exe</SourceImage><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			<SourceImage condition="end with">\LTSVC.exe</SourceImage><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			<SourceImage condition="end with">\SWELF.exe</SourceImage><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			<SourceImage condition="end with">\taskmgr.exe</SourceImage><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			<SourceImage condition="begin with">C:\Program Files\Fortinet\FortiClient\</SourceImage><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			<SourceImage condition="end with">\VBoxService.exe</SourceImage> <!-- Virtual Box --><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			<SourceImage condition="end with">\vmtoolsd.exe</SourceImage> <!-- VMWare --><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
+			<SourceImage condition="is">C:\Windows\CCM\CcmExec.exe</SourceImage>
+			<SourceImage condition="end with">\procexp64.exe</SourceImage><!-- Could miss things if you comment this, but it also reduces noise-->
+			<SourceImage condition="begin with">C:\Windows\</SourceImage> <!-- Could miss things if you comment this, but it also reduces noise-->
+			<SourceImage condition="begin with">C:\Program Files (x86)\</SourceImage> <!-- Could miss things if you comment this, but it also reduces noise-->
+			<SourceImage condition="begin with">C:\Program Files\</SourceImage> <!-- Could miss things if you comment this, but it also reduces noise-->
+			<SourceImage condition="begin with">C:\programdata\microsoft\Windows defender\platform\</SourceImage>
+			<SourceImage condition="end with">\GoogleUpdate.exe</SourceImage><!-- Could miss things if you comment this, but it also reduces noise-->
+			<SourceImage condition="end with">\LTSVC.exe</SourceImage><!-- Could miss things if you comment this, but it also reduces noise-->
+			<SourceImage condition="end with">\SWELF.exe</SourceImage><!-- Could miss things if you comment this, but it also reduces noise-->
+			<SourceImage condition="end with">\taskmgr.exe</SourceImage><!-- Could miss things if you comment this, but it also reduces noise-->
+			<SourceImage condition="begin with">C:\Program Files\Fortinet\FortiClient\</SourceImage><!-- Could miss things if you comment this, but it also reduces noise-->
+			<SourceImage condition="end with">\VBoxService.exe</SourceImage> <!-- Virtual Box --><!-- Could miss things if you comment this, but it also reduces noise-->
+			<SourceImage condition="end with">\vmtoolsd.exe</SourceImage> <!-- VMWare --><!-- Could miss things if you comment this, but it also reduces noise-->
 			<SourceImage condition="end with">\Citrix\System32\wfshell.exe</SourceImage> <!--Citrix process in C:\Program Files (x86)\Citrix\System32\wfshell.exe -->
 			<SourceImage condition="is">C:\Windows\System32\lsm.exe</SourceImage> <!-- System process under C:\Windows\System32\lsm.exe -->
 			<SourceImage condition="end with">\Microsoft.Identity.AadConnect.Health.AadSync.Host.exe</SourceImage> <!-- Microsoft Azure AD Connect Health Sync Agent -->
@@ -1309,7 +2146,7 @@
 			<GrantedAccess condition="end with">0x101400</GrantedAccess><!-- generic access rights -->
 			<GrantedAccess condition="end with">0x100040</GrantedAccess><!-- generic access rights -->
 			<GrantedAccess condition="end with">0x1000000</GrantedAccess><!-- generic access rights -->
-			<CallTrace condition="contains">windows defender</CallTrace> <!-- windefender -->
+			<CallTrace condition="contains">Windows defender</CallTrace> <!-- windefender -->
 		    <CallTrace condition="contains">mpengine.dll</CallTrace> <!-- Windefender -->
 		    <CallTrace condition="contains">UNKNOWN(00007F</CallTrace>
 		    <CallTrace condition="contains">appresolver.dll</CallTrace>
@@ -1327,15 +2164,15 @@
 			<Image condition="begin with">C:\Windows\SystemApps\Microsoft.Windows.Search</Image>
 			<Image condition="is">C:\Windows\System32\mousocoreworker.exe</Image>
 			<Image condition="is">C:\program files (x86)\steam\steam.exe</Image>
-			<Image condition="is">C:\WINDOWS\System32\svchost.exe</Image>
+			<Image condition="is">C:\Windows\System32\svchost.exe</Image>
 			<Image condition="is">C:\Program Files (x86)\Notepad++\notepad++.exe</Image>
 			<Image condition="is">C:\ProgramData\Microsoft\Windows Defender\platform\4.18.1907.4-0\MsMpEng.exe</Image>
 			<Image condition="begin with">C:\ProgramData\Microsoft\Windows Defender\platform\</Image>
-			<Image condition="begin with">C:\Program Files\Fortinet\FortiClient\</Image><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			<Image condition="end with">\SearchUI.exe</Image><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			<Image condition="begin with">C:\Program Files\Fortinet\FortiClient\</Image><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			<Image condition="end with">\AppData\Local\Microsoft\Teams\current\Teams.exe</Image><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			<Image condition="begin with">C:\Program Files\Mozilla Firefox\</Image><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
+			<Image condition="begin with">C:\Program Files\Fortinet\FortiClient\</Image><!-- Could miss things if you comment this, but it also reduces noise-->
+			<Image condition="end with">\SearchUI.exe</Image><!-- Could miss things if you comment this, but it also reduces noise-->
+			<Image condition="begin with">C:\Program Files\Fortinet\FortiClient\</Image><!-- Could miss things if you comment this, but it also reduces noise-->
+			<Image condition="end with">\AppData\Local\Microsoft\Teams\current\Teams.exe</Image><!-- Could miss things if you comment this, but it also reduces noise-->
+			<Image condition="begin with">C:\Program Files\Mozilla Firefox\</Image><!-- Could miss things if you comment this, but it also reduces noise-->
 			<Image condition="is">C:\Windows\SystemApps\Microsoft.Windows.Cortana_cw5n1h2txyewy\SearchUI.exe</Image>
 			<Image condition="begin with">C:\Program Files (x86)\Fortinet\FortiClient\</Image> 
 			<Image condition="is">C:\Program Files (x86)\EMET 5.5\EMET_Service.exe</Image> <!--Microsoft:EMET: Writes to C:\Windows\AppPatch\-->
@@ -1345,60 +2182,68 @@
 			<Image condition="is">C:\Windows\system32\CompatTelRunner.exe</Image> 
 			<Image condition="is">\\?\C:\Windows\system32\wbem\WMIADAP.EXE</Image> <!-- Microsoft:Windows: WMI Performance updates-->
 			<Image condition="is">C:\Windows\system32\mobsync.exe</Image> <!--Microsoft:Windows: Network file syncing-->
-			<Image condition="begin with">C:\Windows\winsxs\amd64_microsoft-windows</Image> <!-- Microsoft:Windows: Windows update-->
+			<Image condition="begin with">C:\Windows\winsxs\amd64_microsoft-Windows</Image> <!-- Microsoft:Windows: Windows update-->
 			<Image condition="is">C:\Program Files (x86)\Dell\CommandUpdate\InvColPC.exe</Image>
 			<Image condition="is">C:\Windows\system32\igfxCUIService.exe</Image> <!--Intel: Drops bat and other files in \Windows in normal operation-->
 			<Image condition="begin with">C:\Program Files (x86)\Microsoft Visual Studio\</Image> 
-			<Image condition="is">c:\windows\system32\svchost.exe</Image>
+			<Image condition="is">c:\Windows\system32\svchost.exe</Image>
 			<Image condition="is">c:\riot games\league of legends\leagueclient.exe</Image>
 			<Image condition="is">c:\riot games\league of legends\game\league of legends.exe</Image>
 			<Image condition="is">c:\program files (x86)\autodesk\autodesk desktop app\adappmgrsvc.exe</Image>
-			<Image condition="is">c:\windows\system32\lsass.exe</Image>
-			<Image condition="is">c:\windows\system32\cleanmgr.exe</Image>
-			<Image condition="is">c:\windows\system32\backgroundtaskhost.exe</Image>		
+			<Image condition="is">c:\Windows\system32\lsass.exe</Image>
+			<Image condition="is">c:\Windows\system32\cleanmgr.exe</Image>
+			<Image condition="is">c:\Windows\system32\backgroundtaskhost.exe</Image>		
 			<Rule groupRelation="and">
-			<Image condition="is">c:\windows\system32\svchost.exe</Image>
+			<Image condition="is">c:\Windows\system32\svchost.exe</Image>
 			<TargetFilename condition="begin with">C:\programdata\diagnosis\</TargetFilename>
 			</Rule>
 			<Rule groupRelation="and">
-			<Image condition="is">C:\WINDOWS\system32\wermgr.exe</Image>
+			<Image condition="is">C:\Windows\system32\wermgr.exe</Image>
 			<TargetFilename condition="begin with">C:\ProgramData\Microsoft\Windows\WER</TargetFilename>
 			</Rule>
 			<Rule groupRelation="and">
 			<Image condition="is">C:\Program Files (x86)\Microsoft Office\Root\Office16\SDXHelper.exe</Image>
-			<TargetFilename condition="begin with">C:\Users\Host\AppData\Local\Microsoft\Office\SolutionPackages</TargetFilename>
+			<TargetFilename condition="contains">\AppData\Local\Microsoft\Office\SolutionPackages</TargetFilename>
 			</Rule>
 			<Rule groupRelation="and">
-			<Image condition="is">c:\windows\system32\werfault.exe</Image>
-			<TargetFilename condition="begin with">c:\programdata\microsoft\windows\wer\reportarchive\</TargetFilename>
+			<Image condition="is">c:\Windows\system32\werfault.exe</Image>
+			<TargetFilename condition="begin with">c:\programdata\microsoft\Windows\wer\reportarchive\</TargetFilename>
 			</Rule>
 			<Rule groupRelation="and">
 			<Image condition="is">C:\program files (x86)\steam\bin\cef\cef.win7x64\steamwebhelper.exe</Image>
-			<TargetFilename condition="begin with">c:\users\host\appdata\local\steam\htmlcache\code cache\</TargetFilename>
+			<TargetFilename condition="contains">\appdata\local\steam\htmlcache\code cache\</TargetFilename>
+			</Rule>
+			<Rule groupRelation="and">
+			<Image condition="is">C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe</Image>
+			<TargetFilename condition="contains">\AppData\Local\Microsoft\Edge\User Data\Default\Service Worker\CacheStorage\</TargetFilename>
+			</Rule>
+			<Rule groupRelation="and"><!-- Could miss things if you comment this, but it also reduces noise-->
+			<Image condition="is">C:\Program Files (x86)\Mozilla Firefox\firefox.exe</Image>
+			<TargetFilename condition="contains">\AppData\Local\Mozilla\Firefox\Profiles\</TargetFilename>
 			</Rule>
 			<Image condition="is">c:\riot games\riot client\riotclientservices.exe</Image>
-			<TargetFilename condition="begin with">C:\Windows\System32\Tasks\OfficeSoftwareProtectionPlatform\SvcRestartTask</TargetFilename><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
+			<TargetFilename condition="begin with">C:\Windows\System32\Tasks\OfficeSoftwareProtectionPlatform\SvcRestartTask</TargetFilename><!-- Could miss things if you comment this, but it also reduces noise-->
 			<TargetFilename condition="begin with">C:\Windows\system32\DriverStore\Temp\</TargetFilename> <!-- Microsoft:Windows: Temp files by DrvInst.exe-->
-			<TargetFilename condition="begin with">C:\Program Files\WindowsApps\</TargetFilename><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
+			<TargetFilename condition="begin with">C:\Program Files\WindowsApps\</TargetFilename><!-- Could miss things if you comment this, but it also reduces noise-->
 			<TargetFilename condition="begin with">C:\Windows\system32\wbem\Performance\</TargetFilename> <!-- Microsoft:Windows: Created in wbem by WMIADAP.exe-->
 			<TargetFilename condition="end with">WRITABLE.TST</TargetFilename> <!-- Microsoft:Windows: Created in wbem by svchost-->
 			<TargetFilename condition="end with">.cdownload</TargetFilename> 
-			<TargetFilename condition="end with">.tmp</TargetFilename> <!-- Could miss things if you leave this uncommented, but it also reduces noise-->
+			<TargetFilename condition="end with">.tmp</TargetFilename> <!-- Could miss things if you comment this, but it also reduces noise-->
 			<TargetFilename condition="end with">.etl</TargetFilename>
 			<TargetFilename condition="end with">.pf</TargetFilename>
-			<TargetFilename condition="end with">.log</TargetFilename><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
+			<TargetFilename condition="end with">.log</TargetFilename><!-- Could miss things if you comment this, but it also reduces noise-->
 			<TargetFilename condition="end with">.rslc</TargetFilename> 
-			<TargetFilename condition="begin with">C:\Windows\SoftwareDistribution\Download\</TargetFilename><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
+			<TargetFilename condition="begin with">C:\Windows\SoftwareDistribution\Download\</TargetFilename><!-- Could miss things if you comment this, but it also reduces noise-->
 			<TargetFilename condition="begin with">C:\Windows\Installer\</TargetFilename> <!--Microsoft:Windows:Installer: Ignore MSI installer files caching-->
-			<TargetFilename condition="begin with">C:\$WINDOWS.~BT\Sources\</TargetFilename> <!-- Microsoft:Windows: Feature updates containing lots of .exe and .sys-->
+			<TargetFilename condition="begin with">C:\$Windows.~BT\Sources\</TargetFilename> <!-- Microsoft:Windows: Feature updates containing lots of .exe and .sys-->
 			<TargetFilename condition="is">C:\Windows\System32\Tasks\Adobe Acrobat Update Task</TargetFilename>
 			<TargetFilename condition="is">C:\Windows\System32\Tasks\Adobe Flash Player Updater</TargetFilename>
 			<TargetFilename condition="begin with">C:\Windows\System32\LogFiles\</TargetFilename>
 			<TargetFilename condition="is">C:\Tools\SysinternalsSuite\Sysmon64.exe</TargetFilename> 
-			<TargetFilename condition="is">C:\windows\microsoft.net\ngennicupdatelock.dat</TargetFilename>
-			<TargetFilename condition="begin with">C:\Program Files\Fortinet\FortiClient\</TargetFilename> <!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			<TargetFilename condition="contains">\AppData\Roaming\Mozilla\Firefox\Profiles\</TargetFilename><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
-			<TargetFilename condition="contains">\AppData\Roaming\Microsoft\Teams\</TargetFilename><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
+			<TargetFilename condition="is">C:\Windows\microsoft.net\ngennicupdatelock.dat</TargetFilename>
+			<TargetFilename condition="begin with">C:\Program Files\Fortinet\FortiClient\</TargetFilename> <!-- Could miss things if you comment this, but it also reduces noise-->
+			<TargetFilename condition="contains">\AppData\Roaming\Mozilla\Firefox\Profiles\</TargetFilename><!-- Could miss things if you comment this, but it also reduces noise-->
+			<TargetFilename condition="contains">\AppData\Roaming\Microsoft\Teams\</TargetFilename><!-- Could miss things if you comment this, but it also reduces noise-->
 		</FileCreate>
 		</RuleGroup>
 		
@@ -1421,18 +2266,19 @@
 		<RegistryEvent onmatch="include">
 			<!--Credential providers-->
 			<TargetObject name="Modification on WMI logging method ETW Tracer" condition="contains">\SYSTEM\CurrentControlSet\Control\WMI\Autologger\AUTOLOGGER_NAME\</TargetObject>
-			<TargetObject condition="begin with">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Authentication\Credential Provider</TargetObject> <!--Wildcard, includes Credental Providers and Credential Provider Filters-->
-			<TargetObject condition="begin with">HKLM\SYSTEM\CurrentControlSet\Control\Lsa</TargetObject>
+			<TargetObject name="Unwanted/Suspicious Reg modification" condition="begin with">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Authentication\Credential Provider</TargetObject> <!--Wildcard, includes Credental Providers and Credential Provider Filters-->
+			<TargetObject name="Unwanted/Suspicious Reg modification" condition="begin with">HKLM\SYSTEM\CurrentControlSet\Control\Lsa</TargetObject>
+			<TargetObject name="Unwanted/Suspicious Reg modification" condition="begin with">HKLM\SYSTEM\ControlSet001\Services\Npfs\Aliases</TargetObject>
 			<TargetObject name="Outlook Homepage Persistence Reg Key" condition="contains">\Software\Microsoft\Office\16.0\Outlook\Today\Stamp</TargetObject>
 			<TargetObject name="AutoRun Reg Key Creation" condition="contains">\Software\Microsoft\Windows NT\CurrentVersion\Windows\Load</TargetObject>
 			<TargetObject name="Outlook Homepage Persistence Reg Key" condition="contains">\Outlook\Today\UserDefinedUrl</TargetObject>
 			<TargetObject name="Outlook Homepage Persistence Reg Key" condition="contains">\Outlook\WebView\Inbox</TargetObject>
 			<TargetObject name="Outlook Homepage Persistence Reg Key" condition="contains">\Outlook\Security</TargetObject>
 			<TargetObject name="Outlook Homepage Persistence Reg Key" condition="contains">\Software\Microsoft\Office\16.0\Outlook\Profiles\Outlook</TargetObject>
-			<TargetObject name="technique_id=T1003,technique_name=Credential Dumping" condition="begin with">HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SecurityProviders</TargetObject><!--Microsoft:Windows: Changes to WDigest-UseLogonCredential for password scraping [ https://www.trustedsec.com/april-2015/dumping-wdigest-creds-with-meterpreter-mimikatzkiwi-in-windows-8-1/ ] -->
+			<TargetObject name="technique_id=T1003,technique_name=Credential Dumping" condition="begin with">HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SecurityProviders</TargetObject><!--Microsoft:Windows: Changes to WDigest-UseLogonCredential for password scraping [ https://www.trustedsec.com/april-2015/dumping-wdigest-creds-with-meterpreter-mimikatzkiwi-in-Windows-8-1/ ] -->
 			<TargetObject name="technique_id=T1003,technique_name=Credential Dumping" condition="contains">\Control\SecurityProviders\WDigest</TargetObject>
-			<TargetObject name="technique_id=T1103,technique_name=Appinit DLLs" condition="begin with">HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Windows\Appinit_Dlls</TargetObject><!--Microsoft:Windows: [ https://msdn.microsoft.com/en-us/library/windows/desktop/dd744762(v=vs.85).aspx ] -->
-			<TargetObject name="technique_id=T1103,technique_name=Appinit DLLs PERSISTENCE VIA REGISTRY MODIFICATION" condition="begin with">HKLM\SOFTWARE\Wow6432Node\Microsoft\Windows NT\CurrentVersion\Windows\Appinit_Dlls</TargetObject><!--Microsoft:Windows: [ https://msdn.microsoft.com/en-us/library/windows/desktop/dn280412(v=vs.85).aspx ] -->
+			<TargetObject name="technique_id=T1103,technique_name=Appinit DLLs" condition="begin with">HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Windows\Appinit_Dlls</TargetObject><!--Microsoft:Windows: [ https://msdn.microsoft.com/en-us/library/Windows/desktop/dd744762(v=vs.85).aspx ] -->
+			<TargetObject name="technique_id=T1103,technique_name=Appinit DLLs PERSISTENCE VIA REGISTRY MODIFICATION" condition="begin with">HKLM\SOFTWARE\Wow6432Node\Microsoft\Windows NT\CurrentVersion\Windows\Appinit_Dlls</TargetObject><!--Microsoft:Windows: [ https://msdn.microsoft.com/en-us/library/Windows/desktop/dn280412(v=vs.85).aspx ] -->
 			<TargetObject name="technique_id=T1076,technique_name=Remote Desktop Protocol" condition="is">HKLM\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services</TargetObject>
 			<!-- Win32_OSRecoveryConfiguration class C2 maps to a change in values within the following key: -->
 			<TargetObject name="technique_id=T1047,technique_name=Windows Management Instrumentation" condition="contains">SYSTEM\CurrentControlSet\Control\CrashControl</TargetObject>
@@ -1491,17 +2337,17 @@
 			<TargetObject name="technique_id=T1060,technique_name=Registry Run Keys / Start Folder" condition="contains">CurrentVersion\Windows\Run</TargetObject> <!--Microsoft:Windows: [ https://msdn.microsoft.com/en-us/library/jj874148.aspx ] -->
 			<TargetObject name="Reg Key for Microsoft:Windows: Autorun location" condition="contains">CurrentVersion\Winlogon\Shell</TargetObject> <!--Microsoft:Windows: [ https://msdn.microsoft.com/en-us/library/ms838576(v=winembedded.5).aspx ] -->
 			<TargetObject name="Reg Key for Microsoft:Windows: Autorun location" condition="contains">CurrentVersion\Winlogon\System</TargetObject> <!--Microsoft:Windows [ https://www.exterminate-it.com/malpedia/regvals/zlob-dns-changer/118 ] -->
-			<TargetObject name="Reg Key for Microsoft:Windows: Autorun location" condition="begin with">HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\Notify</TargetObject> <!--Microsoft:Windows: Autorun location [ https://attack.mitre.org/wiki/Technique/T1004 ] [ https://www.cylance.com/windows-registry-persistence-part-2-the-run-keys-and-search-order ] -->
+			<TargetObject name="Reg Key for Microsoft:Windows: Autorun location" condition="begin with">HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\Notify</TargetObject> <!--Microsoft:Windows: Autorun location [ https://attack.mitre.org/wiki/Technique/T1004 ] [ https://www.cylance.com/Windows-registry-persistence-part-2-the-run-keys-and-search-order ] -->
 			<TargetObject name="Reg Key for Microsoft:Windows: Autorun location" condition="begin with">HKLM\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\Shell</TargetObject> <!--Microsoft:Windows: [ https://technet.microsoft.com/en-us/library/ee851671.aspx ] -->
-			<TargetObject name="Reg Key for Microsoft:Windows: Autorun location" condition="begin with">HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\Userinit</TargetObject> <!--Microsoft:Windows: Autorun location [ https://www.cylance.com/windows-registry-persistence-part-2-the-run-keys-and-search-order ] -->
+			<TargetObject name="Reg Key for Microsoft:Windows: Autorun location" condition="begin with">HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\Userinit</TargetObject> <!--Microsoft:Windows: Autorun location [ https://www.cylance.com/Windows-registry-persistence-part-2-the-run-keys-and-search-order ] -->
 			<TargetObject name="Reg Keys for Legacy driver loading" condition="begin with">HKLM\SOFTWARE\WOW6432Node\Microsoft\Windows NT\CurrentVersion\Drivers32</TargetObject> <!--Microsoft:Windows: Legacy driver loading | Credit @ion-storm -->
 			<TargetObject name="Reg Key for Microsoft:Windows: Autorun location" condition="begin with">HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\BootExecute</TargetObject>
-			<TargetObject name="Reg key for persistance Microsoft:Windows: Autorun" condition="contains">\SYSTEM\CurrentControlSet\Services\NTDS</TargetObject><!--Microsoft:Windows: Autorun | Credit @ion-storm | [ https://www.cylance.com/windows-registry-persistence-part-2-the-run-keys-and-search-order ] -->
+			<TargetObject name="Reg key for persistance Microsoft:Windows: Autorun" condition="contains">\SYSTEM\CurrentControlSet\Services\NTDS</TargetObject><!--Microsoft:Windows: Autorun | Credit @ion-storm | [ https://www.cylance.com/Windows-registry-persistence-part-2-the-run-keys-and-search-order ] -->
 			<TargetObject name="Microsoft:Windows: Automatic program crash debug program" condition="begin with">HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AeDebug</TargetObject> <!--Microsoft:Windows: Automatic program crash debug program [ https://www.symantec.com/security_response/writeup.jsp?docid=2007-050712-5453-99&tabid=2 ] -->
 			<TargetObject name="Reg Key for Legacy logon script environment variable" condition="contains">UserInitMprLogonScript</TargetObject> <!--Microsoft:Windows: Legacy logon script environment variable [ http://www.hexacorn.com/blog/2014/11/14/beyond-good-ol-run-key-part-18/ ] -->
 			<!--Services-->
-			<TargetObject name="Points to a service's DLL" condition="end with">\ServiceDll</TargetObject> <!--Microsoft:Windows: Points to a service's DLL [ https://blog.cylance.com/windows-registry-persistence-part-1-introduction-attack-phases-and-windows-services ] -->
-			<TargetObject name="Manifest pointing to service's DLL" condition="end with">\ServiceManifest</TargetObject> <!--Microsoft:Windows: Manifest pointing to service's DLL [ https://www.geoffchappell.com/studies/windows/win32/services/svchost/index.htm ] -->
+			<TargetObject name="Points to a service's DLL" condition="end with">\ServiceDll</TargetObject> <!--Microsoft:Windows: Points to a service's DLL [ https://blog.cylance.com/Windows-registry-persistence-part-1-introduction-attack-phases-and-Windows-services ] -->
+			<TargetObject name="Manifest pointing to service's DLL" condition="end with">\ServiceManifest</TargetObject> <!--Microsoft:Windows: Manifest pointing to service's DLL [ https://www.geoffchappell.com/studies/Windows/win32/services/svchost/index.htm ] -->
 			<TargetObject name="Points to a service's EXE" condition="end with">\ImagePath</TargetObject> <!--Microsoft:Windows: Points to a service's EXE [ https://attack.mitre.org/wiki/Technique/T1050 ] -->
 			<TargetObject name="Services start mode changes (Disabled, Automatically, Manual)" condition="end with">\Start</TargetObject> <!--Microsoft:Windows: Services start mode changes (Disabled, Automatically, Manual)-->
 			<TargetObject name="Changes to file extension mapping" condition="contains">Explorer\FileExts\</TargetObject> <!--Microsoft:Windows: Changes to file extension mapping-->
@@ -1516,9 +2362,9 @@
 			<!--Windows shell hijack and modifications-->
 			<TargetObject name="Windows shell hijack and modifications location" condition="contains">Classes\*\</TargetObject> <!--Microsoft:Windows:Explorer: [ http://www.silentrunners.org/launchpoints.html ] -->
 			<TargetObject name="Windows shell hijack and modifications location" condition="contains">Classes\AllFilesystemObjects\</TargetObject> <!--Microsoft:Windows:Explorer: [ http://www.silentrunners.org/launchpoints.html ] -->
-			<TargetObject name="Windows shell hijack and modifications location" condition="contains">Classes\Directory\</TargetObject> <!--Microsoft:Windows:Explorer: [ https://stackoverflow.com/questions/1323663/windows-shell-context-menu-option ] -->
-			<TargetObject name="Windows shell hijack and modifications location" condition="contains">Classes\Drive\</TargetObject> <!--Microsoft:Windows:Explorer: [ https://stackoverflow.com/questions/1323663/windows-shell-context-menu-option ] -->
-			<TargetObject name="Windows shell hijack and modifications location" condition="contains">Classes\Folder\</TargetObject> <!--Microsoft:Windows:Explorer: ContextMenuHandlers, DragDropHandlers, CopyHookHandlers, [ https://stackoverflow.com/questions/1323663/windows-shell-context-menu-option ] -->
+			<TargetObject name="Windows shell hijack and modifications location" condition="contains">Classes\Directory\</TargetObject> <!--Microsoft:Windows:Explorer: [ https://stackoverflow.com/questions/1323663/Windows-shell-context-menu-option ] -->
+			<TargetObject name="Windows shell hijack and modifications location" condition="contains">Classes\Drive\</TargetObject> <!--Microsoft:Windows:Explorer: [ https://stackoverflow.com/questions/1323663/Windows-shell-context-menu-option ] -->
+			<TargetObject name="Windows shell hijack and modifications location" condition="contains">Classes\Folder\</TargetObject> <!--Microsoft:Windows:Explorer: ContextMenuHandlers, DragDropHandlers, CopyHookHandlers, [ https://stackoverflow.com/questions/1323663/Windows-shell-context-menu-option ] -->
 			<TargetObject name="Windows shell hijack and modifications location" condition="contains">ContextMenuHandlers\</TargetObject> <!--Microsoft:Windows: [ http://oalabs.openanalysis.net/2015/06/04/malware-persistence-hkey_current_user-shell-extension-handlers/ ] -->
 			<TargetObject name="Windows shell hijack and modifications location" condition="contains">CurrentVersion\Shell</TargetObject> <!--Microsoft:Windows: Shell Folders, ShellExecuteHooks, ShellIconOverloadIdentifers, ShellServiceObjects, ShellServiceObjectDelayLoad [ http://oalabs.openanalysis.net/2015/06/04/malware-persistence-hkey_current_user-shell-extension-handlers/ ] -->
 			<TargetObject name="Windows shell hijack and modifications location" condition="begin with">HKLM\Software\Microsoft\Windows\CurrentVersion\explorer\ShellExecuteHooks</TargetObject> <!--Microsoft:Windows: ShellExecuteHooks-->
@@ -1536,7 +2382,7 @@
 			<!--Credential providers-->
 			<TargetObject name="Credential Providers and Credential Provider Filters" condition="begin with">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Authentication\Credential Provider</TargetObject> <!--Wildcard, includes Credential Providers and Credential Provider Filters-->
 			<TargetObject name="Reg key used to detect https://attack.mitre.org/wiki/Technique/T1131 and https://attack.mitre.org/wiki/Technique/T1101" condition="begin with">HKLM\SYSTEM\CurrentControlSet\Control\Lsa\</TargetObject> <!-- [ https://attack.mitre.org/wiki/Technique/T1131 ] [ https://attack.mitre.org/wiki/Technique/T1101 ] -->
-			<TargetObject name="Changes to WDigest-UseLogonCredential for password scraping" condition="begin with">HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SecurityProviders</TargetObject> <!--Microsoft:Windows: Changes to WDigest-UseLogonCredential for password scraping [ https://www.trustedsec.com/april-2015/dumping-wdigest-creds-with-meterpreter-mimikatzkiwi-in-windows-8-1/ ] -->
+			<TargetObject name="Changes to WDigest-UseLogonCredential for password scraping" condition="begin with">HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SecurityProviders</TargetObject> <!--Microsoft:Windows: Changes to WDigest-UseLogonCredential for password scraping [ https://www.trustedsec.com/april-2015/dumping-wdigest-creds-with-meterpreter-mimikatzkiwi-in-Windows-8-1/ ] -->
 			<TargetObject name="Netsh helper DLL" condition="begin with">HKLM\SOFTWARE\Microsoft\Netsh</TargetObject> <!--Microsoft:Windows: Netsh helper DLL [ https://attack.mitre.org/wiki/Technique/T1128 ] -->
 			<TargetObject name="Account password set to not expire" condition="contains">\CurrentVersion\Policies\System\DisableChangePassword</TargetObject>
 			<!--Networking-->
@@ -1583,14 +2429,14 @@
 			<!--Windows application compatibility-->
 			<TargetObject name="Microsoft:Windows: AppCompat used for SHIM database persistence" condition="begin with">HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Custom</TargetObject> <!--Microsoft:Windows: AppCompat [ https://www.fireeye.com/blog/threat-research/2017/05/fin7-shim-databases-persistence.html ] -->
 			<TargetObject name="Microsoft:Windows: AppCompat used for SHIM database persistence" condition="begin with">HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\InstalledSDB</TargetObject> <!--Microsoft:Windows: AppCompat [ https://attack.mitre.org/wiki/Technique/T1138 ] -->
-			<TargetObject name="Reg key for Microsoft:Windows: Registry virtualization" condition="contains">VirtualStore</TargetObject> <!--Microsoft:Windows: Registry virtualization [ https://msdn.microsoft.com/en-us/library/windows/desktop/aa965884(v=vs.85).aspx ] -->
+			<TargetObject name="Reg key for Microsoft:Windows: Registry virtualization" condition="contains">VirtualStore</TargetObject> <!--Microsoft:Windows: Registry virtualization [ https://msdn.microsoft.com/en-us/library/Windows/desktop/aa965884(v=vs.85).aspx ] -->
 			<!--Windows internals integrity monitoring-->
 			<TargetObject name="Malware likes changing IFEO, like adding Debugger to disable antivirus EXE" condition="begin with">HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\</TargetObject> <!--Microsoft:Windows: Malware likes changing IFEO, like adding Debugger to disable antivirus EXE-->
 			<TargetObject name="Event log system integrity and ACLs" condition="begin with">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WINEVT\</TargetObject> <!--Microsoft:Windows: Event log system integrity and ACLs-->
 			<TargetObject name="Services approved to load in safe mode" condition="begin with">HKLM\SYSTEM\CurrentControlSet\Control\Safeboot\</TargetObject> <!--Microsoft:Windows: Services approved to load in safe mode-->
 			<TargetObject name="Providers notified by WinLogon" condition="begin with">HKLM\SYSTEM\CurrentControlSet\Control\Winlogon\</TargetObject> <!--Microsoft:Windows: Providers notified by WinLogon-->
 			<TargetObject condition="end with">\FriendlyName</TargetObject> <!--Microsoft:Windows: New devices connected and remembered-->
-			<TargetObject condition="contains">VirtualStore</TargetObject> <!--Microsoft:Windows: Registry virtualization [ https://msdn.microsoft.com/en-us/library/windows/desktop/aa965884(v=vs.85).aspx ] -->
+			<TargetObject condition="contains">VirtualStore</TargetObject> <!--Microsoft:Windows: Registry virtualization [ https://msdn.microsoft.com/en-us/library/Windows/desktop/aa965884(v=vs.85).aspx ] -->
 			<TargetObject condition="contains">\SOFTWARE\Microsoft\Windows\CurrentVersion\WINEVT\Publishers\</TargetObject> 
 			<TargetObject condition="contains">\CurrentControlSet\Control\Lsa\OSConfig\Security Packages</TargetObject> 
 			<TargetObject condition="contains">\SYSTEM\CurrentControlSet\Services\PortProxy\v4tov4</TargetObject> 
@@ -1602,7 +2448,7 @@
 			<TargetObject condition="contains">\Microsoft\Windows\CurrentVersion\Policies\Explorer\Run</TargetObject> 
 			<TargetObject condition="contains">\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce</TargetObject> 
 			<TargetObject condition="contains">\InProcServer32</TargetObject> 
-			<TargetObject condition="contains">\SOFTWARE\MICROSOFT\WINDOWS NT\CURRENTVERSION\WINLOGON\</TargetObject> 
+			<TargetObject condition="contains">\SOFTWARE\MICROSOFT\Windows NT\CURRENTVERSION\WINLOGON\</TargetObject> 
 			<TargetObject condition="is">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Installer\InProgress\(Default)</TargetObject>
 			<TargetObject name="Microsoft:Windows: Malware sometimes disables tracing to obfuscate tracks" condition="begin with">HKLM\SOFTWARE\Microsoft\Tracing\RASAPI32</TargetObject> <!--Microsoft:Windows: Malware sometimes disables tracing to obfuscate tracks-->
 			<TargetObject condition="begin with">HKLM\Software\Microsoft\Windows NT\CurrentVersion\Windows\Appinit_Dlls</TargetObject>
@@ -1631,31 +2477,31 @@
 			<TargetObject name="Group policy scripts" condition="contains">\Group Policy\Scripts</TargetObject> <!--Microsoft:Windows: Group policy scripts-->
 			<TargetObject name="technique_id=T1037,technique_name=Logon Scripts" condition="contains">\Windows\System\Scripts</TargetObject> <!--Microsoft:Windows: Logon, Loggoff, Shutdown-->
 			<TargetObject name="technique_id=T1060,technique_name=Registry Run Keys / Start Folder" condition="contains">\Policies\Explorer\Run</TargetObject><!--Microsoft:Windows -->
-			<TargetObject condition="end with">\ServiceDll</TargetObject> <!--Microsoft:Windows: Points to a service's DLL [ https://blog.cylance.com/windows-registry-persistence-part-1-introduction-attack-phases-and-windows-services ] -->
+			<TargetObject condition="end with">\ServiceDll</TargetObject> <!--Microsoft:Windows: Points to a service's DLL [ https://blog.cylance.com/Windows-registry-persistence-part-1-introduction-attack-phases-and-Windows-services ] -->
 			<TargetObject condition="end with">\ImagePath</TargetObject> <!--Microsoft:Windows: Points to a service's EXE [ https://github.com/crypsisgroup/Splunkmon/blob/master/sysmon.cfg ] -->
 			<TargetObject condition="end with">\Start</TargetObject> <!--Microsoft:Windows: Services start mode changes (Disabled, Automatically, Manual)-->
-			<TargetObject name="technique_id=T1004,technique_name=Winlogon Helper DLL" condition="begin with">HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\Notify</TargetObject><!--Microsoft:Windows: Autorun location [ https://www.cylance.com/windows-registry-persistence-part-2-the-run-keys-and-search-order ] -->
-			<TargetObject name="technique_id=T1004,technique_name=Winlogon Helper DLL" condition="begin with">HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\Userinit</TargetObject> <!--Microsoft:Windows: Autorun location [ https://www.cylance.com/windows-registry-persistence-part-2-the-run-keys-and-search-order ] -->
+			<TargetObject name="technique_id=T1004,technique_name=Winlogon Helper DLL" condition="begin with">HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\Notify</TargetObject><!--Microsoft:Windows: Autorun location [ https://www.cylance.com/Windows-registry-persistence-part-2-the-run-keys-and-search-order ] -->
+			<TargetObject name="technique_id=T1004,technique_name=Winlogon Helper DLL" condition="begin with">HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\Userinit</TargetObject> <!--Microsoft:Windows: Autorun location [ https://www.cylance.com/Windows-registry-persistence-part-2-the-run-keys-and-search-order ] -->
 			<TargetObject name="technique_id=T1004,technique_name=Winlogon Helper DLL" condition="begin with">HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\Shell</TargetObject>
 			<TargetObject name="Microsoft:Windows: Legacy driver loading" condition="begin with">HKLM\SOFTWARE\WOW6432Node\Microsoft\Windows NT\CurrentVersion\Drivers32</TargetObject> <!--Microsoft:Windows: Legacy driver loading | Credit @ion-storm -->
-			<TargetObject name="technique_id=T1060,technique_name=Registry Run Keys / Start Folder" condition="begin with">HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\BootExecute</TargetObject> <!--Microsoft:Windows: Autorun | Credit @ion-storm | [ https://www.cylance.com/windows-registry-persistence-part-2-the-run-keys-and-search-order ] -->
+			<TargetObject name="technique_id=T1060,technique_name=Registry Run Keys / Start Folder" condition="begin with">HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\BootExecute</TargetObject> <!--Microsoft:Windows: Autorun | Credit @ion-storm | [ https://www.cylance.com/Windows-registry-persistence-part-2-the-run-keys-and-search-order ] -->
 			<TargetObject name="technique_id=T1042,technique_name=Change Default File Association" condition="contains">\Explorer\FileExts</TargetObject><!--Microsoft:Windows: Changes to file extension mapping-->
 			<TargetObject name="Microsoft:Windows: Sensitive subkey under file associations and CLSID that map to launch command" condition="contains">\shell\install\command</TargetObject> <!--Microsoft:Windows: Sensitive subkey under file associations and CLSID that map to launch command-->
 			<TargetObject name="Microsoft:Windows: Sensitive subkey under file associations and CLSID that map to launch command" condition="contains">\shell\open\command</TargetObject> <!--Microsoft:Windows: Sensitive subkey under file associations and CLSID that map to launch command-->
 			<TargetObject name="Microsoft:Windows: Sensitive subkey under file associations and CLSID that map to launch command" condition="contains">\shell\open\ddeexec</TargetObject> <!--Microsoft:Windows: Sensitive subkey under file associations and CLSID that map to launch command-->
 			<TargetObject name="technique_id=T1060,technique_name=Registry Run Keys / Start Folder" condition="contains">Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders\Startup</TargetObject>
 			<TargetObject condition="contains">\Classes\AllFilesystemObjects</TargetObject> <!--Microsoft:Windows:Explorer: [ http://www.silentrunners.org/launchpoints.html ] -->
-			<TargetObject condition="contains">\Classes\Directory</TargetObject> <!--Microsoft:Windows:Explorer: [ https://stackoverflow.com/questions/1323663/windows-shell-context-menu-option ] -->
-			<TargetObject condition="contains">\Classes\Drive</TargetObject> <!--Microsoft:Windows:Explorer: [ https://stackoverflow.com/questions/1323663/windows-shell-context-menu-option ] -->
-			<TargetObject condition="contains">\Classes\Folder</TargetObject> <!--Microsoft:Windows:Explorer: ContextMenuHandlers, DragDropHandlers, CopyHookHandlers, [ https://stackoverflow.com/questions/1323663/windows-shell-context-menu-option ] -->
+			<TargetObject condition="contains">\Classes\Directory</TargetObject> <!--Microsoft:Windows:Explorer: [ https://stackoverflow.com/questions/1323663/Windows-shell-context-menu-option ] -->
+			<TargetObject condition="contains">\Classes\Drive</TargetObject> <!--Microsoft:Windows:Explorer: [ https://stackoverflow.com/questions/1323663/Windows-shell-context-menu-option ] -->
+			<TargetObject condition="contains">\Classes\Folder</TargetObject> <!--Microsoft:Windows:Explorer: ContextMenuHandlers, DragDropHandlers, CopyHookHandlers, [ https://stackoverflow.com/questions/1323663/Windows-shell-context-menu-option ] -->
 			<TargetObject condition="contains">\ContextMenuHandlers</TargetObject> <!--Microsoft:Windows: [ http://oalabs.openanalysis.net/2015/06/04/malware-persistence-hkey_current_user-shell-extension-handlers/ ] -->
 			<TargetObject condition="contains">\CurrentVersion\Shell</TargetObject> <!--Microsoft:Windows: Shell Folders, ShellExecuteHooks, ShellIconOverloadIdentifers, ShellServiceObjects, ShellServiceObjectDelayLoad [ http://oalabs.openanalysis.net/2015/06/04/malware-persistence-hkey_current_user-shell-extension-handlers/ ] -->
 			<TargetObject condition="begin with">HKLM\Software\Microsoft\Windows\CurrentVersion\explorer\ShellExecuteHooks</TargetObject> <!--Microsoft:Windows: ShellExecuteHooks-->
 			<TargetObject condition="begin with">HKLM\Software\Microsoft\Windows\CurrentVersion\explorer\ShellServiceObjectDelayLoad</TargetObject> <!--Microsoft:Windows: ShellExecuteHooks-->
 			<TargetObject name="technique_id=T1130,technique_name=Install Root Certificate" condition="begin with">HKLM\SOFTWARE\Microsoft\EnterpriseCertificates\Root\Certificates</TargetObject>
 			<TargetObject name="technique_id=T1130,technique_name=Install Root Certificate" condition="contains">\Microsoft\SystemCertificates\Root\Certificates</TargetObject>
-			<TargetObject name="technique_id=T1103,technique_name=Appinit DLLs" condition="begin with">HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Windows\Appinit_Dlls</TargetObject><!--Microsoft:Windows: [ https://msdn.microsoft.com/en-us/library/windows/desktop/dd744762(v=vs.85).aspx ] -->
-			<TargetObject name="technique_id=T1103,technique_name=Appinit DLLs" condition="begin with">HKLM\SOFTWARE\Wow6432Node\Microsoft\Windows NT\CurrentVersion\Windows\Appinit_Dlls</TargetObject><!--Microsoft:Windows: [ https://msdn.microsoft.com/en-us/library/windows/desktop/dn280412(v=vs.85).aspx ] -->
+			<TargetObject name="technique_id=T1103,technique_name=Appinit DLLs" condition="begin with">HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Windows\Appinit_Dlls</TargetObject><!--Microsoft:Windows: [ https://msdn.microsoft.com/en-us/library/Windows/desktop/dd744762(v=vs.85).aspx ] -->
+			<TargetObject name="technique_id=T1103,technique_name=Appinit DLLs" condition="begin with">HKLM\SOFTWARE\Wow6432Node\Microsoft\Windows NT\CurrentVersion\Windows\Appinit_Dlls</TargetObject><!--Microsoft:Windows: [ https://msdn.microsoft.com/en-us/library/Windows/desktop/dn280412(v=vs.85).aspx ] -->
 			<TargetObject name="technique_id=T1047,technique_name=Windows Management Instrumentation" condition="contains">SYSTEM\CurrentControlSet\Control\CrashControl</TargetObject>
 			<!--Networking-->
 			<TargetObject name="Order of network providers that are checked to connect to destination " condition="begin with">HKLM\SYSTEM\CurrentControlSet\Control\NetworkProvider\Order\</TargetObject> <!--Windows: Order of network providers that are checked to connect to destination [ https://www.malwarearchaeology.com/cheat-sheets ] -->
@@ -1693,7 +2539,7 @@
 			<!--Windows application compatibility-->
 			<TargetObject name="T1138,AppCompatShim" condition="begin with">HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Custom</TargetObject> <!--Windows: AppCompat [ https://www.fireeye.com/blog/threat-research/2017/05/fin7-shim-databases-persistence.html ] -->
 			<TargetObject name="T1138,AppCompatShim" condition="begin with">HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\InstalledSDB</TargetObject> <!--Windows: AppCompat [ https://attack.mitre.org/wiki/Technique/T1138 ] -->
-			<TargetObject name="Registry virtualization, something's wrong if it's in use" condition="contains">VirtualStore</TargetObject> <!--Windows: Registry virtualization, something's wrong if it's in use [ https://msdn.microsoft.com/en-us/library/windows/desktop/aa965884(v=vs.85).aspx ] -->
+			<TargetObject name="Registry virtualization, something's wrong if it's in use" condition="contains">VirtualStore</TargetObject> <!--Windows: Registry virtualization, something's wrong if it's in use [ https://msdn.microsoft.com/en-us/library/Windows/desktop/aa965884(v=vs.85).aspx ] -->
 			<!--Windows internals integrity monitoring-->
 			<TargetObject name="T1183,IFEO" condition="begin with">HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\</TargetObject> <!--Windows: Malware likes changing IFEO, like adding Debugger to disable antivirus EXE-->
 			<TargetObject name="Event log system integrity and ACLs" condition="begin with">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WINEVT\</TargetObject> <!--Windows: Event log system integrity and ACLs-->
@@ -1716,7 +2562,7 @@
 		<!--COMMENT:	Remove low-information noise. Often these hide a procress recreating an empty key and do not hide the values created subsequently.-->
 			<!--SECTION: Microsoft binaries-->
 			<Image condition="is">c:\program files\oracle\virtualbox\virtualboxvm.exe</Image>
-            <Image condition="is">c:\windows\system32\lsass.exe</Image>
+            <Image condition="is">c:\Windows\system32\lsass.exe</Image>
             <Image condition="is">C:\Program Files\Mozilla Firefox\firefox.exe</Image>
 			<Image condition="is">c:\program files (x86)\microsoft visual studio\2019\community\common7\servicehub\hosts\servicehub.host.clr.x86\servicehub.settingshost.exe</Image>
 			<Image condition="is">c:\program files (x86)\microsoft visual studio\2019\community\msbuild\current\bin\msbuild.exe</Image>
@@ -1726,7 +2572,7 @@
 			<Image condition="is">C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\ServiceHub\Hosts\ServiceHub.Host.CLR.x86\ServiceHub.RoslynCodeAnalysisService32.exe</Image>
 			<Image condition="is">C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\ServiceHub\Hosts\ServiceHub.Host.CLR.x86\ServiceHub.Host.CLR.x86.exe</Image>
 			<Image condition="is">C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\ServiceHub\Hosts\ServiceHub.Host.CLR.x64\ServiceHub.DataWarehouseHost.exe</Image>
-			<Image condition="end with">\SWELF.exe</Image><!-- Could miss things if you leave this uncommented, but it also reduces noise-->
+			<Image condition="end with">\SWELF.exe</Image><!-- Could miss things if you comment this, but it also reduces noise-->
 			<Image condition="is">C:\Program Files (x86)\Notepad++\notepad++.exe</Image>
 			<Image condition="is">C:\Program Files (x86)\Microsoft Office\Root\VFS\ProgramFilesCommonX86\Microsoft Shared\OFFICE16\SDXHelper.exe</Image>
 			<Image condition="is">C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\PrivateAssemblies\ScriptedSandbox64.exe</Image> <!--Microsoft:Windows: Changes association registry keys-->
@@ -1739,23 +2585,27 @@
 			<Image condition="is">C:\Program Files (x86)\EMET 5.5\EMET_Service.exe</Image> <!--Microsoft:EMET: Routinely refreshes EMET configuration keys from Group Policy-->
 			<Image condition="is">C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\PrivateAssemblies\ScriptedSandbox64.exe</Image>
 			<Rule groupRelation="and">
-			<Image condition="is">C:\WINDOWS\system32\taskhostw.exe</Image>
+			<Image condition="is">C:\Windows\system32\taskhostw.exe</Image>
 			<TargetObject condition="contains">\Software\Microsoft\SystemCertificates\Root\Certificates</TargetObject>
 			</Rule>
 			<Rule groupRelation="and">
-			<Image condition="is">c:\windows\system32\taskhostw.exe</Image><!--noisy-->
+			<Image condition="is">c:\Windows\system32\taskhostw.exe</Image><!--noisy-->
 			<TargetObject condition="end with">\Root\Certificates</TargetObject>
 			</Rule>
 			<Rule groupRelation="and">
-			<Image condition="is">C:\WINDOWS\system32\CompatTelRunner.exe</Image><!--noisy-->
+			<Image condition="is">C:\Windows\system32\CompatTelRunner.exe</Image><!--noisy-->
 			<TargetObject condition="contains">}\Root\InventoryApplicationFile\</TargetObject>
 			</Rule>
-            		<Rule groupRelation="and">
-			<Image condition="is">C:\WINDOWS\system32\svchost.exe</Image><!--noisy-->
+			<Rule groupRelation="and">
+			<Image condition="is">C:\Program Files (x86)\Google\Update\GoogleUpdate.exe</Image><!--noisy-->
+			<TargetObject condition="begin with">HKLM\SOFTWARE\WOW6432Node\Google\Update\ClientState </TargetObject>
+			</Rule>
+            <Rule groupRelation="and">
+			<Image condition="is">C:\Windows\system32\svchost.exe</Image><!--noisy-->
 			<TargetObject condition="contains">\software\microsoft\enterprisecertificates\root\certificates</TargetObject>
 			</Rule>
 			<Rule groupRelation="and">
-			<Image condition="is">C:\WINDOWS\Explorer.EXE</Image><!--noisy-->
+			<Image condition="is">C:\Windows\Explorer.EXE</Image><!--noisy-->
 			<TargetObject condition="contains">\Local Settings\Software\Microsoft\Windows\Shell\</TargetObject><!--This is normal(and loud), BUT leaves you blind to an injected malware attempting to do UAC bypass or shellbaging-->
 			</Rule>
 			<Rule groupRelation="and">
@@ -1897,13 +2747,15 @@
 		<!--SYSMON EVENT ID 17 & 18 : PipeEvent MONITORING [PipeEvent]-->
 		<RuleGroup name="PipeEvent exclude" groupRelation="or">		
 		<PipeEvent onmatch="exclude">
-					<Image condition="begin with">C:\Windows\SystemApps\Microsoft.Windows.Search</Image>
+			<Image condition="begin with">C:\Windows\SystemApps\Microsoft.Windows.Search</Image>
+			<Image condition="is">C:\Program Files (x86)\Mozilla Firefox\firefox.exe</Image>
 			<Image condition="is">c:\program files (x86)\microsoft visual studio\2019\community\common7\servicehub\controller\microsoft.servicehub.controller.exe</Image>
 			<Image condition="is">c:\program files (x86)\microsoft visual studio\2019\community\msbuild\current\bin\msbuild.exe</Image>
 			<Image condition="is">c:\program files (x86)\microsoft visual studio\2019\community\msbuild\current\bin\roslyn\vbcscompiler.exe</Image>
 			<Image condition="is">C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\PrivateAssemblies\ScriptedSandbox64.exe</Image>
 			<Image condition="is">C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\devenv.exe</Image>
 			<Image condition="begin with">C:\Program Files\Fortinet\FortiClient\</Image>
+			<Image condition="is">C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe</Image>
 			<Image condition="is">C:\Program Files (x86)\Common Files\Adobe\ARM\1.0\AdobeARM.exe</Image>
 			<Image condition="begin with">C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\ServiceHub\Hosts\</Image>
 			<Image condition="is">C:\Program Files\Fortinet\FortiClient\FCVbltScan.exe</Image>
@@ -1912,20 +2764,20 @@
 			<Image condition="is">C:\Program Files (x86)\OpenDNS Updater\OpenDNSUpdater.exe</Image> 
 			<Image condition="begin with">c:\program files (x86)\opendns updater\</Image> 
 			<Image condition="begin with">C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\</Image> 
-			<Image condition="is">c:\windows\system32\smartscreen.exe</Image> 
-			<Image condition="is">c:\windows\system32\sppsvc.exe</Image> 
-			<Image condition="is">C:\WINDOWS\system32\vmms.exe</Image>
-			<Image condition="begin with">c:\programdata\microsoft\windows defender\</Image> 
-			<Image condition="is">c:\windows\system32\logonui.exe</Image>
+			<Image condition="is">c:\Windows\system32\smartscreen.exe</Image> 
+			<Image condition="is">c:\Windows\system32\sppsvc.exe</Image> 
+			<Image condition="is">C:\Windows\system32\vmms.exe</Image>
+			<Image condition="begin with">c:\programdata\microsoft\Windows defender\</Image> 
+			<Image condition="is">c:\Windows\system32\logonui.exe</Image>
 			<Image condition="is">c:\program files (x86)\google\update\googleupdate.exe</Image>
 			<Image condition="begin with">C:\Program Files (x86)\Fortinet\FortiClient\</Image>
 			<Image condition="is">C:\Program Files\Mozilla Firefox\firefox.exe</Image>
 			<Image condition="is">C:\Program Files (x86)\VMware\VMware Player\vmplayer.exe</Image>
-			<Image condition="contains">\SWELF.exe</Image>
+			<Image condition="end with">\SWELF.exe</Image>
 			<Image condition="is">C:\Program Files\SplunkUniversalForwarder\bin\splunkd.exe</Image>
 			<Image condition="is">C:\Program Files\SplunkUniversalForwarder\bin\splunk.exe</Image>
 			<Image condition="is">C:\Program Files\SplunkUniversalForwarder\bin\splunk-MonitorNoHandle.exe</Image>
-			<Image condition="is">c:\windows\system32\inetsrv\w3wp.exe</Image> 
+			<Image condition="is">c:\Windows\system32\inetsrv\w3wp.exe</Image> 
 			<Image condition="is">c:\Program Files (x86)\Trend Micro\OfficeScan\PCCSRV\CMAgent\OfcCMAgent.exe</Image>
 			<Image condition="is">c:\Program Files (x86)\Trend Micro\OfficeScan\PCCSRV\web\service\ofcservice.exe</Image>
 			<Image condition="is">c:\Program Files (x86)\Trend Micro\OfficeScan\PCCSRV\Web\Service\DbServer.exe</Image>                    
@@ -1939,16 +2791,17 @@
 			<Image condition="is">c:\Program Files (x86)\Trend Micro\OfficeScan\PCCSRV\web\service\osceintegrationservice.exe</Image>
 			<Image condition="is">c:\Program Files (x86)\Trend Micro\OfficeScan\PCCSRV\web\service\OfcLogReceiverSvc.exe</Image>
 			<Image condition="is">c:\Program Files\Qlik\Sense\Engine\Engine.exe</Image>
+			<Image condition="is">C:\Program Files (x86)\Microsoft SQL Server\110\DTS\binn\dtexec.exe</Image>
+			<Image condition="is">c:\Windows\system32\inetsrv\w3wp.exe</Image>
 			<PipeName condition="contains">Anonymous Pipe</PipeName>
 			<PipeName condition="begin with">\Vivisimo Velocity</PipeName>
+			<!-- Normal WIN10 Named Pipes-->
 			<PipeName condition="is">\ntapvsrq</PipeName>
 			<PipeName condition="is">\srvsvc</PipeName>
 			<PipeName condition="is">\wkssvc</PipeName>
 			<PipeName condition="is">\lsass</PipeName>
   			<PipeName condition="is">\winreg</PipeName>
 		    <PipeName condition="is">\spoolss</PipeName>
-			<PipeName condition="contains">Anonymous Pipe</PipeName>
-			<Image condition="is">c:\windows\system32\inetsrv\w3wp.exe</Image>
 			<!-- MSSQL Named Pipes-->
 			<PipeName condition="is">\SQLLocal\MSSQLSERVER</PipeName>
 			<PipeName condition="is">\SQLLocal\INSTANCE01</PipeName>
@@ -1957,7 +2810,6 @@
 			<PipeName condition="is">\SQLLocal\RTCLOCAL</PipeName>
 			<PipeName condition="is">\SQLLocal\RTC</PipeName>
 			<PipeName condition="is">\SQLLocal\TMSM</PipeName>
-			<Image condition="is">C:\Program Files (x86)\Microsoft SQL Server\110\DTS\binn\dtexec.exe</Image>
 		</PipeEvent>
 		</RuleGroup>
 	    
@@ -1996,10 +2848,10 @@
 		<!--CRITICAL:	Do NOT exclude IPv6 lookups.-->
 		<!--DATA: RuleName, UtcTime, ProcessGuid, ProcessId, QueryName, QueryType, QueryStatus, QueryResults (can't filter on)-->
 		<!--BELOW: These domains should not be excluded at the top level. Be specific if you want to reduce noise under them.-->
-		<!-- Rejected: .cloudapp.net, customer content [ https://blogs.technet.microsoft.com/ptsblog/2012/06/18/security-consideration-when-using-cloudapp-net-domain-as-production-environment-in-windows-azure/ ] -->
+		<!-- Rejected: .cloudapp.net, customer content [ https://blogs.technet.microsoft.com/ptsblog/2012/06/18/security-consideration-when-using-cloudapp-net-domain-as-production-environment-in-Windows-azure/ ] -->
 		<!-- Rejected: .googleapis.com, customer content [ https://www.zdnet.com/article/this-business-email-scam-spreads-trojans-through-google-cloud-storage/ ] -->
 		<!-- Rejected: .cloudfront.net, customer content -->
-		<!-- Rejected: .windows.net, customer content -->
+		<!-- Rejected: .Windows.net, customer content -->
 		<!-- Rejected: *github.com, customer content, including open-source malware components -->
 
 		<RuleGroup name="DnsQuery exclude" groupRelation="or">
@@ -2008,9 +2860,10 @@
 			<Image condition="is">c:\program files\fortinet\forticlient\fortiwf.exe</Image>
 			<Image condition="is">C:\Program Files\Fortinet\FortiClient\update_task.exe</Image>
 			<Image condition="is">C:\Program Files (x86)\OpenDNS Updater\OpenDNSUpdater.exe</Image>
-			<Image condition="is">c:\windows\sysmon.exe</Image>
+			<Image condition="is">c:\Windows\sysmon.exe</Image>
 			<Image condition="is">c:\riot games\league of legends\leagueclient.exe</Image>
 			<!--Network noise-->
+			<QueryName condition="end with">.suite.office.com</QueryName>
 			<QueryName condition="is">cdn.onenote.net</QueryName>
 			<QueryName condition="is">t.co</QueryName>
 			<QueryName condition="end with">.arpa.</QueryName> <!--Design decision to not log reverse DNS lookups. You will need to decide.-->
@@ -2031,7 +2884,7 @@
 			<QueryName condition="end with">.live.com</QueryName> <!--Microsoft | Microsoft default exclusion-->
 			<QueryName condition="end with">.live.net</QueryName> <!--Microsoft | Microsoft default exclusion-->
 			<QueryName condition="end with">.s-microsoft.com</QueryName> <!--Microsoft-->
-			<QueryName condition="end with">.windowsupdate.com</QueryName> <!--Microsoft-->
+			<QueryName condition="end with">.Windowsupdate.com</QueryName> <!--Microsoft-->
 			<QueryName condition="end with">.microsoft.com</QueryName> <!--Microsoft | Microsoft default exclusion-->
 			<QueryName condition="end with">.microsoftonline.com</QueryName> <!--Microsoft | Microsoft default exclusion-->
 			<QueryName condition="end with">.microsoftstore.com</QueryName> <!--Microsoft | Microsoft default exclusion-->
@@ -2041,14 +2894,14 @@
 			<QueryName condition="end with">.msocdn.com</QueryName> <!--Microsoft-->
 			<QueryName condition="end with">.skype.com</QueryName> <!--Microsoft | Microsoft default exclusion-->
 			<QueryName condition="end with">.skype.net</QueryName> <!--Microsoft | Microsoft default exclusion-->
-			<QueryName condition="end with">.windows.com</QueryName> <!--Microsoft-->
-			<QueryName condition="end with">.windows.net.nsatc.net</QueryName> <!--Microsoft-->
-			<QueryName condition="end with">.windowsupdate.com</QueryName> <!--Microsoft-->
+			<QueryName condition="end with">.Windows.com</QueryName> <!--Microsoft-->
+			<QueryName condition="end with">.Windows.net.nsatc.net</QueryName> <!--Microsoft-->
+			<QueryName condition="end with">.Windowsupdate.com</QueryName> <!--Microsoft-->
 			<QueryName condition="end with">.xboxlive.com</QueryName> <!--Microsoft-->
-			<QueryName condition="is">login.windows.net</QueryName> <!--Microsoft-->
+			<QueryName condition="is">login.Windows.net</QueryName> <!--Microsoft-->
 			<QueryName condition="is">officecdn.microsoft.com.edgesuite.net</QueryName> <!--Microsoft-->
 			<!--Microsoft:Office365/AzureAD-->
-			<QueryName condition="end with">.activedirectory.windowsazure.com</QueryName> <!--Microsoft: AzureAD-->
+			<QueryName condition="end with">.activedirectory.Windowsazure.com</QueryName> <!--Microsoft: AzureAD-->
 			<QueryName condition="end with">.aria.microsoft.com</QueryName> <!--Microsoft: OneDrive/SharePoint-->
 			<QueryName condition="end with">.msauth.net</QueryName>
 			<QueryName condition="end with">.msftauth.net</QueryName>
@@ -2161,7 +3014,7 @@
 			<QueryName condition="end with">.scorecardresearch.com</QueryName> <!--Ads: Comscore | Microsoft default exclusion-->
 			<QueryName condition="end with">.serving-sys.com</QueryName> <!--Ads | Microsoft default exclusion-->
 			<QueryName condition="end with">.sharethrough.com</QueryName> <!--Ads-->
-			<QueryName condition="end with">.windowsupdate.com</QueryName>
+			<QueryName condition="end with">.Windowsupdate.com</QueryName>
 			<QueryName condition="end with">.sitescout.com</QueryName> <!--Ads-->
 			<QueryName condition="end with">.smartadserver.com</QueryName> <!--Ads-->
 			<QueryName condition="end with">.snapads.com</QueryName> <!--Ads-->
@@ -2201,7 +3054,7 @@
 			<QueryName condition="is">detectportal.firefox.com</QueryName>
 			<QueryName condition="end with">.doubleclick.net</QueryName>
 			<QueryName condition="is">nexusrules.officeapps.live.com</QueryName>
-			<QueryName condition="is">ctldl.windowsupdate.com</QueryName>
+			<QueryName condition="is">ctldl.Windowsupdate.com</QueryName>
 			<QueryName condition="is">self.events.data.microsoft.com</QueryName>
 			<QueryName condition="is">tlu.dl.delivery.mp.microsoft.com</QueryName>
 			<QueryName condition="is">ardownload.adobe.com</QueryName>
@@ -2218,7 +3071,7 @@
 			<QueryName condition="end with">.usertrust.com</QueryName>
 			<QueryName condition="is">ocsp.comodoca.com</QueryName>
 			<QueryName condition="is">ocsp.verisign.com</QueryName>
-			<QueryName condition="is">ctldl.windowsupdate.com</QueryName>
+			<QueryName condition="is">ctldl.Windowsupdate.com</QueryName>
 			<QueryName condition="is">twitter.com</QueryName>
 			<QueryName condition="is">ocsp.entrust.net</QueryName>
 			<QueryName condition="end with">ocsp.identrust.com</QueryName>
