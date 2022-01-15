@@ -58,7 +58,7 @@
 
 <Sysmon schemaversion="4.81">
 	<!--SYSMON META CONFIG-->
-	<HashAlgorithms>sha256,IMPHASH</HashAlgorithms> <!-- Both MD5 and SHA256 are the industry-standard algorithms for identifying files -->
+	<HashAlgorithms>md5,sha256,IMPHASH</HashAlgorithms> <!-- Both MD5 and SHA256 are the industry-standard algorithms for identifying files -->
 	<CheckRevocation/> <!-- Check loaded drivers, log if their code-signing certificate has been revoked, in case malware stole one to sign a kernel driver -->
 	
 	<!-- <ImageLoad/> --> <!-- Would manually force-on ImageLoad monitoring, even without configuration below. Included only documentation. -->
@@ -2818,7 +2818,7 @@
 		<!--ADDITIONAL REFERENCE: [ https://www.darkoperator.com/blog/2017/10/15/sysinternals-sysmon-610-tracking-of-permanent-wmi-events ] -->
 		<!--ADDITIONAL REFERENCE: [ https://rawsec.lu/blog/posts/2017/Sep/19/sysmon-v610-vs-wmi-persistence/ ] -->
 		<!--DATA: EventType, UtcTime, Operation, User, Name, Type, Destination, Consumer, Filter-->
-		<RuleGroup name="" groupRelation="or">
+		<RuleGroup name="WMIEvent exclude" groupRelation="or">
 			<WmiEvent onmatch="exclude">
 				<!--NOTE: Using exclude with no rules means everything will be logged-->
 			</WmiEvent>
