@@ -2221,6 +2221,10 @@
 			<TargetFilename condition="contains">\appdata\local\steam\htmlcache\code cache\</TargetFilename>
 			</Rule>
 			<Rule groupRelation="and">
+			<Image condition="end with">\XboxAppServices.exe</Image>
+			<TargetFilename condition="end with">\LocalState\DiagOutputDir\XboxAppServices\ftc_log.txt.~tmp</TargetFilename>
+			</Rule>
+			<Rule groupRelation="and">
 			<Image condition="is">C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe</Image>
 			<TargetFilename condition="contains">\AppData\Local\Microsoft\Edge\User Data\Default\Service Worker\CacheStorage\</TargetFilename>
 			</Rule>
