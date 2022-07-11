@@ -2454,6 +2454,7 @@
 			<TargetObject name="Microsoft:Windows: AppCompat used for SHIM database persistence" condition="begin with">HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\InstalledSDB</TargetObject> <!--Microsoft:Windows: AppCompat [ https://attack.mitre.org/wiki/Technique/T1138 ] -->
 			<TargetObject name="Reg key for Microsoft:Windows: Registry virtualization" condition="contains">VirtualStore</TargetObject> <!--Microsoft:Windows: Registry virtualization [ https://msdn.microsoft.com/en-us/library/Windows/desktop/aa965884(v=vs.85).aspx ] -->
 			<!--Windows internals integrity monitoring-->
+			<TargetObject name="CFG modification" condition="contains">SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options</TargetObject> 
 			<TargetObject name="Malware likes changing IFEO, like adding Debugger to disable antivirus EXE" condition="begin with">HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\</TargetObject> <!--Microsoft:Windows: Malware likes changing IFEO, like adding Debugger to disable antivirus EXE-->
 			<TargetObject name="Event log system integrity and ACLs" condition="begin with">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WINEVT\</TargetObject> <!--Microsoft:Windows: Event log system integrity and ACLs-->
 			<TargetObject name="Services approved to load in safe mode" condition="begin with">HKLM\SYSTEM\CurrentControlSet\Control\Safeboot\</TargetObject> <!--Microsoft:Windows: Services approved to load in safe mode-->
