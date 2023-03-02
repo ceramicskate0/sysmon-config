@@ -232,8 +232,12 @@
 			<CommandLine condition="begin with"> "C:\WINDOWS\SysWOW64\DllHost.exe" /Processid:</CommandLine>
 			</Rule>
 			<Rule groupRelation="and"><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
-			<Image condition="is"> C:\Windows\SysWOW64\dllhost.exe</Image>
-			<CommandLine condition="begin with"> "C:\WINDOWS\SysWOW64\DllHost.exe" /Processid:</CommandLine>
+			<Image condition="is">C:\Windows\SysWOW64\dllhost.exe</Image>
+			<CommandLine condition="begin with">"C:\WINDOWS\SysWOW64\DllHost.exe" /Processid:</CommandLine>
+			</Rule>
+			<Rule groupRelation="and"><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+			<Image condition="is">C:\Windows\System32\dmclient.exe</Image>
+			<CommandLine condition="begin with">C:\Windows\System32\dmclient.exe</CommandLine>
 			</Rule>
 			<Rule groupRelation="and">
 			<Image condition="is">C:\Windows\system32\wermgr.exe</Image>
@@ -464,6 +468,7 @@
 			<DestinationHostname condition="end with">microsoft.com</DestinationHostname> <!--Microsoft:Update delivery-->
 			<DestinationHostname condition="end with">microsoft.com.akadns.net</DestinationHostname> <!--Microsoft:Update delivery-->
 			<DestinationHostname condition="end with">microsoft.com.nsatc.net</DestinationHostname> <!--Microsoft:Update delivery-->
+			<DestinationHostname condition="end with">a-0003.a-msedge.net</DestinationHostname> 
 			<DestinationPort condition="is">137</DestinationPort>
 			<DestinationPort condition="is">138</DestinationPort>
 		</NetworkConnect>
@@ -550,6 +555,11 @@
 		    <ImageLoaded condition="contains" name="Execution - Image Loaded from suspicious path">c$</ImageLoaded><!-- loaded from network file share -->
 		    <ImageLoaded condition="contains" name="Execution - Image Loaded from suspicious path">\appdata\</ImageLoaded>
 		    <ImageLoaded condition="contains" name="Execution - Image Loaded from suspicious path">\temp\</ImageLoaded>
+			<ImageLoaded condition="contains" name="Execution - Image Loaded from suspicious path">\Notpad++\plugins</ImageLoaded>
+			<ImageLoaded condition="begin with" name="Execution - Image Loaded from suspicious path">c:\Program Files\Microsoft SQL Server\130\Shared\ErrorDumps</ImageLoaded>
+			<ImageLoaded condition="begin with" name="Execution - Image Loaded from suspicious path">c:\Program Files\ViPER4Windows\DriverComm</ImageLoaded>
+			<ImageLoaded condition="begin with" name="Execution - Image Loaded from suspicious path">c:\Program Files (x86)\Common Files\Adobe\SLCache</ImageLoaded>
+			<ImageLoaded condition="begin with" name="Execution - Image Loaded from suspicious path">C:\Windows\System32\Microsoft\Crypto\RSA\MachineKeys</ImageLoaded>
 		    <ImageLoaded condition="end with" name="Defense Evasion - Unusual Module Extension">.png</ImageLoaded>
 		    <ImageLoaded condition="end with" name="Defense Evasion - Unusual Module Extension">.jpg</ImageLoaded>
             <ImageLoaded condition="end with" name="Defense Evasion - Unusual Module Extension">.cpl</ImageLoaded>
@@ -2177,6 +2187,7 @@
 			<Image condition="is">C:\program files (x86)\steam\steam.exe</Image>
 			<Image condition="is">C:\Windows\System32\svchost.exe</Image>
 			<Image condition="is">C:\Program Files (x86)\Notepad++\notepad++.exe</Image>
+			<Image condition="begin with">C:\Program Files (x86)\Symantec\Symantec Endpoint Protection</Image>
 			<Image condition="is">C:\ProgramData\Microsoft\Windows Defender\platform\4.18.1907.4-0\MsMpEng.exe</Image>
 			<Image condition="begin with">C:\ProgramData\Microsoft\Windows Defender\platform\</Image>
 			<Image condition="begin with">C:\Program Files\Fortinet\FortiClient\</Image><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
@@ -2215,6 +2226,10 @@
 			<Rule groupRelation="and">
 			<Image condition="is">C:\Program Files (x86)\Microsoft Office\Root\Office16\SDXHelper.exe</Image>
 			<TargetFilename condition="contains">\AppData\Local\Microsoft\Office\SolutionPackages</TargetFilename>
+			</Rule>
+			<Rule groupRelation="and">
+			<Image condition="is">C:\Program Files\Common Files\Microsoft Shared\ClickToRun\Updates\16.0.14729.20260\OfficeClickToRun.exe</Image>
+			<TargetFilename condition="contains">C:\Program Files\Microsoft Office\Updates\Download\PackageFiles</TargetFilename>
 			</Rule>
 			<Rule groupRelation="and">
 			<Image condition="end with">\AppData\Local\Programs\Microsoft VS Code\Code.exe</Image>
@@ -2962,6 +2977,7 @@
 			<QueryName condition="is">clients5.google.com</QueryName> <!--Google-->
 			<QueryName condition="is">clients6.google.com</QueryName> <!--Google-->
 			<QueryName condition="is">safebrowsing.googleapis.com</QueryName> <!--Google-->
+			<QueryName condition="is">.akamaized.net</QueryName>
 			<!--Goodlist CDN-->
 			<QueryName condition="end with">.akadns.net</QueryName> <!--AkamaiCDN, extensively used by Microsoft | Microsoft default exclusion-->
 			<QueryName condition="end with">.netflix.com</QueryName>
