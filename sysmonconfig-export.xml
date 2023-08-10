@@ -3202,6 +3202,7 @@
 		<!--SYSMON EVENT ID 27 : FileBlockExecutable -->
 		<RuleGroup name="FileBlockExecutable exclude" groupRelation="or">
 			<FileBlockExecutable onmatch="exclude">
+				<Image condition="is">C:\WINDOWS\system32\DllHost.exe</Image><!-- Design decision  Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 				<Image condition="end with">\Community\MSBuild\Current\Bin\Roslyn\VBCSCompiler.exe</Image><!-- Design decision Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 				<Image condition="end with">\MSBuild.exe</Image><!-- Design decision Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 			</FileBlockExecutable>
