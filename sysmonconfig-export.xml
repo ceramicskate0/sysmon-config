@@ -3208,7 +3208,7 @@
 				<Image condition="end with">\word.exe</Image><!-- Design decision  Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 				<Image condition="end with">\excel.exe</Image><!-- Design decision  Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 				<Image condition="end with">\powerpoint.exe</Image><!-- Design decision  Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
-				<Image condition="end with">\notepad++.exe.exe</Image><!-- Design decision  Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+				<Image condition="end with">\notepad++.exe</Image><!-- Design decision  Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 				<Image condition="end with">\outlook.exe</Image><!-- Design decision  Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 				<Image condition="end with">\code.exe</Image><!-- Design decision  Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 				<Image condition="end with">\devenv.exe</Image><!-- Design decision  Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
