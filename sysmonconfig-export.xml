@@ -502,6 +502,7 @@
 			<Image condition="is">C:\Windows\System32\ctfmon.exe</Image>
 			<Image condition="is">C:\Windows\System32\SpatialAudioLicenseSrv.exe</Image>
 			<Image condition="is">C:\Windows\System32\MoUsoCoreWorker.exe</Image>
+			<Image condition="begin with">AppData\Local\Microsoft\Teams\current\Teams.exe</Image>
 		</ProcessTerminate>
 		</RuleGroup>
 		
@@ -716,7 +717,9 @@
 			<!--Check for loading of the PowerShell engine-->
 			<ImageLoaded name="technique_id=T1086,technique_name=PowerShell Engine" condition="end with">System.Management.Automation.ni.dll</ImageLoaded>
 			<ImageLoaded name="technique_id=T1086,technique_name=PowerShell Engine" condition="end with">System.Management.Automation.dll</ImageLoaded>
-
+			<ImageLoaded name="Load of a suspicious runtime Library" condition="end with">mscoree.dll</ImageLoaded>
+			<ImageLoaded name="Load of a dll used in Discord DLL Hijack" condition="end with">ffmpeg.dll</ImageLoaded>
+			<ImageLoaded name="Load of a dll used in dotnet process dumping" condition="end with">dotnet-dump.dll</ImageLoaded>
 			<!--Default named C# OffSec Tooling, Google name with Word Github at the end to find it-->
 			<Rule groupRelation="and">
 			<Image condition="end with">Control.exe</Image>
@@ -1975,7 +1978,7 @@
 			<TargetImage name="Possible browser inject, often done to dump passwords from browser" condition="end with">\firefox.exe</TargetImage>
 			<GrantedAccess name="Possible suspicious process access,PROCESS_SUSPEND_RESUME (GrantedAccess)" condition="is">0x800</GrantedAccess>
 			<GrantedAccess name="Possible suspicious process access (GrantedAccess)" condition="is">0x010</GrantedAccess>
-			<GrantedAccess name="Often seen when running shellcode. Call trace often has UNKNOWN dll in it, if true (GrantedAccess)" condition="is">0x1FFFFF</GrantedAccess>
+			<GrantedAccess name="Possible suspicious process access (GrantedAccess)" condition="is">0x1FFFFF</GrantedAccess>
 			<GrantedAccess name="Possible suspicious process access (GrantedAccess)" condition="is">0x1010</GrantedAccess>
 			<GrantedAccess name="Possible suspicious process access (GrantedAccess)" condition="is">0x0400</GrantedAccess>
 			<GrantedAccess name="Possible suspicious process access (GrantedAccess)" condition="is">0x1410</GrantedAccess>
@@ -2259,6 +2262,10 @@
 			<Rule groupRelation="and"><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 			<Image condition="is">C:\WINDOWS\Sysmon.exe</Image>
 			<TargetFilename condition="is">C:\Sysmon\CLIP-</TargetFilename>
+			</Rule>
+			<Rule groupRelation="and">
+			<Image condition="begin with">C:\Program Files\Symantec\Symantec Endpoint Protection</Image>
+			<TargetFilename condition="begin with">C:\ProgramData\Symantec\Symantec Endpoint Protection</TargetFilename>
 			</Rule>
 			<Image condition="is">c:\riot games\riot client\riotclientservices.exe</Image>
 			<TargetFilename condition="begin with">C:\Windows\System32\Tasks\OfficeSoftwareProtectionPlatform\SvcRestartTask</TargetFilename><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
@@ -2594,6 +2601,7 @@
 			<TargetObject name="InvDB-Ver" condition="end with">\ProductVersion</TargetObject> <!-- [ https://binaryforay.blogspot.com/2017/10/amcache-still-rules-everything-around.html ] -->
 			<TargetObject name="InvDB-CompileTimeClaim" condition="end with">\LinkDate</TargetObject> <!-- Compile time of EXE, may not be reliable [ https://en.wikipedia.org/wiki/Link_time ] -->
 			<TargetObject name="InvDB" condition="contains">Compatibility Assistant\Store\</TargetObject>
+			<TargetObject name=".Net Usage Logging" condition="contains">\SOFTWARE\Microsoft.NETFramework</TargetObject>
 		</RegistryEvent>
 		</RuleGroup>
 		
@@ -3232,7 +3240,7 @@
 		</RuleGroup>
 		
 		<!--SYSMON EVENT ID 29 : FileExecutableDetected -->
-				<RuleGroup name="FileExecutableDetected exclude" groupRelation="or">
+		<RuleGroup name="FileExecutableDetected exclude" groupRelation="or">
 			<FileExecutableDetected onmatch="exclude">
 				<Image condition="end with">\Community\MSBuild\Current\Bin\Roslyn\VBCSCompiler.exe</Image><!-- Design decision Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 				<Image condition="end with">\MSBuild.exe</Image><!-- Design decision Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
