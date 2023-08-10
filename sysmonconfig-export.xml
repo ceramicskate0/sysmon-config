@@ -3202,6 +3202,7 @@
 		<!--SYSMON EVENT ID 27 : FileBlockExecutable -->
 		<RuleGroup name="FileBlockExecutable exclude" groupRelation="or">
 			<FileBlockExecutable onmatch="exclude">
+				<Image condition="begin with">C:\ProgramData\Microsoft\Windows Defender\platform\</Image><!-- Design decision  Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 				<Image condition="is">C:\WINDOWS\system32\DllHost.exe</Image><!-- Design decision  Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 				<Image condition="end with">\Community\MSBuild\Current\Bin\Roslyn\VBCSCompiler.exe</Image><!-- Design decision Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 				<Image condition="end with">\MSBuild.exe</Image><!-- Design decision Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
@@ -3226,6 +3227,7 @@
 				<Image condition="end with">\devenv.exe</Image><!-- Design decision  Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 				<Image condition="end with">\msedge.exe</Image><!--Browser--><!-- Design decision  Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 				<Image condition="begin with">C:\ProgramData\Microsoft\Windows Defender\platform\</Image><!-- Design decision  Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+				<Image condition="is">C:\WINDOWS\System32\svchost.exe</Image>
 			</FileBlockShredding>
 		</RuleGroup>
 		
