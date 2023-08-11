@@ -3214,6 +3214,7 @@
 		<!--SYSMON EVENT ID 27 : FileBlockExecutable -->
 		<RuleGroup name="FileBlockExecutable exclude" groupRelation="or">
 			<FileBlockExecutable onmatch="exclude">
+				<!--<Image condition="is">C:\Program Files (x86)\Mozilla Firefox\firefox.exe</Image>-->
 				<Image condition="begin with">C:\WINDOWS\winsxs\amd64_microsoft-windows-servicingstack</Image>
 				<Image condition="begin with">C:\ProgramData\Microsoft\Windows Defender\platform\</Image><!-- Design decision  Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 				<Image condition="is">C:\WINDOWS\system32\DllHost.exe</Image><!-- Design decision  Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
@@ -3247,6 +3248,7 @@
 		<!--SYSMON EVENT ID 29 : FileExecutableDetected -->
 		<RuleGroup name="FileExecutableDetected exclude" groupRelation="or">
 			<FileExecutableDetected onmatch="exclude">
+				<Image condition="is">C:\WINDOWS\system32\DllHost.exe</Image>
 				<Image condition="begin with">C:\ProgramData\Microsoft\Windows Defender\platform\</Image>
 				<Image condition="end with">\Community\MSBuild\Current\Bin\Roslyn\VBCSCompiler.exe</Image><!-- Design decision Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 				<Image condition="end with">\MSBuild.exe</Image><!-- Design decision Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
