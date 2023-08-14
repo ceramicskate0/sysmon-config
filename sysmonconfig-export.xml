@@ -2866,6 +2866,10 @@
 				<Image condition="is">C:\WINDOWS\system32\sihost.exe</Image>
 				<PipeName condition="contains">\AppContracts_</PipeName>
 			</Rule>
+			<Rule groupRelation="and">
+				<Image condition="end with">AppData\Local\Microsoft\Teams\current\Teams.exe</Image>
+				<PipeName condition="begin with">\mojo.</PipeName>
+			</Rule>
 		</PipeEvent>
 		</RuleGroup>
 	    
@@ -3208,6 +3212,10 @@
 				<Image condition="is">C:\Windows\System32\mousocoreworker.exe</Image><!-- Design decision  Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 				<Image condition="end with">\PerfWatson2.exe</Image><!-- Design decision  Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 				<Image condition="end with">\searchapp.exe</Image><!-- Design decision  Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
+			    <Rule groupRelation="and">
+					<Image condition="end with">\AppData\Local\Microsoft\Teams\current\Teams.exe</Image>
+					<TargetObject condition="end with">\AppData\Roaming\Microsoft\Teams\storage.json</TargetObject>
+			    </Rule>
 			</FileDeleteDetected>
 		</RuleGroup>
 		
