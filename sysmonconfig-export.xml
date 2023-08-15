@@ -2063,6 +2063,10 @@
 		
 		<RuleGroup name="ProcessAccess exclude" groupRelation="or">
 		<ProcessAccess onmatch="exclude">
+		  <Rule groupRelation="and">
+			 <TargetImage condition="end with">\chrome.exe</TargetImage>
+			 <SourceImage condition="end with">\chrome.exe</SourceImage> 
+		  </Rule>
 		  <SourceImage condition="begin with">C:\ProgramData\Microsoft\Windows Defender\platform\</SourceImage><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 		  <SourceImage condition="end with">\Bin\FMS.exe</SourceImage> <!-- Exchange Process --><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 		  <SourceImage condition="end with">C:\Windows\System32\smss.exe</SourceImage>
