@@ -714,12 +714,38 @@
 			<ImageLoaded condition="end with" name="PrivEsc - UACBypass - DLL hijack Cliconfig">NTWDBLIB.dll</ImageLoaded>
 			<ImageLoaded condition="contains" name="MitreRef=T1128,Technique=Netsh Helper Beacon DLL,Tactic=Persistence,Alert=Cobalt Strike Netsh Helper Beacon">NetshHelperBeacon</ImageLoaded>
 			<ImageLoaded name="technique_id=T1170,technique_name=MSHTA with AMSI Bypass" condition="end with">jscript9.dll</ImageLoaded>
+			<ImageLoaded name="technique_id=T1047,technique_name=Windows Scheduled Tasks" condition="end with">mstask.dll</ImageLoaded>
+			<ImageLoaded name="technique_id=T1059,technique_name=Command and Scripting Interpreter" condition="end with">wshom.ocx</ImageLoaded>
+			<OriginalFileName condition="is">scrrun.dll</OriginalFileName>
+			<OriginalFileName condition="is">vbscript.dll</OriginalFileName>
+			<OriginalFileName condition="is">urlmon.dll</OriginalFileName>
+			<ImageLoaded name="technique_id=T1047,technique_name=Windows Management Instrumentation" condition="end with">wmiutils.dll</ImageLoaded>
+			<OriginalFileName name="technique_id=T1112,technique_name=Modify Registry" condition="is">regsvc.dll</OriginalFileName>
+			<!--Detect execution of HTA using the IE Javascript engine to bypass AMSI-->
+			<!--Note: Rule placed before Windows Scriptingh to ensure it triggers on this on case any other component is used.-->
+			<!---Thanks to Carlos Perez-->
+			<Rule groupRelation="and">
+			<OriginalFileName name="technique_id=T1218.005,technique_name=MSHTA with AMSI Bypass" condition="is">jscript.dll</OriginalFileName>
+			<Image condition="end with">mshta.exe</Image>
+			</Rule>
+			<Rule groupRelation="and">
+			<OriginalFileName name="technique_id=T1218.005,technique_name=MSHTA with AMSI Bypass" condition="is">jscript9.dll</OriginalFileName>
+			<Image condition="end with">mshta.exe</Image>
+			</Rule>   
 			<!--Check for loading of the PowerShell engine-->
 			<ImageLoaded name="technique_id=T1086,technique_name=PowerShell Engine" condition="end with">System.Management.Automation.ni.dll</ImageLoaded>
 			<ImageLoaded name="technique_id=T1086,technique_name=PowerShell Engine" condition="end with">System.Management.Automation.dll</ImageLoaded>
 			<ImageLoaded name="Load of a suspicious runtime Library" condition="end with">mscoree.dll</ImageLoaded>
 			<ImageLoaded name="Load of a dll used in Discord DLL Hijack" condition="end with">ffmpeg.dll</ImageLoaded>
 			<ImageLoaded name="Load of a dll used in dotnet process dumping" condition="end with">dotnet-dump.dll</ImageLoaded>
+			<Rule groupRelation="and">
+					<OriginalFileName name="technique_id=T1059.001,technique_name=PowerShell" condition="is">amsi.dll</OriginalFileName>
+					<Image condition="excludes any">powershell.exe;powershell_ise.exe</Image>
+			</Rule>
+			<Rule groupRelation="and">
+			<Image condition="end with">rundll32.exe</Image>
+			<OriginalFileName name="technique_id=T1003.004,technique_name=LSASS Memory" condition="is">comsvcs.dll</OriginalFileName>
+			</Rule>
 			<!--Default named C# OffSec Tooling, Google name with Word Github at the end to find it-->
 			<Rule groupRelation="and">
 			<Image condition="end with">Control.exe</Image>
@@ -1969,6 +1995,8 @@
 		<RuleGroup name="ProcessAccess include" groupRelation="or">
 		<ProcessAccess onmatch="include">	
 			<CallTrace name="Call of DLL used for injection and powershell with out powershell.exe" condition="contains">System.Management.Automation.ni</CallTrace>
+			<CallTrace name="technique_id=T1003,technique_name=Credential Dumping" condition="contains">dbghelp.dll</CallTrace>
+			<CallTrace name="technique_id=T1003,technique_name=Credential Dumping" condition="contains">dbgcore.dll</CallTrace>
 			<!--<CallTrace name="Call of DLL used for injection and powershell with out powershell.exe" condition="contains">UNKNOWN</CallTrace>-->
 			<CallTrace name="Seen doing process minidump with rundll32, taskmanager, and custom bins" condition="contains">\dbghelp.dll</CallTrace>
 			<CallTrace name="Seen doing process minidump with rundll32, taskmanager, and custom bins" condition="contains">minidump</CallTrace>
@@ -1983,9 +2011,16 @@
 			<GrantedAccess name="Possible suspicious process access (GrantedAccess)" condition="is">0x0400</GrantedAccess>
 			<GrantedAccess name="Possible suspicious process access (GrantedAccess)" condition="is">0x1410</GrantedAccess>
 			<GrantedAccess name="Possible suspicious process access (GrantedAccess)" condition="is">0x0010</GrantedAccess>
+			<GrantedAccess name="technique_id=T1055.012,technique_name=Process Hollowing">0x21410</GrantedAccess> 
 			<GrantedAccess name="technique_id=T1003,technique_name=Credential Dumping (GrantedAccess)">0x0810</GrantedAccess> <!-- PROCESS_SUSPEND_RESUME + PROCESS_VM_READ - possible memory dump to extract sensitive information -->
 			<GrantedAccess name="technique_id=T1055,technique_name=Process Injection (GrantedAccess)">0x0820</GrantedAccess> <!-- PROCESS_SUSPEND_RESUME + PROCESS_VM_WRITE - possible memory injection -->
 			<GrantedAccess name="Defense Evasion - Possible Process Suspended" condition="is">0x800</GrantedAccess><!-- minimum required OpenProcess access rights to suspend a target process -->
+			<GrantedAccess name="technique_id=T1055.012,technique_name=Process Hollowing">0x0800</GrantedAccess>            <!-- PROCESS_SUSPEND_RESUME -->
+            <GrantedAccess name="technique_id=T1003,technique_name=Credential Dumping">0x0810</GrantedAccess>            <!-- PROCESS_SUSPEND_RESUME + PROCESS_VM_READ - possible memory dump to extract sensitive information -->
+            <GrantedAccess name="technique_id=T1055,technique_name=Process Injection">0x0820</GrantedAccess>            <!-- PROCESS_SUSPEND_RESUME + PROCESS_VM_WRITE - possible memory injection -->
+            <GrantedAccess name="technique_id=T1055.012,technique_name=Process Hollowing">0x800</GrantedAccess>            <!-- PROCESS_SUSPEND_RESUME -->
+            <GrantedAccess name="technique_id=T1003,technique_name=Credential Dumping">0x810</GrantedAccess>            <!-- PROCESS_SUSPEND_RESUME + PROCESS_VM_READ - possible memory dump to extract sensitive information -->
+            <GrantedAccess name="technique_id=T1055,technique_name=Process Injection">0x820</GrantedAccess>   
 			<SourceImage condition="end with">jjs.exe</SourceImage>
 			<SourceImage condition="end with">cscript.exe</SourceImage>
 			<TargetImage condition="end with" name="Credential Access - Lsass MemAccess">lsass.exe</TargetImage>
@@ -2012,6 +2047,19 @@
 			<SourceImage condition="begin with">C:\$Recycle.bin\</SourceImage>
 			<SourceImage condition="contains">\Windows\IME\</SourceImage>
 			<SourceImage condition="contains">AppData\Local\Programs\Opera</SourceImage>
+			<Rule groupRelation="and"><!-- https://medium.com/falconforce/falconfriday-direct-system-calls-and-cobalt-strike-bofs-0xff14-741fa8e1bdd6 -->
+			<CallTrace name="technique_id=T1055,technique_name=Process Injection" condition="not begin with">C:\Windows\SYSTEM32\ntdll.dll</CallTrace>
+			<CallTrace name="technique_id=T1055,technique_name=Process Injection" condition="not begin with">C:\Windows\SYSTEM32\win32u.dll</CallTrace>
+			<CallTrace name="technique_id=T1055,technique_name=Process Injection" condition="not begin with">C:\Windows\SYSTEM32\wow64win.dll</CallTrace>
+			</Rule>
+			<Rule groupRelation="and">
+			<CallTrace name="technique_id=T1055.001,technique_name=Dynamic-link Library Injection" condition="contains all">C:\Windows\SYSTEM32\ntdll.dll;C:\Windows\System32\kernelbase.dll;UNKNOWN</CallTrace>          <!--@darkquassar-->
+			<GrantedAccess name="technique_id=T1055.001,technique_name=Dynamic-link Library Injection" condition="contains any">0x1F0FFF;0x1F1FFF;0x143A;0x1410;0x1010;0x1F2FFF;0x1F3FFF;0x1FFFFF;0x147A</GrantedAccess>
+			</Rule>
+			<Rule groupRelation="and" name="technique_id=T1055,technique_name=Process Injection">
+			<SourceImage condition="contains all">C:\Program Files;\Microsoft Office\Root\Office</SourceImage>
+			<CallTrace condition="contains">\Microsoft Shared\VBA</CallTrace>
+			</Rule>
 			<Rule groupRelation="and">
 			<TargetImage name="technique_id=T1003,technique_name=Credential Dumping" condition="is">C:\Windows\system32\lsass.exe</TargetImage>
 			<GrantedAccess>0x1FFFFF</GrantedAccess>
@@ -2058,6 +2106,26 @@
             <GrantedAccess name="technique_id=T1055,technique_name=Process Injection">0x0820</GrantedAccess>
             <GrantedAccess name="technique_id=T1055,technique_name=Process Injection">0x820</GrantedAccess>
 			</Rule>
+			<Rule groupRelation="and">
+          <TargetImage name="technique_id=T1003,technique_name=Credential Dumping" condition="is">C:\Windows\system32\lsass.exe</TargetImage>          <!--Mitre T1098-->          <!--Mitre T1550.002-->          <!--Mitre T1003-->          <!-- depending on what you're running on your host, this might be noisy-->
+          <GrantedAccess>0x1FFFFF</GrantedAccess>          <!--Expect EDRs/AVs to also trigger this-->
+        </Rule>
+			<Rule groupRelation="and">
+          <TargetImage name="technique_id=T1003,technique_name=Credential Dumping" condition="is">C:\Windows\system32\lsass.exe</TargetImage>          <!--Mitre T1098-->          <!--Mitre T1550.002-->          <!--Mitre T1003-->          <!-- depending on what you're running on your host, this might be noisy-->
+          <GrantedAccess>0x1F1FFF</GrantedAccess>
+        </Rule>
+			<Rule groupRelation="and">
+          <TargetImage name="technique_id=T1003,technique_name=Credential Dumping" condition="is">C:\Windows\system32\lsass.exe</TargetImage>          <!--Mitre T1098-->          <!--Mitre T1550.002-->          <!--Mitre T1003-->          <!-- depending on what you're running on your host, this might be noisy-->
+          <GrantedAccess>0x1010</GrantedAccess>
+        </Rule>
+			<Rule groupRelation="and">
+          <TargetImage name="technique_id=T1003,technique_name=Credential Dumping" condition="is">C:\Windows\system32\lsass.exe</TargetImage>          <!--Mitre T1098-->          <!--Mitre T1550.002-->          <!--Mitre T1003-->          <!-- depending on what you're running on your host, this might be noisy-->
+          <GrantedAccess>0x143A</GrantedAccess>
+        </Rule>
+			<Rule groupRelation="and">
+          <TargetImage name="technique_id=T1003,technique_name=Credential Dumping" condition="image">lsass.exe</TargetImage>          <!--https://pentestlab.blog/2018/05/15/lateral-movement-winrm/-->
+          <SourceImage name="technique_id=T1003,technique_name=Credential Dumping" condition="image">wsmprovhost.exe</SourceImage>
+        </Rule> 
 		</ProcessAccess>
 		</RuleGroup>
 		
