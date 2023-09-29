@@ -77,14 +77,14 @@
 		<RuleGroup name="ProcessCreate Exclude" groupRelation="or">
 		<ProcessCreate onmatch="exclude">
 			<!--SECTION: Microsoft Windows-->
-			<IntegrityLevel condition="is">AppContainer</IntegrityLevel> <!--Microsoft:Windows: Don't care about sandboxed processes-->
+			<IntegrityLevel condition="is">AppContainer</IntegrityLevel> <!--Microsoft:Windows: Don't care about sandboxed processes--><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 			<Image condition="is">C:\Windows\System32\usocoreworker.exe</Image>
 			<Image condition="is">C:\Windows\System32\SpatialAudioLicenseSrv.exe</Image>
 			<Image condition="is">c:\riot games\league of legends\leagueclient.exe</Image><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 			<Image condition="is">c:\program files (x86)\microsoft visual studio\2019\community\common7\servicehub\hosts\servicehub.host.clr.x64\servicehub.datawarehousehost.exe</Image>
 			<Image condition="is">C:\Windows\System32\UsoClient.exe</Image>
 			<Image condition="is">c:\Windows\system32\sdclt.exe</Image>
-			<Image condition="is">c:\Windows\system32\mmc.exe</Image>
+			<Image condition="is">c:\Windows\system32\mmc.exe</Image><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 			<Image condition="is">C:\Windows\System32\CompPkgSrv.exe</Image>
 			<Image condition="is">c:\Windows\system32\sgrmbroker.exe</Image>
 			<Image condition="is">C:\Windows\System32\WerFault.exe</Image><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
@@ -100,7 +100,7 @@
 			<Image condition="is">C:\Windows\System32\audiodg.exe</Image>
 			<Image condition="is">C:\Windows\System32\wsqmcons.exe</Image>
 			<Image condition="is">C:\Windows\System32\RuntimeBroker.exe</Image>
-			<Image condition="is">C:\Program Files (x86)\Notepad++\notepad++.exe</Image>
+			<Image condition="is">C:\Program Files (x86)\Notepad++\notepad++.exe</Image><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 			<Image condition="is">C:\Windows\System32\SearchProtocolHost.exe</Image><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 			<Image condition="is">C:\Program Files\Oracle\VirtualBox\VBoxHeadless.exe</Image>
 			<Image condition="is">C:\Program Files\Oracle\VirtualBox\VBoxNetDHCP.exe</Image>
@@ -124,7 +124,7 @@
 			<Image condition="is">C:\Windows\System32\MusNotifyIcon.exe</Image>
 			<Image condition="is">C:\Windows\System32\appidcertstorecheck.exe</Image>
 			<Image condition="is">C:\Windows\Microsoft.Net\Framework64\v3.0\WPF\PresentationFontCache.exe</Image> <!--Microsoft:Windows: Font cache service-->			
-			<Image condition="is">C:\Windows\system32\mobsync.exe</Image> <!--Microsoft:Windows: Network file syncing-->
+			<Image condition="is">C:\Windows\system32\mobsync.exe</Image> <!--Microsoft:Windows: Network file syncing--><!-- Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
 			<Image condition="is">C:\Windows\system32\SppExtComObj.Exe</Image> <!--Microsoft:Windows: KMS activation-->
 			<Image condition="is">C:\Windows\system32\PrintIsolationHost.exe</Image> <!--Microsoft:Windows: Printing-->
 			<Image condition="is">C:\Windows\system32\MpSigStub.exe</Image> <!--Microsoft:Windows: Microsoft Malware Protection Signature Update Stub-->
@@ -3246,10 +3246,10 @@
 		-->
 
 		<!--SYSMON EVENT ID 24 : CLIPBOARD EVENT MONITORING [ClipboardChange]-->
-			<!--EVENT 24: "Clipboard changed"-->
-			<!--COMMENT:	Sandbox usage.  Sysmon can capture the contents of clipboard events.
+		<!--EVENT 24: "Clipboard changed"-->
+		<!--COMMENT:	Sandbox usage.  Sysmon can capture the contents of clipboard events.
 				An  example of what could be a production usage on restricted desktops is provided below, but it is commented-out. -->
-			<!--DATA: EventType, UtcTime, ProcessGuid, ProcessId, Image, Session, ClientInfo, Hashes, Archived -->
+		<!--DATA: EventType, UtcTime, ProcessGuid, ProcessId, Image, Session, ClientInfo, Hashes, Archived -->
 		<RuleGroup name="Clipboard Monitoring exclude" groupRelation="or">
 			<ClipboardChange onmatch="exclude">
 			</ClipboardChange>
@@ -3269,51 +3269,9 @@
 		</RuleGroup>
 
 		<!--SYSMON EVENT ID 26 : FileDeleteDetected -->
-		<RuleGroup name="FileDeleteDetected exclude" groupRelation="or">
-			<FileDeleteDetected onmatch="exclude">
-				<Image condition="end with">\chrome.exe</Image><!--Browser--><!-- Design decision  Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
-				<Image condition="end with">\firefox.exe</Image><!--Browser--><!-- Design decision  Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
-				<Image condition="end with">\iexplore.exe</Image><!--Browser--><!-- Design decision  Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
-				<Image condition="end with">\MicrosoftEdge.exe</Image><!--Browser--><!-- Design decision  Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
-				<Image condition="end with">\notepad.exe</Image><!-- Design decision  Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
-				<Image condition="end with">\word.exe</Image><!-- Design decision  Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
-				<Image condition="end with">\excel.exe</Image><!-- Design decision  Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
-				<Image condition="end with">\powerpoint.exe</Image><!-- Design decision  Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
-				<Image condition="end with">\notepad++.exe</Image><!-- Design decision  Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
-				<Image condition="end with">\outlook.exe</Image><!-- Design decision  Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
-				<Image condition="end with">\code.exe</Image><!-- Design decision  Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
-				<Image condition="end with">\devenv.exe</Image><!-- Design decision  Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
-				<Image condition="end with">\msedge.exe</Image><!--Browser--><!-- Design decision  Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
-				<Image condition="begin with">C:\ProgramData\Microsoft\Windows Defender\platform\</Image><!-- Design decision  Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
-				<Image condition="is">C:\WINDOWS\system32\svchost.exe</Image><!-- Design decision  Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
-				<Image condition="is">C:\WINDOWS\system32\lsass.exe</Image><!-- Design decision  Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
-				<Image condition="begin with">C:\ProgramData\Microsoft\Windows Defender\platform\</Image><!-- Design decision  Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
-				<Image condition="is">C:\Program Files\Common Files\Microsoft Shared\ClickToRun\OfficeClickToRun.exe</Image>
-				<Image condition="is">C:\Program Files\Common Files\Microsoft Shared\ClickToRun\OfficeC2RClient.exe</Image>
-				<Image condition="is">C:\Program Files\Microsoft Office\root\integration\integrator.exe</Image>
-				<Image condition="is">C:\Windows\System32\RuntimeBroker.exe</Image>
-				<Image condition="end with">\AppData\Local\Microsoft\OneDrive\OneDrive.exe</Image>
-				<Image condition="is">C:\Windows\System32\CompatTelRunner.exe</Image>
-				<Image condition="is">C:\Windows\System32\backgroundTaskHost.exe</Image>
-				<Image condition="is">C:\Windows\System32\taskhostw.exe</Image>
-				<Image condition="is">C:\Windows\System32\mousocoreworker.exe</Image><!-- Design decision  Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
-				<Image condition="end with">\PerfWatson2.exe</Image><!-- Design decision  Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
-				<Image condition="end with">\searchapp.exe</Image><!-- Design decision  Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
-				<Image condition="end with">\AppData\Local\Microsoft\Teams\current\Teams.exe</Image>
-			</FileDeleteDetected>
-		</RuleGroup>
-		
+
+
 		<!--SYSMON EVENT ID 27 : FileBlockExecutable -->
-		<RuleGroup name="FileBlockExecutable exclude" groupRelation="or">
-			<FileBlockExecutable onmatch="exclude">
-				<!--<Image condition="is">C:\Program Files (x86)\Mozilla Firefox\firefox.exe</Image>-->
-				<Image condition="begin with">C:\WINDOWS\winsxs\amd64_microsoft-windows-servicingstack</Image>
-				<Image condition="begin with">C:\ProgramData\Microsoft\Windows Defender\platform\</Image><!-- Design decision  Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
-				<Image condition="is">C:\WINDOWS\system32\DllHost.exe</Image><!-- Design decision  Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
-				<Image condition="end with">\Community\MSBuild\Current\Bin\Roslyn\VBCSCompiler.exe</Image><!-- Design decision Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
-				<Image condition="end with">\MSBuild.exe</Image><!-- Design decision Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
-			</FileBlockExecutable>
-		</RuleGroup>
 		
 		<!--SYSMON EVENT ID 28 : FileBlockShredding -->
 		<RuleGroup name="FileBlockShredding exclude" groupRelation="or">
@@ -3338,15 +3296,7 @@
 		</RuleGroup>
 		
 		<!--SYSMON EVENT ID 29 : FileExecutableDetected -->
-		<RuleGroup name="FileExecutableDetected exclude" groupRelation="or">
-			<FileExecutableDetected onmatch="exclude">
-				<Image condition="is">C:\WINDOWS\system32\DllHost.exe</Image>
-				<Image condition="begin with">C:\ProgramData\Microsoft\Windows Defender\platform\</Image>
-				<Image condition="end with">\Community\MSBuild\Current\Bin\Roslyn\VBCSCompiler.exe</Image><!-- Design decision Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
-				<Image condition="end with">\MSBuild.exe</Image><!-- Design decision Could find more things if you comment this, but as it is it also reduces noise when its uncommented-->
-			</FileExecutableDetected>
-		</RuleGroup>
-		
+
 		<!--SYSMON EVENT ID 255 : ERROR-->
 		<!--"This event is generated when an error occurred within Sysmon. They can happen if the system is under heavy load
 			and certain tasked could not be performed or a bug exists in the Sysmon service. You can report any bugs on the
